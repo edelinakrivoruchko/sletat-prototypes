@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чёрная пятница в Слетать.ру: туры со скидкой в рублях</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0C12; --bg2:#14161F; --card:#1A1D29; --line:#2A2E3D;
+  --text:#F3F5FA; --muted:#9AA1B2; --yellow:#FFD709; --blue:#2470FF; --blue-l:#5C95FF;
+  --green:#22C55E; --pink:#FF3D7F;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.45;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:0;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:64px 0}
+h2{font-size:36px;font-weight:800;line-height:1.15}
+.sub{color:var(--muted);font-weight:600;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 28px;border-radius:12px;font-weight:800;font-size:16px;transition:transform .15s,filter .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn-y{background:var(--yellow);color:#111;box-shadow:0 0 0 0 rgba(255,215,9,.5)}
+.btn-y:hover{box-shadow:0 8px 28px rgba(255,215,9,.35)}
+.btn-ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px #ffffff55}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px #fff}
+
+/* прототип */
+.proto{background:#000;color:var(--muted);font-size:12px;padding:7px 0;border-bottom:1px solid var(--line)}
+
+/* шапка */
+header{position:sticky;top:0;z-index:20;background:rgba(11,12,18,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:16px;height:68px}
+.logo{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.5px}
+.logo span{color:var(--yellow)}
+.grow{flex:1}
+.mini-timer{font-size:13px;font-weight:700;color:var(--yellow);background:#FFD7091A;padding:7px 12px;border-radius:100px;white-space:nowrap}
+.hlink{font-size:14px;font-weight:600;color:var(--muted)}
+.hlink:hover{color:#fff}
+.hphone{font-weight:700}
+@media(max-width:900px){.hide-m{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 80px}
+.hero:before{content:"";position:absolute;width:720px;height:720px;right:-200px;top:-260px;background:radial-gradient(circle,rgba(36,112,255,.45),transparent 65%);pointer-events:none}
+.hero:after{content:"";position:absolute;width:520px;height:520px;left:-200px;bottom:-280px;background:radial-gradient(circle,rgba(255,215,9,.22),transparent 65%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-weight:800;font-size:13px;letter-spacing:1px;color:var(--yellow)}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 12px var(--pink);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.mega{font-size:96px;font-weight:800;line-height:.95;letter-spacing:-3px;margin:18px 0 8px;text-transform:uppercase}
+.mega span{color:var(--yellow)}
+.hero h1{font-size:30px;font-weight:700;max-width:760px}
+.hero h1 b{color:var(--yellow)}
+.hero .lead{color:var(--muted);font-size:18px;margin-top:10px;max-width:700px}
+.countdown{display:flex;gap:12px;margin:32px 0 10px;flex-wrap:wrap;align-items:flex-end}
+.cd{background:var(--card);border:1px solid var(--line);border-radius:16px;min-width:96px;padding:14px 10px;text-align:center}
+.cd b{display:block;font-size:44px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.cd small{color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.cd-label{color:var(--muted);font-size:14px;font-weight:600;margin-bottom:6px;width:100%}
+.hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+
+/* бегущая строка */
+.ticker{background:var(--yellow);color:#111;overflow:hidden;white-space:nowrap;font-weight:800;font-size:15px;padding:12px 0;transform:rotate(-1deg);margin:0 -10px}
+.ticker div{display:inline-block;animation:run 30s linear infinite}
+.ticker span{margin:0 22px}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* фильтры и карточки */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 24px}
+.f{padding:9px 18px;border-radius:100px;background:var(--card);border:1px solid var(--line);color:var(--text);font-weight:700;font-size:14px}
+.f.on{background:#fff;color:#111;border-color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.deal:hover{border-color:var(--blue-l);transform:translateY(-3px)}
+.ph{height:180px;position:relative;padding:14px;display:flex;justify-content:space-between;align-items:flex-start}
+.ph .lbl{position:absolute;left:14px;bottom:10px;font-size:12px;color:#ffffffcc}
+.g1{background:linear-gradient(135deg,#1e3a8a,#06b6d4)}
+.g2{background:linear-gradient(135deg,#312e81,#22d3ee)}
+.g3{background:linear-gradient(135deg,#7c2d12,#f59e0b)}
+.g4{background:linear-gradient(135deg,#831843,#3b82f6)}
+.g5{background:linear-gradient(135deg,#064e3b,#34d399)}
+.save{background:var(--yellow);color:#111;font-weight:800;font-size:14px;padding:7px 12px;border-radius:10px}
+.rate{background:#000a;color:#fff;font-size:13px;font-weight:700;padding:5px 10px;border-radius:100px}
+.deal .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.dest{color:var(--blue-l);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.deal h3{font-size:18px;line-height:1.25}
+.prices{display:flex;align-items:baseline;gap:10px;margin-top:2px}
+.price{font-size:28px;font-weight:800}
+.old{color:var(--muted);text-decoration:line-through}
+.meta{color:var(--muted);font-size:14px}
+.pl{display:flex;flex-wrap:wrap;gap:6px}
+.pl span{font-size:12px;font-weight:600;padding:5px 10px;border-radius:100px;background:#ffffff10}
+.inst{font-size:13px;color:var(--green);font-weight:700}
+.deal .btn{margin-top:auto;width:100%}
+.note-under{color:var(--muted);font-size:13px;margin-top:18px}
+
+/* как считаем */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.how div{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:26px}
+.how b{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--blue);align-items:center;justify-content:center;margin-bottom:12px}
+.how h3{font-size:18px;margin-bottom:6px}
+.how p{color:var(--muted);font-size:15px}
+.vs{margin-top:20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:18px 24px}
+.vs s{color:var(--muted)}
+.vs b{color:var(--yellow)}
+
+/* ранняя бронь */
+.early{background:linear-gradient(120deg,#1a2a6c,#2470FF);border-radius:28px;padding:40px;display:flex;gap:32px;align-items:center;flex-wrap:wrap}
+.early .grow{min-width:280px}
+.early h2{font-size:30px}
+.early p{color:#dbe6ff;margin-top:8px}
+.seasons{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.seasons span{background:#ffffff1f;padding:6px 12px;border-radius:100px;font-size:13px;font-weight:600}
+
+/* форма */
+.fw{display:grid;grid-template-columns:1fr 440px;gap:40px;align-items:start}
+.steps{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.steps div{display:flex;gap:14px;align-items:flex-start}
+.steps b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--yellow);color:#111;display:flex;align-items:center;justify-content:center;font-size:14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.lead-form{display:flex;flex-direction:column;gap:12px}
+.fld{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:8px 16px}
+.fld:focus-within{border-color:var(--blue-l)}
+.fld label{display:block;font-size:12px;color:var(--muted)}
+.fld input{background:transparent;border:0;color:var(--text);font:inherit;width:100%;outline:none;padding:2px 0}
+.chs{display:flex;gap:8px;flex-wrap:wrap}
+.chs input{display:none}
+.chs span{display:inline-block;padding:8px 16px;border-radius:100px;border:1px solid var(--line);font-weight:700;font-size:14px;cursor:pointer}
+.chs input:checked+span{background:#fff;color:#111;border-color:#fff}
+.legal{font-size:12px;color:var(--muted)}
+.ok{background:#22c55e1a;border:1px solid #22c55e66;border-radius:16px;padding:22px}
+.ok h3{color:var(--green);margin-bottom:6px}
+
+/* faq */
+details{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-top:10px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--yellow);font-size:20px;line-height:1}
+details[open] summary:after{content:"−"}
+details p{color:var(--muted);margin-top:10px;font-size:15px}
+
+footer{border-top:1px solid var(--line);padding:36px 0 100px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(11,12,18,.95);border-top:1px solid var(--line);padding:10px 12px;gap:8px}
+.mbar .btn{flex:1;padding:12px}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.modal.open{display:flex}
+.modal .box{max-width:460px;width:100%;position:relative;max-height:92vh;overflow:auto}
+.modal .x{position:absolute;right:14px;top:10px;background:none;color:var(--muted);font-size:26px}
+.modal h3{font-size:22px;padding-right:28px}
+
+@media(max-width:900px){
+  section{padding:44px 0}
+  h2{font-size:28px}
+  .hero{padding:44px 0 52px}
+  .mega{font-size:52px;letter-spacing:-1.5px}
+  .hero h1{font-size:22px}
+  .cd{min-width:70px;padding:10px 6px}
+  .cd b{font-size:30px}
+  .grid,.how,.fw{grid-template-columns:1fr}
+  .early{padding:28px}
+  .mbar{display:flex}
+}
+</style>
+</head>
+<body>
+
+<div class="proto"><div class="wrap">Прототип посадки «Чёрная пятница» · 06.11.2026 · цены, отели и даты акции условные, заявки никуда не отправляются</div></div>
+
+<header><div class="wrap">
+  <a class="logo" href="#">слетать.<span>ру</span></a>
+  <span class="mini-timer" id="miniTimer">…</span>
+  <div class="grow"></div>
+  <a class="hlink hide-m" href="#deals">Туры со скидкой</a>
+  <a class="hlink hide-m" href="#expert">Эксперт</a>
+  <a class="hlink hide-m" href="#">Telegram</a>
+  <a class="hlink hide-m" href="#">Макс</a>
+  <a class="hphone" href="tel:88003339963">8 (800) 333-99-63</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="kicker"><i></i><span id="kickerText">СТАРТ 11 НОЯБРЯ</span></div>
+  <div class="mega">Чёрная<br><span>пятница</span></div>
+  <h1>Туры в Турцию со скидкой — <b>от 96 000 ₽</b></h1>
+  <p class="lead">Сравнили цены у 500+ туроператоров и называем скидку в рублях. Цены акции действуют несколько дней.</p>
+  <div class="countdown">
+    <div class="cd-label" id="cdLabel">До старта акции</div>
+    <div class="cd"><b id="d">0</b><small>дней</small></div>
+    <div class="cd"><b id="h">00</b><small>часов</small></div>
+    <div class="cd"><b id="m">00</b><small>минут</small></div>
+    <div class="cd"><b id="s">00</b><small>секунд</small></div>
+  </div>
+  <div class="hero-cta">
+    <a class="btn btn-y" href="#deals">Смотреть туры со скидкой</a>
+    <a class="btn btn-ghost" href="#expert">Подобрать с экспертом</a>
+  </div>
+</div></div>
+
+<div class="ticker"><div id="tick"></div></div>
+
+<section id="deals"><div class="wrap">
+  <h2>Лучшие цены акции</h2>
+  <p class="sub">Готовые туры: выберите понравившийся, и эксперт подберёт его или похожий на ваши даты</p>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+  <p class="note-under">Цены за тур на двоих с перелётом из Москвы. Обновлены сегодня в 14:00.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Скидка, которую можно проверить</h2>
+  <p class="sub">Как мы её считаем</p>
+  <div class="how">
+    <div><b>1</b><h3>Цена до акции</h3><p>Цена того же тура (отель, даты, ночи, питание) за неделю до старта.</p></div>
+    <div><b>2</b><h3>Цена в акцию</h3><p>Цена туроператора в дни Чёрной пятницы, без скрытых доплат.</p></div>
+    <div><b>3</b><h3>500+ туроператоров</h3><p>Показываем самый выгодный вариант. Если цена изменится, скажем до оплаты.</p></div>
+  </div>
+  <div class="vs"><s>«Скидки до −90%»</s><span>→</span><span>у нас: <b>96 000 ₽ вместо 118 000 ₽, экономия 22 000 ₽</b></span></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="early">
+    <div class="grow">
+      <h2>Отпуск на 2027 год по цене Чёрной пятницы</h2>
+      <p>Зафиксируйте цену зимней или летней поездки сейчас, остальное оплатите частями.</p>
+      <div class="seasons"><span>Зима 2027: Таиланд, Хайнань, ОАЭ, Египет</span><span>Лето 2027</span></div>
+    </div>
+    <button class="btn btn-y" data-hotel="Ранняя бронь на 2027">Подобрать тур на 2027</button>
+  </div>
+</div></section>
+
+<section id="expert"><div class="wrap">
+  <div class="fw">
+    <div>
+      <h2>Не нашли свой тур? Подберём со скидкой на ваши даты</h2>
+      <p class="sub">Бесплатно и без обязательства купить</p>
+      <div class="steps">
+        <div><b>1</b><span id="sla">Эксперт свяжется за 15 минут удобным вам способом.</span></div>
+        <div><b>2</b><span>Пришлёт 3–5 вариантов с ценой и экономией в рублях.</span></div>
+        <div><b>3</b><span>Купить можно на сайте, по телефону или в одном из 350 офисов.</span></div>
+        <div><b>₽</b><span>Можно оплатить частями: 0 ₽ при бронировании, деньги списываются после подтверждения тура. <a href="#" style="color:var(--blue-l);font-weight:700" onclick="event.preventDefault();alert('Документ с условиями рассрочки нужно получить у Слетать.ру.')">Условия рассрочки</a></span></div>
+      </div>
+    </div>
+    <div class="box"><form class="lead-form" id="mainForm"></form></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Про акцию</h2>
+  <details open><summary>Сколько действуют цены акции?</summary><p>С 11 ноября, несколько дней. Точные даты появятся здесь после старта.</p></details>
+  <details><summary>Что входит в цену тура?</summary><p>Перелёт, трансфер, отель, питание по тарифу и страховка. Состав конкретного тура указан в карточке.</p></details>
+  <details><summary>Что будет, если цена изменится до оплаты?</summary><p>Предупредим до оплаты и предложим варианты. Деньги списываются только после подтверждения тура туроператором.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+  <div><span class="logo">слетать.<span>ру</span></span><p style="margin-top:8px">500+ туроператоров · 350 офисов в 170+ городах · с 2003 года</p></div>
+  <div style="text-align:right"><b style="color:#fff">8 (800) 333-99-63</b><p>Telegram · Макс</p></div>
+</div></footer>
+
+<div class="mbar"><a class="btn btn-y" href="tel:88003339963">Позвонить</a><a class="btn btn-ghost" href="#expert">Написать</a></div>
+
+<div class="modal" id="modal"><div class="box">
+  <button class="x" aria-label="Закрыть" onclick="closeModal()">×</button>
+  <h3>Подберём этот тур или похожий</h3>
+  <p class="sub" style="margin:4px 0 14px">на ваши даты и бюджет</p>
+  <div id="modalBody"></div>
+</div></div>
+
+<script>
+// ---- даты акции: старт 11.11 (уточняется на синке), окончание — допущение ----
+const START=new Date('2026-11-11T00:00:00+03:00');
+const END=new Date('2026-11-15T23:59:59+03:00');
+
+const DEALS=[
+ {c:'Турция',g:'g3',n:'5★ Отель-пример Club, Белек',m:'7 ночей · 14.11–21.11 · всё включено',pl:['бассейн с подогревом','первая линия'],p:96000,o:118000,r:'9.3'},
+ {c:'Турция',g:'g1',n:'5★ Отель-пример Resort, Кемер',m:'7 ночей · 15.11–22.11 · всё включено',pl:['для семей','горы и море'],p:84000,o:99000,r:'9.0'},
+ {c:'Египет',g:'g4',n:'5★ Отель-пример Reef, Шарм-эш-Шейх',m:'10 ночей · 14.11–24.11 · всё включено',pl:['коралловый риф','для семей'],p:89000,o:104000,r:'9.0'},
+ {c:'Таиланд',g:'g2',n:'5★ Отель-пример Beach Resort, Пхукет',m:'10 ночей · 14.11–24.11 · завтраки',pl:['первая линия','для пар'],p:142000,o:163000,r:'9.1'},
+ {c:'Хайнань',g:'g5',n:'5★ Отель-пример Bay Resort, Санья',m:'9 ночей · 15.11–24.11 · завтраки',pl:['детский клуб','для семей'],p:152000,o:171000,r:'8.9'},
+ {c:'ОАЭ',g:'g1',n:'5★ Отель-пример Marina, Дубай',m:'7 ночей · 15.11–22.11 · завтраки',pl:['пляж','город рядом'],p:118000,o:136000,r:'9.1'},
+ {c:'Турция',g:'g2',n:'5★ Отель-пример Palace, Сиде',m:'8 ночей · 16.11–24.11 · ультра всё включено',pl:['аквапарк','песчаный пляж'],p:102000,o:121000,r:'9.1'},
+ {c:'Египет',g:'g3',n:'4★ Отель-пример Beach, Хургада',m:'7 ночей · 16.11–23.11 · всё включено',pl:['песчаный вход','аквапарк'],p:61000,o:72000,r:'8.6'},
+ {c:'Таиланд',g:'g4',n:'4★ Отель-пример Bay, Паттайя',m:'9 ночей · 15.11–24.11 · завтраки',pl:['центр','бассейн'],p:98000,o:112000,r:'8.7'}];
+const rub=n=>n.toLocaleString('ru-RU').replace(/ /g,' ')+' ₽';
+
+// фильтры и карточки
+const cats=['Все',...new Set(DEALS.map(d=>d.c))];let cur='Все';
+const fEl=document.getElementById('filters'),gEl=document.getElementById('grid');
+function render(){
+  fEl.innerHTML=cats.map(c=>`<button class="f ${c===cur?'on':''}" data-c="${c}">${c}</button>`).join('');
+  gEl.innerHTML=DEALS.filter(d=>cur==='Все'||d.c===cur).map(d=>`<article class="deal"><div class="ph ${d.g}"><span class="save">−${rub(d.o-d.p)}</span><span class="rate">${d.r}</span><span class="lbl">фото отеля</span></div>
+  <div class="body"><span class="dest">${d.c}</span><h3>${d.n}</h3><div class="prices"><span class="price">${rub(d.p)}</span><span class="old">${rub(d.o)}</span></div>
+  <div class="meta">${d.m}</div><div class="pl">${d.pl.map(x=>`<span>${x}</span>`).join('')}</div>
+  <div class="inst">Частями: от ${rub(Math.round(d.p/12/100)*100)} в месяц</div>
+  <button class="btn btn-y" data-hotel="${d.n}, ${d.m}">Хочу этот тур или похожий</button></div></article>`).join('');
+}
+fEl.addEventListener('click',e=>{const b=e.target.closest('.f');if(b){cur=b.dataset.c;render()}});
+render();
+
+// бегущая строка
+const T=['ЧЁРНАЯ ПЯТНИЦА','СКИДКИ В РУБЛЯХ','500+ ТУРОПЕРАТОРОВ','ТУРЦИЯ ОТ 96 000 ₽','ОПЛАТА ЧАСТЯМИ','350 ОФИСОВ'];
+document.getElementById('tick').innerHTML=Array(4).fill(T.map(x=>`<span>${x}</span><span>✦</span>`).join('')).join('');
+
+// таймер
+const pad=n=>String(n).padStart(2,'0');
+function tick(){
+  const now=new Date();let target,label,kicker;
+  if(now<START){target=START;label='До старта акции';kicker='СТАРТ 11 НОЯБРЯ'}
+  else if(now<END){target=END;label='До конца акции';kicker='АКЦИЯ ИДЁТ'}
+  else{document.getElementById('cdLabel').textContent='Акция завершена';document.getElementById('kickerText').textContent='АКЦИЯ ЗАВЕРШЕНА';document.getElementById('miniTimer').textContent='Акция завершена';return}
+  const d=target-now;const D=Math.floor(d/864e5),H=Math.floor(d/36e5)%24,M=Math.floor(d/6e4)%60,S=Math.floor(d/1e3)%60;
+  document.getElementById('d').textContent=D;document.getElementById('h').textContent=pad(H);document.getElementById('m').textContent=pad(M);document.getElementById('s').textContent=pad(S);
+  document.getElementById('cdLabel').textContent=label;document.getElementById('kickerText').textContent=kicker;
+  document.getElementById('miniTimer').textContent=(now<START?'До старта ':'До конца ')+D+' д '+pad(H)+':'+pad(M)+':'+pad(S);
+}
+tick();setInterval(tick,1000);
+
+// рабочее время 9–21 МСК в будни (допущение)
+function work(){const m=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Moscow'}));return m.getDay()>0&&m.getDay()<6&&m.getHours()>=9&&m.getHours()<21}
+const SLA=work()?'Эксперт свяжется за 15 минут удобным вам способом.':'Сейчас нерабочее время: ответим в мессенджере до 10:00.';
+document.getElementById('sla').textContent=SLA;
+
+// формы (никуда не отправляются)
+function formHTML(h){return `
+<div class="fld"><label>Имя</label><input name="name" required placeholder="Как к вам обращаться"></div>
+<div class="fld"><label>Телефон</label><input name="phone" required type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__"></div>
+<div style="font-size:14px;font-weight:700">Как удобнее связаться?</div>
+<div class="chs">${['Звонок','Telegram','Макс'].map((c,i)=>`<label><input type="radio" name="ch" ${i?'':'checked'}><span>${c}</span></label>`).join('')}</div>
+${h?`<div class="fld"><label>Интересует</label><input value="${h}"></div>`:''}
+<div class="fld"><label>Промокод, если есть</label><input placeholder="необязательно"></div>
+<button class="btn btn-y" style="width:100%">Подобрать тур со скидкой</button>
+<p class="legal">Даты и число туристов уточнит эксперт. Нажимая кнопку, вы соглашаетесь с политикой обработки данных.</p>`}
+function bind(f,h){f.innerHTML=formHTML(h);const ph=f.querySelector('[name=phone]');
+ ph.addEventListener('input',()=>{let d=ph.value.replace(/\D/g,'');if(d[0]==='8')d='7'+d.slice(1);if(d[0]!=='7')d='7'+d;d=d.slice(0,11);
+  let s='+7';if(d.length>1)s+=' ('+d.slice(1,4);if(d.length>=4)s+=')';if(d.length>4)s+=' '+d.slice(4,7);if(d.length>7)s+='-'+d.slice(7,9);if(d.length>9)s+='-'+d.slice(9,11);ph.value=s});
+ f.onsubmit=e=>{e.preventDefault();if(ph.value.replace(/\D/g,'').length<11){ph.parentElement.style.borderColor='#FF3D7F';ph.focus();return}
+  f.outerHTML=`<div class="ok"><h3>Заявка принята</h3><p>${SLA}</p><p style="margin-top:6px;color:var(--muted)">Пришлём 3–5 вариантов с ценой и экономией в рублях.</p></div>`}}
+bind(document.getElementById('mainForm'));
+const modal=document.getElementById('modal');
+function openModal(h){const mb=document.getElementById('modalBody');mb.innerHTML='<form class="lead-form"></form>';bind(mb.firstChild,h);modal.classList.add('open')}
+function closeModal(){modal.classList.remove('open')}
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-hotel]');if(b){e.preventDefault();openModal(b.dataset.hotel)}});
+</script>
+</body>
+</html>
