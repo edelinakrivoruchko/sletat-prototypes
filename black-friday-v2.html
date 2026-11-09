@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чёрная пятница в Слетать.ру: туры со скидкой</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2470FF; --blue-d:#0F4FD6; --blue-dd:#0A3AA8; --sky:#F4F8FD; --line:#E3EAF5;
+  --orange:#FF6A00; --orange-d:#E85E00; --orange-l:#FFF1E6;
+  --text:#313140; --muted:#727A87; --white:#fff; --red:#E8323C; --green:#1FA35B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',Arial,sans-serif;background:var(--white);color:var(--text);line-height:1.45;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+h2{font-size:38px;font-weight:800;line-height:1.12;letter-spacing:-.5px}
+.sub{color:var(--muted);font-weight:600;margin-top:8px;font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 30px;border-radius:12px;font-weight:800;font-size:16px;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--orange);color:#fff;box-shadow:0 6px 18px rgba(255,106,0,.35)}
+.btn-o:hover{background:var(--orange-d);box-shadow:0 10px 26px rgba(255,106,0,.45)}
+.btn-pulse{animation:glow 1.8s infinite}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(255,106,0,.55)}70%{box-shadow:0 0 0 16px rgba(255,106,0,0)}100%{box-shadow:0 0 0 0 rgba(255,106,0,0)}}
+.btn-w{background:#fff;color:var(--blue)}
+.btn-line{box-shadow:inset 0 0 0 2px #ffffffaa;color:#fff}
+.btn-line:hover{box-shadow:inset 0 0 0 2px #fff}
+.btn-b{box-shadow:inset 0 0 0 2px var(--blue);color:var(--blue)}
+
+/* плашка прототипа */
+.proto{background:#EEF2F8;color:var(--muted);font-size:12px;padding:6px 0}
+
+/* верх: бегущая строка + шапка */
+.top{position:sticky;top:0;z-index:40}
+.ticker{background:var(--orange);color:#fff;overflow:hidden;white-space:nowrap;font-weight:800;font-size:14px;padding:9px 0;letter-spacing:.3px}
+.ticker div{display:inline-block;animation:run 40s linear infinite}
+.ticker span{margin:0 18px}
+@keyframes run{to{transform:translateX(-50%)}}
+header{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(36,112,255,.06)}
+header .wrap{display:flex;align-items:center;gap:20px;height:66px}
+.logo{font-size:25px;font-weight:800;color:var(--blue);letter-spacing:-.5px}
+.logo span{color:var(--orange)}
+.grow{flex:1}
+.hlink{font-size:14px;font-weight:700;color:var(--muted)}
+.hlink:hover{color:var(--blue)}
+.hphone{font-weight:800;font-size:16px}
+.hphone small{display:block;font-size:11px;color:var(--muted);font-weight:600}
+header .btn{padding:11px 20px;font-size:14px}
+@media(max-width:980px){.hide-m{display:none!important}}
+
+/* первый экран */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--blue) 0%,var(--blue-d) 55%,var(--blue-dd) 100%);color:#fff;padding:64px 0 76px}
+.hero:before{content:"";position:absolute;width:760px;height:760px;right:-240px;top:-300px;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 62%)}
+.hero:after{content:"";position:absolute;width:600px;height:600px;left:-260px;bottom:-330px;background:radial-gradient(circle,rgba(255,106,0,.35),transparent 65%)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-weight:800;font-size:13px;letter-spacing:1px;background:#ffffff22;padding:7px 14px;border-radius:100px}
+.kicker i{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(255,106,0,.7);animation:dot 1.4s infinite}
+@keyframes dot{70%{box-shadow:0 0 0 10px rgba(255,106,0,0)}}
+.mega{font-size:92px;font-weight:800;line-height:.92;letter-spacing:-3px;margin:20px 0 14px;text-transform:uppercase}
+.mega span{color:var(--orange);display:block;text-shadow:0 4px 30px rgba(255,106,0,.35)}
+.hero h1{font-size:26px;font-weight:700;line-height:1.25}
+.hero h1 b{background:var(--orange);padding:0 8px;border-radius:6px;white-space:nowrap}
+.hero .lead{color:#DCE7FF;font-size:17px;margin-top:12px;max-width:560px}
+.hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.social{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:14px;font-weight:700;color:#DCE7FF}
+.social b{color:#fff}
+.social .live:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#3BE37F;margin-right:7px;vertical-align:1px}
+.timerbox{background:#fff;color:var(--text);border-radius:26px;padding:28px;box-shadow:0 24px 60px rgba(6,30,90,.35);position:relative}
+.sticker{position:absolute;right:-14px;top:-26px;background:var(--orange);color:#fff;font-weight:800;font-size:20px;line-height:1.05;text-align:center;width:118px;height:118px;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:rotate(12deg);box-shadow:0 10px 24px rgba(255,106,0,.45);border:4px solid #fff}
+.timerbox .lbl{font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.5px;color:var(--red)}
+.countdown{display:flex;gap:10px;margin:14px 0 18px}
+.cd{flex:1;background:var(--sky);border-radius:14px;padding:12px 4px;text-align:center}
+.cd b{display:block;font-size:42px;font-weight:800;line-height:1;color:var(--blue);font-variant-numeric:tabular-nums}
+.cd small{color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase}
+.tb-row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:10px 0;border-top:1px dashed var(--line)}
+.tb-row b{color:var(--blue)}
+.timerbox .btn{width:100%;margin-top:14px}
+
+/* хиты */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.fire{display:inline-block;background:var(--orange-l);color:var(--orange-d);font-weight:800;font-size:13px;padding:6px 12px;border-radius:100px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
+.hits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.deal{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.deal:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(36,112,255,.14)}
+.ph{height:190px;position:relative;padding:14px;display:flex;justify-content:space-between;align-items:flex-start;color:#fff}
+.ph .pl-name{position:absolute;left:16px;bottom:12px;font-weight:800;font-size:22px;text-shadow:0 2px 10px rgba(0,0,0,.25)}
+.ph .tag{position:absolute;right:14px;bottom:14px;font-size:11px;color:#ffffffcc}
+.save{background:var(--orange);color:#fff;font-weight:800;font-size:15px;padding:7px 12px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.rate{background:#fff;color:var(--blue);font-size:13px;font-weight:800;padding:5px 10px;border-radius:100px}
+.g1{background:linear-gradient(135deg,#0E7AE6,#24D1D9)}
+.g2{background:linear-gradient(135deg,#F28C28,#F7C548)}
+.g3{background:linear-gradient(135deg,#1E9E8C,#7BDCB5)}
+.g4{background:linear-gradient(135deg,#2470FF,#7FB2FF)}
+.g5{background:linear-gradient(135deg,#E2604A,#F6A55B)}
+.g6{background:linear-gradient(135deg,#7A4DE0,#3BA7F0)}
+.deal .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.deal h3{font-size:18px;line-height:1.25}
+.meta{color:var(--muted);font-size:14px}
+.pl{display:flex;flex-wrap:wrap;gap:6px}
+.pl span{font-size:12px;font-weight:700;padding:5px 10px;border-radius:100px;background:var(--sky);color:var(--blue)}
+.prices{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price{font-size:30px;font-weight:800}
+.old{color:var(--muted);text-decoration:line-through;font-weight:600}
+.left{font-size:14px;font-weight:800;color:var(--red)}
+.bar{height:8px;background:#FFE3CF;border-radius:10px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--orange),#FF9A3D);border-radius:10px}
+.bar-l{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:var(--muted)}
+.inst{font-size:13px;color:var(--green);font-weight:700}
+.deal .btn{margin-top:auto;width:100%}
+
+/* направления */
+.dirs{background:var(--sky)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.tile{position:relative;border-radius:22px;height:170px;padding:20px;color:#fff;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:transform .2s,box-shadow .2s;outline:4px solid transparent;outline-offset:-4px}
+.tile:hover{transform:translateY(-3px)}
+.tile.on{outline-color:var(--orange);box-shadow:0 14px 34px rgba(255,106,0,.3)}
+.tile b{font-size:30px;font-weight:800;line-height:1}
+.tile span{font-size:14px;font-weight:700;opacity:.92;margin-top:6px}
+.tile em{position:absolute;right:16px;top:16px;font-style:normal;background:var(--orange);font-weight:800;font-size:14px;padding:6px 10px;border-radius:10px}
+.tile .countries{position:absolute;left:20px;top:18px;font-size:12px;font-weight:700;opacity:.85}
+.car-head{display:flex;justify-content:space-between;align-items:center;margin:34px 0 16px;gap:12px}
+.car-head h3{font-size:22px}
+.arrows{display:flex;gap:8px}
+.arrows button{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);font-size:20px;font-weight:800;color:var(--blue)}
+.arrows button:hover{background:var(--blue);color:#fff}
+.car{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 10px}
+.car::-webkit-scrollbar{display:none}
+.car .deal{scroll-snap-align:start}
+
+/* ускоритель */
+.boost{background:linear-gradient(110deg,var(--orange) 0%,#FF8A1F 100%);border-radius:28px;padding:38px 44px;color:#fff;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;position:relative;overflow:hidden}
+.boost:after{content:"%";position:absolute;left:46%;bottom:-110px;font-size:300px;font-weight:800;opacity:.08;line-height:1;pointer-events:none}
+.boost h2{font-size:34px}
+.boost p{font-size:17px;margin-top:8px;color:#FFF3E8}
+.code{display:flex;gap:10px;align-items:center;margin-top:18px;flex-wrap:wrap;position:relative;z-index:1}
+.code span{background:#fff;color:var(--orange-d);font-weight:800;font-size:22px;letter-spacing:2px;padding:10px 18px;border-radius:12px;border:2px dashed var(--orange)}
+.boost .left-codes{text-align:center;background:#ffffff26;border-radius:22px;padding:22px 30px;position:relative;z-index:1}
+.boost .left-codes b{display:block;font-size:64px;line-height:1;font-weight:800}
+.boost .left-codes small{font-weight:700;font-size:14px}
+.boost .bar{background:#ffffff40;margin-top:12px}
+.boost .bar i{background:#fff}
+
+/* цифры */
+.nums{background:var(--blue);color:#fff;padding:46px 0}
+.nums .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.nums b{display:block;font-size:46px;font-weight:800;line-height:1.05}
+.nums span{color:#DCE7FF;font-weight:600;font-size:15px}
+
+/* как купить */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.step{background:var(--sky);border-radius:22px;padding:28px;position:relative}
+.step i{display:flex;width:46px;height:46px;border-radius:14px;background:var(--blue);color:#fff;font-style:normal;font-weight:800;font-size:20px;align-items:center;justify-content:center;margin-bottom:16px}
+.step h3{font-size:19px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+.pay{margin-top:18px;background:#E9F8EF;color:#14753F;border-radius:16px;padding:16px 22px;font-weight:700;font-size:15px}
+.pay a{color:var(--blue);text-decoration:underline}
+
+/* форма */
+.final{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dd) 100%);color:#fff;border-radius:30px;padding:46px;display:grid;grid-template-columns:1fr 430px;gap:40px;align-items:center}
+.final .sub{color:#DCE7FF}
+.mini-cd{display:flex;gap:8px;margin-top:22px}
+.mini-cd div{background:#ffffff1f;border-radius:12px;padding:10px 12px;text-align:center;min-width:64px}
+.mini-cd b{display:block;font-size:26px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.mini-cd small{font-size:10px;font-weight:700;text-transform:uppercase;color:#DCE7FF}
+.box{background:#fff;color:var(--text);border-radius:22px;padding:28px}
+.lead-form{display:flex;flex-direction:column;gap:12px}
+.fld{border:1.5px solid var(--line);border-radius:12px;padding:8px 16px;background:#fff}
+.fld:focus-within{border-color:var(--blue)}
+.fld label{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.fld input{border:0;font:inherit;width:100%;outline:none;padding:2px 0;color:var(--text);background:transparent}
+.chs{display:flex;gap:8px;flex-wrap:wrap}
+.chs input{display:none}
+.chs span{display:inline-block;padding:8px 16px;border-radius:100px;border:1.5px solid var(--line);font-weight:700;font-size:14px;cursor:pointer}
+.chs input:checked+span{background:var(--blue);color:#fff;border-color:var(--blue)}
+.legal{font-size:12px;color:var(--muted)}
+.ok{background:#E9F8EF;border-radius:16px;padding:22px}
+.ok h3{color:var(--green);margin-bottom:6px}
+
+footer{background:#F0F4FA;padding:40px 0 110px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer b{color:var(--text)}
+
+/* лента броней */
+.toast{position:fixed;left:20px;bottom:20px;z-index:35;background:#fff;border-radius:16px;box-shadow:0 14px 40px rgba(20,40,90,.22);padding:14px 18px 14px 14px;display:flex;gap:12px;align-items:center;max-width:360px;transform:translateY(140%);transition:transform .45s cubic-bezier(.2,.9,.3,1.2)}
+.toast.show{transform:none}
+.toast .av{flex:none;width:42px;height:42px;border-radius:12px;background:var(--orange-l);color:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:800}
+.toast p{font-size:14px;line-height:1.35}
+.toast small{color:var(--muted);font-size:12px}
+
+/* моб. панель */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:38;background:#fff;box-shadow:0 -6px 20px rgba(20,40,90,.12)}
+.mbar .t{background:var(--blue);color:#fff;text-align:center;font-size:12px;font-weight:800;padding:5px}
+.mbar .r{display:flex;gap:8px;padding:10px 12px}
+.mbar .btn{flex:1;padding:13px 8px;font-size:15px}
+
+/* модалки */
+.modal{position:fixed;inset:0;background:rgba(10,25,60,.6);display:none;align-items:center;justify-content:center;z-index:60;padding:16px}
+.modal.open{display:flex}
+.modal .box{max-width:460px;width:100%;position:relative;max-height:92vh;overflow:auto}
+.modal .x{position:absolute;right:14px;top:8px;color:var(--muted);font-size:28px}
+.modal h3{font-size:22px;padding-right:28px;line-height:1.2}
+.exit h3{font-size:28px}
+.exit .big{font-size:54px;font-weight:800;color:var(--orange);line-height:1;margin:10px 0 6px}
+
+@media(max-width:980px){
+  section{padding:48px 0}
+  h2{font-size:28px}
+  .hero{padding:36px 0 48px}
+  .hero .wrap{grid-template-columns:1fr;gap:34px}
+  .mega{font-size:54px;letter-spacing:-1.5px}
+  .hero h1{font-size:21px}
+  .sticker{width:92px;height:92px;font-size:16px;right:-4px;top:-30px}
+  .cd b{font-size:32px}
+  .hits,.tiles,.steps{grid-template-columns:1fr}
+  .hits{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:84%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .hits::-webkit-scrollbar{display:none}
+  .hits .deal{scroll-snap-align:start}
+  .tiles{grid-template-columns:repeat(3,1fr);gap:10px}
+  .tile{height:120px;padding:12px;border-radius:16px}
+  .tile b{font-size:19px}
+  .tile span{font-size:11px}
+  .tile em{font-size:11px;right:8px;top:8px;padding:4px 6px}
+  .tile .countries{display:none}
+  .car{grid-auto-columns:84%}
+  .arrows{display:none}
+  .boost{grid-template-columns:1fr;padding:28px}
+  .boost h2{font-size:26px}
+  .nums .wrap{grid-template-columns:1fr 1fr;gap:26px}
+  .nums b{font-size:34px}
+  .final{grid-template-columns:1fr;padding:28px}
+  .wrap{padding:0 16px}
+  .mbar{display:block}
+  .toast{left:12px;right:12px;bottom:112px;max-width:none}
+}
+</style>
+</head>
+<body>
+
+<div class="proto"><div class="wrap">Прототип посадки «Чёрная пятница» в стиле sletat.ru, v2 от 09.11.2026. Цены, отели, счётчики и лента броней условные, заявки никуда не отправляются.</div></div>
+
+<div class="top">
+  <div class="ticker"><div id="tick"></div></div>
+  <header><div class="wrap">
+    <a class="logo" href="#">слетать.<span>ру</span></a>
+    <div class="grow"></div>
+    <a class="hlink hide-m" href="#hits">Хиты акции</a>
+    <a class="hlink hide-m" href="#dirs">Направления</a>
+    <a class="hlink hide-m" href="#how">Как купить</a>
+    <a class="hlink hide-m" href="#">Telegram</a>
+    <a class="hlink hide-m" href="#">Макс</a>
+    <a class="hphone" href="tel:88003339963">8 (800) 333-99-63<small class="hide-m">бесплатно по России</small></a>
+    <a class="btn btn-o hide-m" href="#form">Подобрать со скидкой</a>
+  </div></header>
+</div>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="kicker"><i></i><span id="kickerText">СТАРТ 11 НОЯБРЯ</span></div>
+    <div class="mega">Чёрная<span>пятница</span></div>
+    <h1>Туры со скидкой <b id="heroMax">до 22 000 ₽</b> на поездку</h1>
+    <p class="lead">Собрали самые выгодные туры у 500+ туроператоров. Цены акции действуют только до конца таймера.</p>
+    <div class="hero-cta">
+      <a class="btn btn-o btn-pulse" href="#hits">Забрать тур со скидкой</a>
+      <a class="btn btn-line" href="#form">Подобрать с экспертом</a>
+    </div>
+    <div class="social">
+      <span>Сегодня забронировали <b id="booked">127</b> туров</span>
+      <span class="live">Сейчас смотрят <b id="watching">48</b></span>
+    </div>
+  </div>
+  <div class="timerbox">
+    <div class="sticker" id="sticker">−22 000 ₽</div>
+    <div class="lbl" id="cdLabel">До старта акции</div>
+    <div class="countdown">
+      <div class="cd"><b id="d">0</b><small>дней</small></div>
+      <div class="cd"><b id="h">00</b><small>часов</small></div>
+      <div class="cd"><b id="m">00</b><small>минут</small></div>
+      <div class="cd"><b id="s">00</b><small>секунд</small></div>
+    </div>
+    <div class="tb-row"><span>Туров со скидкой</span><b id="dealsCount">15</b></div>
+    <div class="tb-row"><span>Самая большая экономия</span><b id="maxSave">22 000 ₽</b></div>
+    <div class="tb-row"><span>Оплата частями</span><b>0 ₽ сейчас</b></div>
+    <a class="btn btn-o" href="#hits">Смотреть туры</a>
+  </div>
+</div></div>
+
+<section id="hits"><div class="wrap">
+  <div class="sec-head"><div>
+    <span class="fire">Разбирают быстрее всего</span>
+    <h2>Хиты Чёрной пятницы</h2>
+    <p class="sub">Три тура с самой большой скидкой. Когда закончатся, цена вернётся.</p>
+  </div></div>
+  <div class="hits" id="hitsGrid"></div>
+</div></section>
+
+<section class="dirs" id="dirs"><div class="wrap">
+  <h2>Куда полетим?</h2>
+  <p class="sub">Выберите направление, и покажем туры со скидкой</p>
+  <div class="tiles" id="tiles"></div>
+  <div class="car-head">
+    <h3 id="carTitle">Азия</h3>
+    <div class="arrows"><button aria-label="Назад" data-dir="-1">‹</button><button aria-label="Вперёд" data-dir="1">›</button></div>
+  </div>
+  <div class="car" id="car"></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="boost">
+    <div>
+      <h2>Первым 100 заявкам ещё −3 000 ₽</h2>
+      <p>Назовите промокод эксперту или впишите в форму. Скидка суммируется с ценой акции.</p>
+      <div class="code"><span id="promo">BLACK3000</span><button class="btn btn-w" id="copyBtn">Скопировать</button></div>
+    </div>
+    <div class="left-codes">
+      <small>Осталось промокодов</small>
+      <b id="codesLeft">37</b>
+      <div class="bar"><i id="codesBar" style="width:37%"></i></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="nums"><div class="wrap">
+  <div><b>500+</b><span>туроператоров в одном поиске</span></div>
+  <div><b>350</b><span>офисов в 170+ городах</span></div>
+  <div><b>с 2003</b><span>года продаём туры</span></div>
+  <div><b>3 млн</b><span>туристов уже слетали</span></div>
+</div></div>
+
+<section id="how"><div class="wrap">
+  <h2>Как забрать тур по цене акции</h2>
+  <p class="sub">Три шага, бесплатно и без обязательства купить</p>
+  <div class="steps">
+    <div class="step"><i>1</i><h3>Оставьте заявку</h3><p>Выберите тур из подборки или напишите, куда и когда хотите поехать.</p></div>
+    <div class="step"><i>2</i><h3>Эксперт перезвонит</h3><p id="sla">Свяжемся за 15 минут удобным способом и пришлём 3–5 вариантов с экономией в рублях.</p></div>
+    <div class="step"><i>3</i><h3>Оплатите как удобно</h3><p>На сайте, частями или в одном из 350 офисов рядом с домом.</p></div>
+  </div>
+  <div class="pay">0 ₽ при бронировании, остальное частями. Деньги списываются только после того, как туроператор подтвердил тур. <a href="#" id="instLink">Условия рассрочки</a></div>
+</div></section>
+
+<section id="form" style="padding-top:0"><div class="wrap">
+  <div class="final">
+    <div>
+      <h2>Не нашли свой тур? Подберём со скидкой на ваши даты</h2>
+      <p class="sub">Эксперт проверит цены у 500+ туроператоров и найдёт вариант по акции</p>
+      <div class="mini-cd" id="miniCd"></div>
+    </div>
+    <div class="box"><form class="lead-form" id="mainForm"></form></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><span class="logo">слетать.<span>ру</span></span><p style="margin-top:8px">500+ туроператоров · 350 офисов в 170+ городах · с 2003 года</p><p>Сведения о реестрах и юрлице — уточнить у клиента</p></div>
+  <div style="text-align:right"><b>8 (800) 333-99-63</b><p>Telegram · Макс</p></div>
+</div></footer>
+
+<div class="toast" id="toast"><div class="av" id="toastAv">А</div><div><p id="toastText"></p><small id="toastTime"></small></div></div>
+
+<div class="mbar"><div class="t" id="mbarT">…</div><div class="r"><a class="btn btn-b" href="tel:88003339963">Позвонить</a><a class="btn btn-o" href="#hits">Забрать скидку</a></div></div>
+
+<div class="modal" id="modal"><div class="box">
+  <button class="x" aria-label="Закрыть" data-close>×</button>
+  <h3>Подберём этот тур или похожий</h3>
+  <p class="sub" style="margin:4px 0 14px;font-size:15px">на ваши даты и бюджет, по цене акции</p>
+  <div id="modalBody"></div>
+</div></div>
+
+<div class="modal" id="exitModal"><div class="box exit">
+  <button class="x" aria-label="Закрыть" data-close>×</button>
+  <h3>Подождите! Заберите скидку</h3>
+  <div class="big">−3 000 ₽</div>
+  <p class="sub" style="margin:0 0 16px;font-size:15px">Оставьте телефон, и эксперт закрепит промокод за вами до конца акции</p>
+  <div id="exitBody"></div>
+</div></div>
+
+<script>
+// Даты акции: старт 11.11 (по синку, может сдвинуться на 13.11), окончание 15.11 — допущение
+const START=new Date('2026-11-11T00:00:00+03:00');
+const END=new Date('2026-11-15T23:59:59+03:00');
+
+// Туры условные. dir: asia / egypt / other
+const DEALS=[
+ {dir:'asia',c:'Таиланд',g:'g1',n:'5★ Отель-пример Beach Resort, Пхукет',m:'10 ночей · завтраки · 2 взрослых',pl:['первая линия','для пар'],p:142000,o:163000,r:'9.1',sold:72,left:3},
+ {dir:'asia',c:'Вьетнам',g:'g3',n:'5★ Отель-пример Bay, Нячанг',m:'10 ночей · завтраки · 2 взрослых',pl:['песчаный пляж','спа'],p:118000,o:134000,r:'8.9',sold:55,left:6},
+ {dir:'asia',c:'Хайнань',g:'g6',n:'5★ Отель-пример Bay Resort, Санья',m:'9 ночей · завтраки · 2 взрослых',pl:['детский клуб','для семей'],p:152000,o:171000,r:'8.9',sold:64,left:4},
+ {dir:'asia',c:'Таиланд',g:'g4',n:'4★ Отель-пример Bay, Паттайя',m:'9 ночей · завтраки · 2 взрослых',pl:['центр','бассейн'],p:98000,o:112000,r:'8.7',sold:48,left:7},
+ {dir:'asia',c:'Китай',g:'g5',n:'5★ Отель-пример Garden, Пекин',m:'7 ночей · завтраки · 2 взрослых',pl:['экскурсии','город'],p:109000,o:121000,r:'8.8',sold:31,left:9},
+ {dir:'egypt',c:'Египет',g:'g2',n:'5★ Отель-пример Reef, Шарм-эш-Шейх',m:'10 ночей · всё включено · 2 взрослых',pl:['коралловый риф','для семей'],p:89000,o:104000,r:'9.0',sold:81,left:2},
+ {dir:'egypt',c:'Египет',g:'g5',n:'4★ Отель-пример Beach, Хургада',m:'7 ночей · всё включено · 2 взрослых',pl:['песчаный вход','аквапарк'],p:61000,o:72000,r:'8.6',sold:67,left:4},
+ {dir:'egypt',c:'Египет',g:'g1',n:'5★ Отель-пример Palace, Макади-Бей',m:'8 ночей · ультра всё включено · 2 взрослых',pl:['подогреваемый бассейн','для семей'],p:94000,o:110000,r:'9.2',sold:58,left:5},
+ {dir:'egypt',c:'Египет',g:'g3',n:'5★ Отель-пример Resort, Эль-Гуна',m:'10 ночей · всё включено · 2 взрослых',pl:['лагуна','тихий отдых'],p:112000,o:127000,r:'9.0',sold:40,left:8},
+ {dir:'other',c:'Турция',g:'g2',n:'5★ Отель-пример Club, Белек',m:'7 ночей · всё включено · 2 взрослых',pl:['бассейн с подогревом','первая линия'],p:96000,o:118000,r:'9.3',sold:77,left:3},
+ {dir:'other',c:'Турция',g:'g4',n:'5★ Отель-пример Resort, Кемер',m:'7 ночей · всё включено · 2 взрослых',pl:['для семей','горы и море'],p:84000,o:99000,r:'9.0',sold:52,left:6},
+ {dir:'other',c:'ОАЭ',g:'g6',n:'5★ Отель-пример Marina, Дубай',m:'7 ночей · завтраки · 2 взрослых',pl:['пляж','город рядом'],p:118000,o:136000,r:'9.1',sold:60,left:5},
+ {dir:'other',c:'Турция',g:'g1',n:'5★ Отель-пример Palace, Сиде',m:'8 ночей · ультра всё включено · 2 взрослых',pl:['аквапарк','песчаный пляж'],p:102000,o:121000,r:'9.1',sold:46,left:7},
+ {dir:'other',c:'ОАЭ',g:'g3',n:'4★ Отель-пример Beach, Рас-эль-Хайма',m:'7 ночей · завтраки · 2 взрослых',pl:['свой пляж','для семей'],p:79000,o:91000,r:'8.7',sold:38,left:8},
+ {dir:'other',c:'Мальдивы',g:'g4',n:'4★ Отель-пример Island, Маафуши',m:'7 ночей · полупансион · 2 взрослых',pl:['белый песок','снорклинг'],p:189000,o:209000,r:'8.9',sold:29,left:4}];
+const DIRS={
+ asia:{t:'Азия',s:'Таиланд, Вьетнам, Хайнань, Китай',g:'g1'},
+ egypt:{t:'Египет',s:'Шарм-эш-Шейх, Хургада, Эль-Гуна',g:'g2'},
+ other:{t:'Другое',s:'Турция, ОАЭ, Мальдивы',g:'g6'}};
+
+const rub=n=>n.toLocaleString('ru-RU').replace(/\s/g,' ')+' ₽';
+const $=id=>document.getElementById(id);
+const plural=(n,a,b,c)=>{const m=n%10,h=n%100;return m===1&&h!==11?a:(m>=2&&m<=4&&(h<12||h>14)?b:c)};
+const esc=s=>String(s).replace(/"/g,'&quot;');
+
+function card(d){return `<article class="deal"><div class="ph ${d.g}"><span class="save">−${rub(d.o-d.p)}</span><span class="rate">★ ${d.r}</span><span class="pl-name">${d.c}</span><span class="tag">фото отеля</span></div>
+<div class="body"><h3>${d.n}</h3><div class="meta">${d.m}</div><div class="pl">${d.pl.map(x=>`<span>${x}</span>`).join('')}</div>
+<div class="prices"><span class="price">${rub(d.p)}</span><span class="old">${rub(d.o)}</span></div>
+<div class="left">Осталось ${d.left} ${plural(d.left,"тур","тура","туров")} по этой цене</div>
+<div class="bar"><i style="width:${d.sold}%"></i></div><div class="bar-l"><span>Продано ${d.sold}%</span><span>частями от ${rub(Math.round(d.p/12/100)*100)}/мес</span></div>
+<button class="btn btn-o" data-hotel="${esc(d.n+', '+d.m)}">Хочу этот тур</button></div></article>`}
+
+// цифры для первого экрана
+const maxSave=Math.max(...DEALS.map(d=>d.o-d.p));
+$('heroMax').textContent='до '+rub(maxSave);$('maxSave').textContent=rub(maxSave);$('sticker').textContent='−'+rub(maxSave);$('dealsCount').textContent=DEALS.length;
+
+// хиты: три с самой большой экономией
+$('hitsGrid').innerHTML=[...DEALS].sort((a,b)=>(b.o-b.p)-(a.o-a.p)).slice(0,3).map(card).join('');
+
+// направления: три плитки и одна карусель
+let curDir='asia';
+function renderDirs(){
+  $('tiles').innerHTML=Object.entries(DIRS).map(([k,v])=>{const ds=DEALS.filter(d=>d.dir===k);const min=Math.min(...ds.map(d=>d.p));const mx=Math.max(...ds.map(d=>d.o-d.p));
+   return `<button class="tile ${v.g} ${k===curDir?'on':''}" data-k="${k}"><span class="countries">${v.s}</span><em>до −${rub(mx)}</em><b>${v.t}</b><span>${ds.length} ${plural(ds.length,"тур","тура","туров")} · от ${rub(min)}</span></button>`}).join('');
+  $('carTitle').textContent=DIRS[curDir].t+': '+DIRS[curDir].s;
+  $('car').innerHTML=DEALS.filter(d=>d.dir===curDir).map(card).join('');$('car').scrollLeft=0;
+}
+$('tiles').addEventListener('click',e=>{const t=e.target.closest('.tile');if(t){curDir=t.dataset.k;renderDirs()}});
+document.querySelector('.arrows').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const c=$('car');const w=c.querySelector('.deal').offsetWidth+22;c.scrollBy({left:w*b.dataset.dir,behavior:'smooth'})});
+renderDirs();
+
+// бегущая строка
+const T=['ЧЁРНАЯ ПЯТНИЦА','ЭКОНОМИЯ ДО '+rub(maxSave).toUpperCase(),'ЕЩЁ −3 000 ₽ ПО ПРОМОКОДУ','500+ ТУРОПЕРАТОРОВ','ОПЛАТА ЧАСТЯМИ','350 ОФИСОВ'];
+$('tick').innerHTML=Array(4).fill(T.map(x=>`<span>${x}</span><span>●</span>`).join('')).join('');
+
+// таймер
+const pad=n=>String(n).padStart(2,'0');
+function tick(){
+  const now=new Date();let target,label,kicker;
+  if(now<START){target=START;label='До старта акции';kicker='СТАРТ 11 НОЯБРЯ'}
+  else if(now<END){target=END;label='До конца акции';kicker='АКЦИЯ ИДЁТ'}
+  else{$('cdLabel').textContent='Акция завершена';$('kickerText').textContent='АКЦИЯ ЗАВЕРШЕНА';$('mbarT').textContent='Акция завершена';$('miniCd').innerHTML='';return}
+  const d=target-now;const D=Math.floor(d/864e5),H=Math.floor(d/36e5)%24,M=Math.floor(d/6e4)%60,S=Math.floor(d/1e3)%60;
+  $('d').textContent=D;$('h').textContent=pad(H);$('m').textContent=pad(M);$('s').textContent=pad(S);
+  $('cdLabel').textContent=label;$('kickerText').textContent=kicker;
+  $('mbarT').textContent=label+': '+D+' д '+pad(H)+':'+pad(M)+':'+pad(S);
+  $('miniCd').innerHTML=[[D,'дней'],[pad(H),'часов'],[pad(M),'минут'],[pad(S),'секунд']].map(([v,l])=>`<div><b>${v}</b><small>${l}</small></div>`).join('');
+}
+tick();setInterval(tick,1000);
+
+// счётчики (демо)
+let booked=127,watching=48,codes=37;
+setInterval(()=>{if(Math.random()<.5){booked++;$('booked').textContent=booked}watching=Math.max(31,watching+Math.round(Math.random()*6-3));$('watching').textContent=watching},4000);
+setInterval(()=>{if(codes>9){codes--;$('codesLeft').textContent=codes;$('codesBar').style.width=codes+'%'}},45000);
+$('copyBtn').onclick=()=>{try{navigator.clipboard.writeText('BLACK3000')}catch(e){}$('copyBtn').textContent='Скопировано'};
+$('instLink').onclick=e=>{e.preventDefault();alert('Документ с условиями рассрочки нужно получить у Слетать.ру.')};
+
+// лента броней (демо)
+const FEED=[['Анна','Казани','Таиланд',84000],['Игорь','Екатеринбурга','Египет',61000],['Мария','Москвы','Турцию',96000],['Олег','Новосибирска','Хайнань',152000],['Светлана','Самары','ОАЭ',79000],['Дмитрий','Перми','Вьетнам',118000]];
+let fi=0;
+function showToast(){const [n,c,w,p]=FEED[fi++%FEED.length];$('toastAv').textContent=n[0];$('toastText').innerHTML=`<b>${n} из ${c}</b> забронировал(а) ${w} за ${rub(p)}`;$('toastTime').textContent=(2+fi%7)+' минуты назад';$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),5000)}
+setTimeout(()=>{showToast();setInterval(showToast,14000)},6000);
+
+// рабочее время 9–21 МСК в будни (допущение)
+function work(){const m=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Moscow'}));return m.getDay()>0&&m.getDay()<6&&m.getHours()>=9&&m.getHours()<21}
+const SLA=work()?'Эксперт свяжется за 15 минут удобным вам способом.':'Сейчас нерабочее время: ответим в мессенджере до 10:00.';
+if(!work())$('sla').textContent='Сейчас нерабочее время: ответим в мессенджере до 10:00 и пришлём 3–5 вариантов с экономией в рублях.';
+
+// формы (никуда не отправляются)
+function formHTML(h,short){return `
+${short?'':'<div class="fld"><label>Имя</label><input name="name" placeholder="Как к вам обращаться"></div>'}
+<div class="fld"><label>Телефон</label><input name="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__"></div>
+${short?'':`<div style="font-size:14px;font-weight:700">Как удобнее связаться?</div>
+<div class="chs">${['Звонок','Telegram','Макс'].map((c,i)=>`<label><input type="radio" name="ch" ${i?'':'checked'}><span>${c}</span></label>`).join('')}</div>`}
+${h?`<div class="fld"><label>Интересует</label><input value="${h}"></div>`:''}
+${short?'':'<div class="fld"><label>Промокод</label><input value="BLACK3000"></div>'}
+<button class="btn btn-o" style="width:100%">${short?'Закрепить скидку':'Подобрать тур со скидкой'}</button>
+<p class="legal">Нажимая кнопку, вы соглашаетесь с политикой обработки данных.</p>`}
+function bind(f,h,short){f.innerHTML=formHTML(h,short);const ph=f.querySelector('[name=phone]');
+ ph.addEventListener('input',()=>{let d=ph.value.replace(/\D/g,'');if(!d){ph.value='';return}if(d[0]==='8')d='7'+d.slice(1);if(d[0]!=='7')d='7'+d;d=d.slice(0,11);
+  let s='+7';if(d.length>1)s+=' ('+d.slice(1,4);if(d.length>=4)s+=')';if(d.length>4)s+=' '+d.slice(4,7);if(d.length>7)s+='-'+d.slice(7,9);if(d.length>9)s+='-'+d.slice(9,11);ph.value=s});
+ f.onsubmit=e=>{e.preventDefault();if(ph.value.replace(/\D/g,'').length<11){ph.parentElement.style.borderColor='var(--red)';ph.focus();return}
+  f.outerHTML=`<div class="ok"><h3>Заявка принята</h3><p>${SLA}</p><p style="margin-top:6px;color:var(--muted)">Промокод BLACK3000 закреплён за вами до конца акции.</p></div>`}}
+bind($('mainForm'));
+function openModal(h){const mb=$('modalBody');mb.innerHTML='<form class="lead-form"></form>';bind(mb.firstChild,h);$('modal').classList.add('open')}
+document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m||e.target.hasAttribute('data-close'))m.classList.remove('open')}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'))});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-hotel]');if(b){e.preventDefault();openModal(b.dataset.hotel)}});
+
+// попап при уходе: курсор ушёл вверх (десктоп) или 40 секунд на странице (телефон); один раз
+let exitShown=false;
+function showExit(){if(exitShown||document.querySelector('.modal.open'))return;exitShown=true;const eb=$('exitBody');eb.innerHTML='<form class="lead-form"></form>';bind(eb.firstChild,'',true);$('exitModal').classList.add('open')}
+document.addEventListener('mouseout',e=>{if(!e.relatedTarget&&e.clientY<=0)showExit()});
+if(matchMedia('(max-width:980px)').matches)setTimeout(showExit,40000);
+</script>
+</body>
+</html>
