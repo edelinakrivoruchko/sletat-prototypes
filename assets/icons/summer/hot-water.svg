@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="3.70 4.70 56.60 56.60">
+<!-- тёплый бассейн: волны из иконки Water набора Summer (Printerinks) + пар в цветах иконки Fire; дорисовано для посадок Слетать.ру 09.11.2026 -->
+<g fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="#ffce52" d="M20 31c-3.5-3.5 3.5-6.5 0-10s3.5-6.5 0-10"/>
+<path stroke="#ff5a5a" d="M32 29c-3.5-3.5 3.5-6.5 0-10s3.5-6.5 0-10"/>
+<path stroke="#ffce52" d="M44 31c-3.5-3.5 3.5-6.5 0-10s3.5-6.5 0-10"/>
+<path transform="matrix(1,0,0,-1,6,44)" stroke="#6384ad" d="M0 0C0 0 10.5 19.5 26 4 41.5-11.5 52 8 52 8"/>
+<path transform="matrix(1,0,0,-1,6,55)" stroke="#73bccd" d="M0 0C0 0 10.5 19.5 26 4 41.5-11.5 52 8 52 8"/>
+</g>
+</svg>

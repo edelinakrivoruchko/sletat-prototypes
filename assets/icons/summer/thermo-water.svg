@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- тёплый бассейн: градусник в воде в манере и цветах набора Summer (Printerinks), вариант для Слетать.ру 10.11.2026 -->
+<rect x="26.5" y="5" width="11" height="34" rx="5.5" fill="#fff7e7"/>
+<g stroke="#535962" stroke-width="2" stroke-linecap="round"><path d="M40.5 11h4M40.5 17h3M40.5 23h4M40.5 29h3"/></g>
+<rect x="29.75" y="14" width="4.5" height="24" rx="2.25" fill="#ff5a5a"/>
+<circle cx="32" cy="40.5" r="8.5" fill="#ff5a5a"/>
+<circle cx="29.4" cy="38" r="2.2" fill="#fff" opacity=".55"/>
+<g fill="none" stroke-width="3" stroke-linecap="round">
+<path stroke="#73bccd" d="M5 51.5c4.5-3.6 9-3.6 13.5 0s9 3.6 13.5 0 9-3.6 13.5 0 9 3.6 13.5 0"/>
+<path stroke="#6384ad" d="M5 58.5c4.5-3.6 9-3.6 13.5 0s9 3.6 13.5 0 9-3.6 13.5 0 9 3.6 13.5 0"/>
+</g>
+</svg>

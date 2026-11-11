@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="7.85 6.7 52 52">
+<!-- хаммам и сауна: деревянная шайка с черпаком в манере и цветах набора Summer (Printerinks), нарисовано для Слетать.ру 10.11.2026; пар убран по просьбе Натальи, viewBox обрезан по рисунку, как у иконок набора -->
+<path d="M35 31 55.5 10.5" stroke="#885849" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M11 31h30l-3.5 24a2 2 0 0 1-2 1.6h-19a2 2 0 0 1-2-1.6z" fill="#c39253"/>
+<g stroke="#885849" stroke-width="1.4" opacity=".55"><path d="M19 33l1.3 22.5M26 33v22.5M33 33l-1.3 22.5"/></g>
+<g stroke="#535962" stroke-width="3" stroke-linecap="round"><path d="M12.4 37.5h27.2M14.5 50.5h23"/></g>
+<ellipse cx="26" cy="31" rx="15.5" ry="3.4" fill="#885849"/>
+<ellipse cx="26" cy="31" rx="13" ry="2.2" fill="#73bccd"/>
+</svg>

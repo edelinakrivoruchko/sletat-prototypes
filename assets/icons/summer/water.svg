@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="64" height="64" viewBox="4.00 4.00 56.00 56.00">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,0,64)" d="M0 64H64V0H0Z"/>
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(1,0,0,-1,0,64)" d="M4.99965 12.999H59.0004V51.0013H4.99965Z"/>
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(1,0,0,-1,0,64)" d="M58.474 36.88C57.988 37.144 57.381 36.96 57.119 36.474 57.075 36.391 52.576 28.178 45.405 27.125 41.29 26.521 37.015 28.398 32.707 32.707 27.926 37.488 23.073 39.553 18.305 38.853 10.15 37.656 5.321 28.849 5.119 28.474 4.857 27.988 5.04 27.381 5.526 27.12 6.012 26.857 6.619 27.04 6.881 27.526 6.925 27.609 11.424 35.822 18.595 36.875 22.712 37.479 26.985 35.602 31.293 31.293 35.467 27.119 39.69 25.014 43.875 25.014 44.483 25.014 45.09 25.058 45.695 25.147 53.85 26.344 58.679 35.151 58.881 35.526 59.143 36.012 58.96 36.619 58.474 36.88"/>
+</clipPath>
+<clipPath id="clip_4">
+<path transform="matrix(1,0,0,-1,0,64)" d="M5.526 39.134C6.012 38.872 6.619 39.054 6.881 39.541 6.925 39.624 11.424 47.836 18.595 48.889 22.712 49.493 26.985 47.616 31.293 43.308 35.467 39.134 39.69 37.028 43.875 37.028 44.483 37.028 45.09 37.073 45.695 37.162 53.85 38.358 58.679 47.166 58.881 47.541 59.143 48.027 58.96 48.633 58.474 48.895 57.988 49.158 57.381 48.975 57.119 48.489 57.075 48.406 52.576 40.193 45.405 39.14 41.29 38.535 37.015 40.413 32.707 44.722 27.926 49.502 23.073 51.57 18.305 50.868 10.15 49.671 5.321 40.863 5.119 40.489 4.857 40.002 5.04 39.396 5.526 39.134"/>
+</clipPath>
+<clipPath id="clip_5">
+<path transform="matrix(1,0,0,-1,0,64)" d="M58.474 24.866C57.988 25.129 57.381 24.945 57.119 24.459 57.075 24.376 52.576 16.164 45.405 15.111 41.29 14.506 37.015 16.384 32.707 20.692 27.926 25.473 23.073 27.54 18.305 26.838 10.15 25.642 5.321 16.834 5.119 16.459 4.857 15.973 5.04 15.367 5.526 15.105 6.012 14.842 6.619 15.025 6.881 15.511 6.925 15.594 11.424 23.807 18.595 24.86 22.712 25.464 26.985 23.587 31.293 19.278 35.467 15.104 39.69 12.999 43.875 12.999 44.483 12.999 45.09 13.043 45.695 13.132 53.85 14.329 58.679 23.137 58.881 23.511 59.143 23.998 58.96 24.604 58.474 24.866"/>
+</clipPath>
+</defs>
+<g>
+<g inkscape:groupmode="layer" inkscape:label="Icons">
+<g clip-path="url(#clip_1)">
+<path transform="matrix(1,0,0,-1,6,36)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#6384ad" d="M0 0C0 0 10.5 19.5 26 4 41.5-11.5 52 8 52 8"/>
+<path transform="matrix(1,0,0,-1,6,23.9855)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#73bccd" d="M0 0C0 0 10.5 19.5 26 4 41.5-11.5 52 8 52 8"/>
+<path transform="matrix(1,0,0,-1,6,48.0145)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#73bccd" d="M0 0C0 0 10.5 19.5 26 4 41.5-11.5 52 8 52 8"/>
+<g opacity=".350006" style="mix-blend-mode:overlay">
+<g clip-path="url(#clip_2)">
+<g clip-path="url(#clip_3)">
+<image x="5" y="24" width="54" height="15" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAADYAAAAPCAYAAACvMDy4AAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAZ0lEQVR4nN3DsQpAUAAF0PupZJBBCgMpUmSQehlkwIDhWVj4vus/
+7qkDz3GpGIHvUzGiMKRipHFCxSiynIpRlxUVo2taKsbQ91SM0RgqxjxNVIxtWakY
+535QMS5rqRjPfVMxvvel4h8HPk8lRGKA3wAAAABJRU5ErkJggg=="/>
+</g>
+<g clip-path="url(#clip_4)">
+<image x="5" y="12" width="54" height="15" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAADYAAAAPCAYAAACvMDy4AAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAZklEQVR4nN3DQQaAUAAE0LnJj0+kSJEiRSIiSpSUKC3SIt1/Nd1j
+Hg/WGCqGNQ4Vw3NdKkboB1SMJIqpGHmaUTGqoqRiNHVNxejaloox9gMVY5lmKsa+
+blSM6zipGM99UzG+96XiH66DsoITsHgwAAAAAElFTkSuQmCC"/>
+</g>
+<g clip-path="url(#clip_5)">
+<image x="5" y="36" width="54" height="15" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAADYAAAAPCAYAAACvMDy4AAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAYklEQVR4nN3DIRKAIAAEwPv/S7Bg0YJBiiQSBixYsGghkQjnP25n
+FpMxVIzZWirGuixUjM05KobfPRUjHIGKEWOkYpwpUTGunKkYdylUjKdWKsb3flSM
+1hoVo/dOxRhjUPEPEO/uCzb/zAwAAAAASUVORK5CYII="/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

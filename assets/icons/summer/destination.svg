@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="64" height="64" viewBox="3.00 3.00 58.00 58.00">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,0,64)" d="M0 64H64V0H0Z"/>
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(1,0,0,-1,0,64)" d="M4 4H60V60H4Z"/>
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(1,0,0,-1,0,64)" d="M60 32C60 16.536 47.464 4 32 4 16.536 4 4 16.536 4 32 4 47.464 16.536 60 32 60 47.464 60 60 47.464 60 32"/>
+</clipPath>
+</defs>
+<g>
+<g inkscape:groupmode="layer" inkscape:label="Icons">
+<g clip-path="url(#clip_1)">
+<path transform="matrix(1,0,0,-1,4,32)" d="M0 0C0-15.46 12.54-28 28-28 43.46-28 56-15.46 56 0 56 15.46 43.46 28 28 28 12.54 28 0 15.46 0 0" fill="#cef7ef"/>
+<path transform="matrix(1,0,0,-1,60,32)" d="M0 0C0-5.86-1.8-11.29-4.88-15.79-9.92-23.16-18.4-28-28-28-39.91-28-50.09-20.55-54.13-10.06-55.34-6.94-56-3.55-56 0Z" fill="#73bccd"/>
+<path transform="matrix(1,0,0,-1,55.12,47.79)" d="M0 0C-5.04-7.37-13.52-12.21-23.12-12.21-35.03-12.21-45.21-4.76-49.25 5.73-26.17 5.21-21.99 .99 0 0" fill="#6384ad"/>
+<path transform="matrix(1,0,0,-1,51,21)" d="M0 0C0 1.105-.895 2-2 2-2.031 2-2.059 1.992-2.089 1.991-2.293 2.577-2.845 3-3.5 3-3.698 3-3.885 2.96-4.058 2.89-4.23 3.528-4.807 4-5.5 4-6.256 4-6.875 3.439-6.979 2.711-7.279 2.89-7.625 3-8 3-9.105 3-10 2.105-10 1-10 .634-9.894 .295-9.723 0Z" fill="#ffffff"/>
+<path transform="matrix(1,0,0,-1,31,14)" d="M0 0C-.232 1.141-1.24 2-2.45 2-2.646 2-2.836 1.972-3.019 1.929-3.205 2.547-3.771 3-4.45 3-5.142 3-5.719 2.528-5.892 1.89-6.065 1.96-6.252 2-6.45 2-7.142 2-7.719 1.528-7.892 .89-8.065 .96-8.252 1-8.45 1-9.102 1-9.651 .581-9.858 0Z" fill="#ffffff"/>
+<path transform="matrix(1,0,0,-1,56,34)" d="M0 0H-47C-47 0-45.69 3.75-42 3-42 3-39.12 12-36 12-32.88 12-31.81 7.25-30 6-28.19 4.75-27.25 13.81-23 14-18.75 14.19-19.25 8.69-16 8-15.45 7.88-14.96 7.86-14.5 7.9-12.27 8.05-10.84 9.37-7 6-7 6-3.94 6.25-4 3-4 3 .19 3.44 0 0" fill="#885849"/>
+<path transform="matrix(1,0,0,-1,50.74,34)" d="M0 0H-31.85C-30.18 1.89-24.74 4-24.74 4-24.74 4-21.35 8-18.74 8-15.53 8-13.45 6-11.7 6-10.86 6-10.19 6.93-9.24 7.9-7.01 8.05-5.58 9.37-1.74 6-3.68 5.38-5.69 3.43-3.7 2-2.49 1.12-.7 1.56 0 0" fill="#bdd75b"/>
+<path transform="matrix(1,0,0,-1,33,31)" d="M0 0C0 0-2 .437-3-1-3-1-.75-1.875 3-1 3-1 2.25 1.75 0 0" fill="#885849"/>
+<path transform="matrix(1,0,0,-1,37,36)" d="M0 0C0 0 .25 3 3 3 3 3 3.375 4 5 4 6.625 4 9 2.125 9 0Z" fill="#885849"/>
+<g opacity=".350006" style="mix-blend-mode:overlay">
+<g clip-path="url(#clip_2)">
+<g clip-path="url(#clip_3)">
+<image x="4" y="4" width="56" height="56" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAABUklEQVR4nN3DQUcDAAAF4PdPdigWi8VSMSqNSsVSaVSalCal0qQ0
+qUwqk0llUllUFpPForJoLBaLxQ6Lxg6LHRY77LDDDq//8T4+1BkMVA5jXT2Vw2Rs
+oHKYTY1UDou5icrRYmmmclhb26gc7VYrlaOro5PK0W2zUTn6enqpHPb+ASrHkH2Q
+yjE6PELlGHM4qByT4xNUjimnk8oxOz1D5Zhzuagci/MLVI6VpWUqx6rbTeXYWFun
+cmx6PFSOna1tKseu10vlONjbp3Ic+nxUjiO/n8pxenxC5TgLBKgcl+cXVI6rYJDK
+cXt9Q+W4C4WoHPfhMJXjIRKhcjxGo1SOl6dnKsdrLEbliL/FqRzviQSV4yOZpHJ8
+plJUjq90msqRyWSoHN/ZLJUj95OjcuTzeSrHb6FA5SgWi1SOv1KJylEul6kclUqF
+ylGtVqkctVqNyv8BigeQ6YyOEuUAAAAASUVORK5CYII="/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

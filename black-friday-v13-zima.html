@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сбежать от зимы – Чёрная пятница в Слетать.ру</title>
+<!-- шрифты бренда локально (00_Бренд/fonts): Onest – заголовки, Open Sans – текст; фирменный шрифт Яндекса с yandex-серверов убран -->
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<!-- как на ЧП-витрине: макет 1280 px, на десктопе (окно шире 1080 px) страница масштабируется целиком – одинаково в любом окне и масштабе браузера -->
+<script>try{if(localStorage.getItem("sl_theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+<script>(() => { const D = document.documentElement, f = () => { const w = D.clientWidth || innerWidth; D.style.setProperty('--z', w > 1080 ? Math.max(.8, Math.min(w / 1280, innerHeight / 560)).toFixed(4) : '1'); }; f(); addEventListener('resize', f); document.addEventListener('DOMContentLoaded', f); })();</script>
+<style>
+/* цвета только из основной темы sletat.ru (base.html) */
+/* цвета бренда (00_Бренд/BRANDBOOK.md): синий #236DFA, жёлтый #FFCA00, оранжевый плашек #FF9207, рейтинг #00C74D, подписи #6C6C76 */
+:root{--blue:#236DFA;--bd:#094695;--text:#313140;--muted:#6C6C76;--sky:#F4F8FD;--lb:#D9EAFF;--line:#E1E6EE;--yel:#FFCA00;--org:#FF9207;--grn:#00C74D;--gbg:#E3F7E8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Open Sans',Helvetica,Arial,sans-serif;background:#fff;color:var(--text);line-height:1.45;overflow-x:hidden;font-size:15px}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.mega,.offer,.kicker,.cd b,.nums b,.payc .big,.photo b,.hotel .hook,.hotel .pr b,.way-t,.fin h2,.vs-t,.tcard .lbl{font-family:'Onest','Open Sans',Arial,sans-serif}
+button{font:inherit;border:0;cursor:pointer;background:none;color:inherit}
+:root{--z:1;--vh:calc(1vh / var(--z))}
+@media (min-width:1081px){:root{--vh:min(calc(1vh / var(--z)), 6.06px)}body{zoom:var(--z)}}
+.wrap{max-width:1280px;margin:0 auto;padding:0 56px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:100px;font-weight:700;font-size:15px;white-space:nowrap;transition:box-shadow .15s,background .15s} /* все кнопки – пилюли без стрелок (Наталья, 09.11.2026) */
+.btn-y{background:var(--yel);color:var(--text)}.btn-y:hover{background:#FFD709}
+.btn-b{box-shadow:inset 0 0 0 1.5px var(--blue);color:var(--blue)}.btn-b:hover{background:var(--sky)}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;font-size:13px;font-weight:600;box-shadow:inset 0 0 0 1px var(--lb);color:var(--blue);white-space:nowrap}
+.pill:hover{background:var(--sky)}
+.hot{display:inline-flex;align-items:center;gap:5px;background:var(--org);color:#fff;font-weight:700;font-size:11px;letter-spacing:.3px;text-transform:uppercase;padding:4px 9px;border-radius:6px;align-self:flex-start}
+.hot svg{width:12px;height:12px}
+.proto{background:var(--sky);color:var(--muted);font-size:12px;padding:6px 0}
+
+/* верхний баннер, как «Новый год на Хайнане» */
+.promo{background:var(--yel);color:var(--text);overflow:hidden;white-space:nowrap;font-weight:700;font-size:14px;height:40px;display:flex;align-items:center}
+.promo div{display:inline-block;animation:run 45s linear infinite}
+.promo span{margin:0 16px}.promo b{color:var(--text);font-weight:800}.promo i{font-style:normal;color:var(--blue);font-size:9px;vertical-align:2px}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* шапка */
+header{background:#fff;position:sticky;top:0;z-index:40;box-shadow:0 1px 0 var(--line)}
+header .wrap{display:flex;align-items:center;gap:22px;height:64px}
+/* логотип – файл бренда 00_Бренд/logo/logo_цветной_на-светлом.svg */
+.logo{display:flex;align-items:center;flex:none}.logo img{display:block;height:35px;width:auto}
+.grow{flex:1}
+.hphone{font-weight:700;font-size:15px;line-height:1.2;white-space:nowrap;text-align:right}.hphone small{display:block;font-size:11px;color:var(--muted);font-weight:400}
+/* таймер в шапке, как в посадках Натальи */
+.hdr-time{display:flex;align-items:center;gap:10px;margin-right:10px;font-size:14px;font-weight:600;color:var(--muted);white-space:nowrap}
+.hdr-time b{min-width:7.2em;font:800 20px/1 'Onest','Open Sans',Arial,sans-serif;color:var(--blue);font-variant-numeric:tabular-nums}
+
+/* первый экран: заголовок слева, карточка таймера справа */
+.hero{padding:0}.hero>.wrap{padding:0;max-width:none}
+.hero-box{position:relative;background:var(--blue);color:#fff;border-radius:0;padding:clamp(22px,calc(5 * var(--vh)),44px) 56px clamp(20px,calc(4 * var(--vh)),48px);overflow:hidden}
+.hero-in{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 480px;gap:56px;align-items:center;max-width:1168px;margin:0 auto}
+.kicker{display:inline-flex;align-items:center;gap:10px;background:#ffffff26;padding:8px 16px;border-radius:100px;font-weight:800;font-size:14px;letter-spacing:1px;text-transform:uppercase}
+.kicker i{width:10px;height:10px;border-radius:50%;background:var(--yel)} /* без свечения и пульсации: на посадках ничего не светится */
+.mega{font-size:clamp(64px,calc(13.6 * var(--vh)),104px);font-weight:900;line-height:.95;letter-spacing:-2px;text-transform:uppercase;margin:clamp(16px,calc(4 * var(--vh)),30px) 0 clamp(18px,calc(4.4 * var(--vh)),34px)}
+.mega span{display:block;color:var(--yel)}
+.hero .lead{font-size:clamp(19px,calc(3.9 * var(--vh)),25px);line-height:1.45;max-width:760px;color:#EAF2FF}
+.hero .lead strong{font-weight:700;color:#fff}
+.hero .lead b{display:inline-block;background:var(--yel);color:var(--text);font-family:'Onest','Open Sans',Arial,sans-serif;font-weight:800;padding:0 10px;border-radius:10px;white-space:nowrap}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:clamp(24px,calc(5.6 * var(--vh)),44px)}
+.hero-cta .btn{padding:clamp(14px,calc(2.6 * var(--vh)),18px) 34px;font-size:17px;border-radius:100px}
+.btn-w{box-shadow:inset 0 0 0 2px #ffffffb3;color:#fff;background:var(--blue)}.btn-w:hover{background:#3A7CFB} /* фон непрозрачный: следы самолётов за кнопкой не видны */
+.tcard{position:relative;background:#fff;color:var(--text);border-radius:24px;padding:clamp(26px,calc(6 * var(--vh)),44px) 34px clamp(24px,calc(5.4 * var(--vh)),40px);box-shadow:0 24px 60px rgba(6,30,90,.35)}
+.tcard .lbl{color:var(--blue);font-weight:800;font-size:17px;letter-spacing:.6px;text-transform:uppercase}
+.cdn{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:clamp(16px,calc(3.6 * var(--vh)),26px) 0 clamp(10px,calc(2.4 * var(--vh)),16px)}
+.cd{background:var(--sky);border-radius:16px;padding:clamp(12px,calc(2.8 * var(--vh)),20px) 4px clamp(10px,calc(2.2 * var(--vh)),16px);text-align:center}
+.cd b{display:block;font-size:clamp(38px,calc(7.2 * var(--vh)),52px);font-weight:800;line-height:1;color:var(--blue);font-variant-numeric:tabular-nums}
+.cd small{display:block;margin-top:10px;color:var(--muted);font-size:12px;font-weight:700;text-transform:uppercase}
+.trow{display:flex;justify-content:space-between;gap:10px;font-size:16px;padding:clamp(10px,calc(2.6 * var(--vh)),18px) 0;border-top:1px dashed var(--line)}.trow b{color:var(--blue);text-align:right}
+.tcard>.btn{width:100%;margin-top:clamp(14px,calc(3.4 * var(--vh)),24px);padding:clamp(14px,calc(2.7 * var(--vh)),19px);font-size:18px;border-radius:100px}
+/* плашка выгоды в углу карточки – как .fab-rib в посадках Натальи */
+.t-rib{position:absolute;right:0;top:0;display:flex;align-items:center;height:34px;padding:0 18px;border-radius:0 24px 0 16px;background:var(--org);color:#fff;font:800 13px/1 'Onest','Open Sans',Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.t-rib b{font-weight:800}
+
+/* вкладки с иконками */
+
+/* секция-карточка в стиле главной */
+.blk{padding:18px 0}
+.card{background:#fff;border-radius:20px;box-shadow:0 2px 14px rgba(35,109,250,.10);padding:28px 28px 30px}
+.bh{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px}
+.bh .ico{flex:none;display:flex;align-items:center;justify-content:center;font-size:22px} /* иконки без подложки */
+.bh h2{font-size:24px;font-weight:700;line-height:1.2}
+.bh p{color:var(--muted);font-size:14px}
+.bh .ttl{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.bh>div:last-child{flex:1;min-width:0}
+/* «Смотреть все»: надпись размером с заголовок, кнопка справа */
+.bh:has(.ttl .pill){align-items:center}.bh .ttl:has(.pill){justify-content:space-between}
+.bh .ttl .pill,.tcar-h .pill{font:700 24px/1.2 'Onest','Open Sans',Arial,sans-serif;padding:10px 26px;box-shadow:inset 0 0 0 2px var(--lb)}
+.bh .rnd{margin-left:auto;display:flex;gap:8px;flex:none}
+.rnd button{width:38px;height:38px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--lb);color:var(--blue);display:flex;align-items:center;justify-content:center}
+.rnd button:hover{background:var(--sky)}.rnd svg{width:18px;height:18px}
+.band{background:var(--sky);padding:44px 0;margin:28px 0}
+
+/* карточки отелей */
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hotel{display:flex;flex-direction:column;gap:8px}
+.himg{position:relative;height:210px;border-radius:14px;overflow:hidden;background-size:cover;background-position:center}
+.himg .b1{position:absolute;left:10px;top:10px;max-width:calc(100% - 66px);background:var(--org);color:#fff;font-size:11px;font-weight:800;padding:4px 8px;border-radius:6px;text-transform:uppercase}
+.himg .rt{position:absolute;right:10px;top:10px;background:var(--grn);color:#fff;font-size:13px;font-weight:800;padding:3px 8px;border-radius:6px}
+.himg .cn{position:absolute;left:12px;bottom:10px;color:#fff;font-weight:700;font-size:13px;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.hotel .pr{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:4px}
+.hotel .pr b{font-size:22px;font-weight:800;color:var(--blue)}.hotel .pr s{color:var(--muted);font-size:14px}
+.hotel h3{font-size:15px;font-weight:700;line-height:1.3}
+.hotel .m{color:var(--muted);font-size:13px}
+.hotel .pl{display:flex;gap:6px;flex-wrap:wrap}.hotel .pl span{font-size:12px;padding:3px 8px;border-radius:6px;background:var(--sky);color:var(--blue);font-weight:600}
+.hotel .mon{color:var(--grn);font-weight:700;font-size:13px}
+.hotel .left{color:var(--org);font-weight:700;font-size:13px}
+.hotel .btn{margin-top:auto}
+
+/* направления */
+.row4{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.tile{display:flex;flex-direction:column;gap:8px}
+.photo{position:relative;height:280px;border-radius:14px;overflow:hidden;color:#fff;cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tile.open .photo{outline-color:var(--org)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s;background-size:cover;background-position:center}.slide.on{opacity:1}
+.photo .ov{position:absolute;inset:0;padding:14px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,rgba(0,0,0,.05) 40%,rgba(0,0,0,.55))}
+.photo .t1{display:flex;justify-content:space-between;align-items:center}
+.photo .save{background:var(--org);font-size:11px;font-weight:800;padding:4px 8px;border-radius:6px}
+.arr{display:flex;gap:6px}.arr button{width:30px;height:30px;border-radius:50%;background:#ffffffe6;color:var(--blue);font-size:18px;font-weight:800;line-height:1}
+.cap{font-size:12px;opacity:.95}.photo b{display:block;font-size:26px;font-weight:800;line-height:1.1}.photo .from{font-weight:700;font-size:14px}
+.dots{display:flex;gap:5px;margin-top:8px}.dots i{width:6px;height:6px;border-radius:10px;background:#ffffff80;transition:width .3s}.dots i{position:relative;overflow:hidden}.dots i.on{width:22px;background:#ffffff80}.dots i.on:after{content:"";position:absolute;inset:0;background:#fff;transform-origin:left;transform:scaleX(1)}.tile.run .dots i.on:after{animation:prog 4s linear}@keyframes prog{from{transform:scaleX(0)}}
+.hint{font-weight:600;font-size:13px;color:var(--blue);padding:2px 4px}
+.list{display:none;background:#fff;border-radius:14px;padding:6px;box-shadow:0 10px 26px rgba(20,40,90,.16)}
+.tile.open .list{display:block}.tile.open .hint{display:none}
+.list a{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:8px;font-weight:700;font-size:14px}
+.list a:hover{background:var(--sky)}.list a span{color:var(--muted);font-weight:400;font-size:13px}
+
+/* карусель туров направления */
+.tcar{margin-top:26px;border-top:1px solid var(--line);padding-top:22px}
+.tcar-h{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.tcar-h b{font-size:20px}.cn2{color:var(--muted);font-size:14px;margin-left:10px}
+.tcar .rnd{display:flex;gap:8px}
+.fchips{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 16px}
+.fchips button{padding:7px 14px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line);font-weight:600;font-size:13px}.fchips button.on{background:var(--blue);color:#fff;box-shadow:none}
+.car{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 60px)/4);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.car::-webkit-scrollbar{display:none}
+.car .hotel{scroll-snap-align:start}.car .himg{height:170px}.car .hotel h3{font-size:14px}
+.car .lnk{color:var(--blue);font-weight:600;font-size:13px}
+
+/* этапы – как «Почему Слетать.ру» */
+.row4c{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.st{background:#fff;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px;position:relative;min-height:190px}
+.st .d{color:var(--muted);font-size:13px;font-weight:600}
+.st h3{font-size:17px}.st p{color:var(--muted);font-size:13px}
+.st .tag{display:none;position:absolute;right:14px;top:14px;background:var(--yel);font-weight:800;font-size:10px;letter-spacing:.5px;padding:3px 8px;border-radius:6px}
+.st.now{box-shadow:0 0 0 2px var(--blue)}.st.now .tag{display:block}
+.st .em{margin-top:auto;font-size:40px;align-self:flex-end;line-height:1}
+
+/* рассрочка – синий баннер */
+.inst{background:var(--blue);color:#fff;border-radius:20px;padding:28px 40px;display:grid;grid-template-columns:1fr 400px;gap:40px;align-items:center;position:relative;overflow:hidden}
+.inst>*{position:relative}
+.inst h2{font-size:28px;line-height:1.15;margin:10px 0 6px}
+.inst .p{color:#EAF2FF;font-size:16px}
+.chk{display:flex;gap:10px;align-items:center;font-weight:600;margin-top:6px}.chk:before{content:"✓";flex:none;width:20px;height:20px;border-radius:50%;background:var(--grn);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.inst .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.inst .btn-b{box-shadow:inset 0 0 0 1.5px #fff;color:#fff}.inst .btn-b:hover{background:#ffffff1f}
+.calc{background:#fff;color:var(--text);border-radius:16px;padding:18px 22px;display:flex;flex-direction:column;gap:7px}
+.calc .c2{font-size:11px;font-weight:800;color:var(--muted);letter-spacing:1px}
+.calc .pr{display:flex;align-items:baseline;gap:8px}.calc .pr b{font-size:26px;color:var(--blue)}.calc .pr s{color:var(--muted)}
+.calc .ec{align-self:flex-start;background:var(--gbg);color:var(--grn);font-weight:700;font-size:13px;padding:4px 9px;border-radius:6px}
+.calc hr{border:0;border-top:1px solid var(--line)}
+.tabs{display:flex;gap:6px}.tabs button{padding:7px 14px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line);font-weight:600;font-size:13px}.tabs button.on{background:var(--blue);color:#fff;box-shadow:none}
+.permo{display:flex;align-items:baseline;gap:6px}.permo b{font-size:28px;font-weight:800;color:var(--blue)}.permo span{color:var(--muted)}
+.paychips{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:16px;font-size:14px}
+.paychips span{background:var(--sky);color:var(--blue);font-weight:600;font-size:13px;padding:6px 12px;border-radius:8px}
+
+/* как забрать тур */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hs{border-radius:16px;box-shadow:inset 0 0 0 1px var(--line);padding:22px;display:flex;gap:14px}
+.hs i{flex:none;width:40px;height:40px;border-radius:50%;background:var(--sky);color:var(--blue);font-style:normal;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+.hs h3{font-size:16px;margin-bottom:4px}.hs p{color:var(--muted);font-size:13px}
+.paynote{margin-top:16px;background:var(--gbg);color:#14753F;border-radius:12px;padding:12px 18px;font-weight:600;font-size:14px}
+
+/* цифры – как в посадке Натальи ЧП-корпоративный */
+.stats{background:var(--yel);padding:52px 0;margin:18px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;text-align:center}
+.stats b{display:block;font:900 64px/1.05 'Onest','Open Sans',Arial,sans-serif;color:var(--text);letter-spacing:-.02em}
+.stats span{display:block;margin-top:10px;font-size:18px;font-weight:600;line-height:1.35;color:var(--text)}
+@media(max-width:980px){.stats{padding:32px 0}.stats .wrap{gap:8px}.stats b{font-size:28px;white-space:nowrap}.stats span{font-size:13px}}
+
+/* форма – как «Подберём под ваш бюджет» */
+.pick{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:start}
+.ava{display:flex;margin-bottom:14px}.ava i{width:46px;height:46px;border-radius:50%;border:3px solid #fff;margin-left:-10px;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:800;color:#fff;font-size:15px}
+.ava i:first-child{margin-left:0;background:var(--blue)}.ava i:nth-child(2){background:var(--org)}.ava i:nth-child(3){background:var(--grn)}
+.pick h2{font-size:28px;line-height:1.15}
+.pick .sub{color:var(--muted);margin-top:8px}
+.after{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.after h3{font-size:15px}
+.after div{display:flex;gap:12px;align-items:flex-start;font-size:14px}.after i{flex:none;width:28px;height:28px;border-radius:8px;background:var(--sky);color:var(--blue);font-style:normal;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:13px}
+.pick .ph{margin-top:18px;font-size:13px;color:var(--muted)}.pick .ph a{color:var(--blue);font-weight:700}
+.lead-form{display:flex;flex-direction:column;gap:10px;background:var(--sky);border-radius:16px;padding:22px}
+.lead-form h3{font-size:18px}
+.fld{background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 14px}.fld:focus-within{border-color:var(--blue)}
+.fld label{display:block;font-size:11px;color:var(--muted)}.fld input{border:0;font:inherit;width:100%;outline:none;padding:1px 0;background:transparent}
+.chs{display:flex;gap:6px;flex-wrap:wrap}.chs input{display:none}.chs span{display:inline-block;padding:7px 14px;border-radius:8px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:13px;cursor:pointer}
+.chs input:checked+span{background:var(--blue);color:#fff;border-color:var(--blue)}
+.legal{font-size:11px;color:var(--muted)}
+.ok{background:var(--gbg);border-radius:16px;padding:22px}.ok h3{color:var(--grn);margin-bottom:6px}
+
+/* как купить: две колонки */
+.buy{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.buy .col{border-radius:16px;box-shadow:inset 0 0 0 1px var(--line);padding:22px}
+.buy h3{font-size:16px;margin-bottom:12px}
+.buy li{list-style:none;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:var(--sky);margin-bottom:8px;font-size:14px}
+.buy li:before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.buy .tel{font-size:24px;font-weight:800;color:var(--blue);display:block;margin:4px 0}
+.buy .col .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.buy .col .row .btn{padding:10px 16px;font-size:14px}
+
+/* подвал */
+footer{background:var(--sky);margin-top:0;padding:18px 0;font-size:13px;color:var(--muted)}
+.fgrid{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.fgrid .logo img{height:30px}
+.flinks{display:flex;gap:18px;flex-wrap:wrap;flex:1}footer a:hover{color:var(--blue)}
+footer .tel{color:var(--text);font-size:16px;font-weight:800}
+.fbot{margin-top:10px;font-size:11px}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:38;background:#fff;box-shadow:0 -6px 20px rgba(20,40,90,.12)}
+.mbar .t{background:var(--blue);color:#fff;text-align:center;font-size:12px;font-weight:700;padding:5px}
+.mbar .r{display:flex;gap:8px;padding:10px 12px}.mbar .btn{flex:1;padding:12px 8px}
+.modal{position:fixed;inset:0;background:rgba(10,25,60,.55);display:none;align-items:center;justify-content:center;z-index:60;padding:16px}
+.modal.open{display:flex}.modal .box{background:#fff;border-radius:20px;padding:24px;max-width:440px;width:100%;position:relative}
+.modal .x{position:absolute;right:14px;top:6px;color:var(--muted);font-size:28px}.modal h3{font-size:20px;padding-right:28px}
+.modal .lead-form{padding:0;background:none;margin-top:12px}.modal .fld{background:var(--sky)}
+
+@media(max-width:980px){
+ .wrap{padding:0 16px}body{font-size:14px}
+ .hide-m{display:none!important}.hdr-time{display:none}
+ .hero-box{padding:26px 16px 30px}
+ .hero-in{grid-template-columns:1fr;gap:44px}
+ .mega{font-size:54px;letter-spacing:-1px;margin:18px 0 20px}.hero .lead{font-size:18px}
+ .hero-cta .btn{flex:1 1 100%;padding:15px}
+ .tcard{padding:26px 16px 18px}.cd b{font-size:32px}.cdn{gap:6px}.trow{font-size:14px}
+ .card{padding:20px 16px;border-radius:16px}.bh h2{font-size:20px}.bh .ttl .pill,.tcar-h .pill{font-size:20px;padding:8px 20px}.bh:has(.ttl .pill){align-items:flex-start}
+ .row3,.row4{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+ .row3>*,.row4>*{scroll-snap-align:start}
+ .row4c,.how,.buy,.pick{grid-template-columns:1fr}
+ .photo{height:230px}
+ .car{grid-auto-columns:78%}.tcar-h b{font-size:17px}
+ .inst{grid-template-columns:1fr;padding:24px 18px;gap:24px}.inst h2{font-size:24px}
+ .inst>*,.pick>*{min-width:0}
+ footer{padding:16px 0 96px}.fgrid{gap:12px}
+ .mbar{display:block}
+}
+
+/* v5: иконки набора Summer (Printerinks), как у посадки Натальи */
+.fi{width:22px;height:22px;flex:none;display:inline-block;vertical-align:middle}
+.bh .ico .fi{width:40px;height:40px}
+@media(max-width:980px){.bh .ico .fi{width:32px;height:32px}}
+.hot .fi,.chips .fi{width:14px;height:14px}
+/* шапка: два телефона и Telegram */
+.hphones{display:flex;gap:18px;align-items:center}
+.tg{width:38px;height:38px;flex:none;border-radius:50%;background:var(--sky);color:var(--blue);display:flex;align-items:center;justify-content:center}
+.tg svg{width:20px;height:20px}.tg:hover{background:var(--lb)}
+/* карточка тура: крючок, удобства, условия и две кнопки, как у Натальи */
+.hotel .hook{font-size:18px;font-weight:800;line-height:1.25}
+.hotel .hn{font-size:13px;color:var(--muted)}.hotel .hn b{color:var(--org);font-weight:700;margin-right:4px}
+.perks{display:flex;flex-direction:column;gap:6px;margin:4px 0}
+.perks span{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600}
+.terms{font-size:12px;color:var(--muted)}.terms b{color:var(--text)}
+.hotel .pr small{font-size:14px;font-weight:600;color:var(--text)}
+.cta2{display:flex;gap:8px;margin-top:auto;padding-top:6px}.cta2 .btn{flex:1;padding:12px 10px;font-size:14px}
+.car .cta2 .btn{padding:10px 8px;font-size:13px}
+.carlink{font-weight:700;color:var(--blue);font-size:14px;white-space:nowrap}
+/* рассрочка: 4 карточки с условиями sletat.ru/faq */
+.inst{grid-template-columns:1fr}
+.pay-sec{padding:40px 0 22px}
+.pay-h{text-align:center;font:900 48px/1.08 'Onest','Open Sans',Arial,sans-serif;letter-spacing:-.02em}.pay-h em{font-style:normal;color:var(--blue)}
+.pay-sub{text-align:center;color:var(--muted);font-size:18px;margin-top:12px}
+.pay{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px}
+.pay-c{display:flex;flex-direction:column;padding:26px 24px;border-radius:24px;background:#fff;box-shadow:0 2px 8px rgba(15,85,126,.06),8px 14px 36px rgba(18,102,152,.12);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.pay-c:hover{transform:translateY(-4px)}
+.pay-p{font:800 13px/1.2 'Onest','Open Sans',Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pay-big{margin:16px 0 18px;font:900 46px/1 'Onest','Open Sans',Arial,sans-serif;letter-spacing:-.02em;color:var(--blue);white-space:nowrap}
+.pay-big small{display:block;margin-top:8px;font:600 15px/1.35 'Open Sans',Arial,sans-serif;letter-spacing:0;color:var(--muted);white-space:normal}
+.pay-l{list-style:none;margin:0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;gap:10px}
+.pay-l li{position:relative;padding-left:26px;font-size:14.5px;font-weight:600;line-height:1.45}
+.pay-l li::before{content:'';position:absolute;left:2px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--yel)}
+.pay-note{text-align:center;color:var(--muted);font-size:13px;margin-top:22px}
+.pay-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}.pay-cta .btn{padding:16px 34px;font-size:17px}
+.btn-b2{box-shadow:inset 0 0 0 2px var(--blue);color:var(--blue)}.btn-b2:hover{background:var(--sky)}
+@media(max-width:980px){.pay-h{font-size:30px}.pay-sub{font-size:15px}.pay{grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.pay-c{padding:22px 20px}.pay-big{font-size:36px;margin:12px 0 14px}.pay-cta .btn{flex:1 1 100%}}
+@media(max-width:560px){.pay{grid-template-columns:1fr}}
+.payg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.payc{background:#fff;color:var(--text);border-radius:16px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:4px}
+.payc .pp{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.payc .big{font-size:30px;font-weight:900;color:var(--blue);line-height:1.1}
+.payc .big small{display:block;font-size:13px;font-weight:600;color:var(--text)}
+.payc ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+.payc ul li{position:relative;padding-left:18px}.payc ul li:before{content:"";position:absolute;left:0;top:5px;width:10px;height:10px;border-radius:50%;background:var(--yel)}.payc.y ul li:before{background:var(--blue)}
+.payc.y{background:var(--yel)}.payc.y .big{color:var(--text)}.payc.y ul{color:var(--text)}
+.paynote2{font-size:12px;color:#EAF2FF;margin-top:12px}
+/* подвал: контакты */
+.fcont{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.fcont .tel{font-size:20px;margin:0}
+@media(max-width:980px){
+ header .wrap{gap:10px}.logo img{height:28px}.hphones{gap:10px}
+ .kicker{font-size:12px;letter-spacing:.4px;padding:7px 12px}.hero .lead br{display:none}
+ .hphone{display:none}
+ .payg{grid-template-columns:1fr 1fr}.payc .big{font-size:24px}
+ .tcar-h{flex-wrap:wrap}
+}
+@media(max-width:560px){.payg{grid-template-columns:1fr}
+}
+
+/* ===== v8: Макс, погода из «Сбежать от зимы», «Впечатления рядом» и финал из посадки Натальи ===== */
+.tg.mx svg{width:22px;height:22px}
+.bh .sub2{color:var(--muted);font-size:15px;margin-top:4px}
+/* температура на фото */
+.tmp{display:inline-flex;align-items:center;gap:5px;background:#fff;color:var(--text);font-size:12px;font-weight:800;padding:4px 9px;border-radius:6px;white-space:nowrap}
+.tmp .fi{width:14px;height:14px}.tmp i{font-style:normal;font-weight:800;color:var(--text)}
+.himg .tmp{position:absolute;right:10px;bottom:10px}
+.car .himg .tmp{top:44px;bottom:auto} /* в узких карточках каталога погода не закрывает подпись места */
+.photo .t1 .tmp{font-size:12px}
+/* «Тот же ноябрь, другая погода» */
+.vs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.vs:before{content:"";position:absolute;left:calc(50% - 36px);right:calc(50% - 36px);top:50%;border-top:2px dashed var(--lb)}
+.vs-c{position:relative;min-height:300px;border-radius:16px;overflow:hidden;color:#fff;padding:24px 26px;display:flex;flex-direction:column;justify-content:flex-end;background-size:cover;background-position:center;isolation:isolate}
+.vs-c:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0) 25%,rgba(0,0,0,.7))}
+.vs-c.cold{background-color:#5D6A87;filter:saturate(.6)}.vs-c.warm{background-color:var(--blue)}
+.vs-l{font-size:13px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;opacity:.9}
+.vs-t{font-size:84px;font-weight:900;line-height:.95;letter-spacing:-2px;margin:6px 0 12px}
+.vs-c.warm .vs-t{color:var(--yel)}
+.vs-f{list-style:none;display:grid;gap:6px;font-weight:600;font-size:15px;border-top:1px solid #ffffff40;padding-top:12px}
+.vs-f li{display:flex;gap:8px;align-items:center}.vs-f .fi{filter:brightness(0) invert(1)}
+.vs-mid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:96px;height:96px;border-radius:50%;background:var(--yel);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 0 8px #fff;text-align:center;line-height:1.1}
+.vs-mid b{font-size:17px;font-weight:900}.vs-mid small{font-size:11px;font-weight:700}
+/* «Впечатления рядом» в хитах */
+.see-h{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+.see{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.sg{position:relative;height:84px;border-radius:10px;overflow:hidden;background-size:cover;background-position:center;background-color:var(--lb);color:#fff;display:flex;align-items:flex-end;padding:6px 7px;font-size:11px;font-weight:700;line-height:1.15}
+.sg:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.7))}.sg span{position:relative}
+/* «Купите как удобно» */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.way{display:flex;flex-direction:column;gap:8px;padding:22px 20px;border-radius:16px;background:var(--sky);transition:box-shadow .15s}
+.way:hover{box-shadow:inset 0 0 0 2px var(--blue)}
+.way-i{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center}.way-i svg{width:22px;height:22px}
+.way-t{font-size:19px;font-weight:800}.way-d{color:var(--muted);font-size:14px}
+.way-a{margin-top:auto;padding-top:6px;color:var(--blue);font-weight:800;font-size:17px;white-space:nowrap}
+/* финал */
+.fin-sec{position:relative;overflow:hidden;background:var(--blue);color:#fff;margin-top:18px;padding:48px 0}.fin-sec>.wrap{position:relative}
+/* следы самолётов: белый пунктир, как маршруты на первом экране посадок Натальи */
+.trails{position:absolute;top:0;left:50%;width:1280px;height:100%;margin-left:-640px;pointer-events:none}
+.trails path{fill:none;stroke:rgba(255,255,255,.6);stroke-width:2;stroke-dasharray:7 9;stroke-linecap:round} /* статичные */
+@media(max-width:980px){.trails{display:none}} /* цветные блоки – на всю ширину, без скруглений */
+.fin{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:48px;align-items:center;overflow:hidden}
+.fin h2{font-size:60px;font-weight:900;line-height:1.02;letter-spacing:-1.5px}.fin p{font-size:20px;margin:16px 0 0;max-width:480px;color:#EAF2FF}.fin p b{color:#fff}
+.fin .btn{margin-top:30px;background:var(--yel);color:var(--text);padding:22px 46px;font-size:25px;border-radius:100px}.fin .btn:hover{background:#FFD709}
+.fin-ph{position:relative;height:320px;border-radius:18px;overflow:hidden}
+.fin-ph>img{display:block;width:100%;height:100%;object-fit:cover}
+.fin-ph .tmp{position:absolute;left:14px;top:14px;font-size:14px;padding:6px 12px}.fin-ph .tmp .fi{width:18px;height:18px}
+@media(max-width:980px){
+ .vs{grid-template-columns:1fr;gap:16px}.vs:before{display:none}.vs-c{min-height:230px}.vs-t{font-size:60px}
+ .vs-mid{position:static;transform:none;margin:-8px auto -8px;width:auto;height:auto;flex-direction:row;gap:6px;padding:8px 16px;border-radius:100px;box-shadow:none}
+ .fin-sec{padding:32px 0}.fin{grid-template-columns:1fr;gap:22px}.fin h2{font-size:34px}.fin p{font-size:16px}.fin .btn{width:100%;padding:18px;margin-top:22px;font-size:21px}.fin-ph{height:210px}
+}
+@media(max-width:760px){.ways{grid-template-columns:1fr}}
+
+/* ===== v8.1: каталог открывается по клику на плитку + анимации фото из v7 «Сбежать от зимы» ===== */
+.tcar[hidden]{display:none}
+.tcar{animation:catin .45s cubic-bezier(.2,.8,.2,1);scroll-margin-top:90px}
+@keyframes catin{from{opacity:0;transform:translateY(12px)}}
+.tile .photo{transition:transform .3s cubic-bezier(.2,.8,.2,1),outline-color .2s}
+.tile:hover .photo{transform:translateY(-4px)}
+.slide{transition:opacity .6s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.tile:hover .slide{transform:scale(1.06)}
+.tile.sel .photo{box-shadow:0 0 0 3px var(--org)}
+.tile .hint{cursor:pointer;text-align:left}
+/* слой фото внутри карточки, чтобы зумить фото, а не плашки */
+.ph{position:absolute;inset:0;background-size:cover;background-position:center;font-style:normal}
+.himg .ph{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.car .hotel:hover .himg .ph{transform:scale(1.06)}
+/* хиты: карточка выезжает снизу, фото медленно отъезжает (9 с), удобства появляются по очереди */
+.hotel.hit{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i) * 120ms)}
+.hotel.hit.vis{opacity:1;transform:none}
+.hotel.hit .himg .ph{transform:scale(1.12);transition:transform 9s ease-out}
+.hotel.hit.vis .himg .ph{transform:scale(1)}
+.hotel.hit .perks span{opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s cubic-bezier(.2,1.3,.4,1);transition-delay:calc(var(--j) * 90ms + 350ms)}
+.hotel.hit.vis .perks span{opacity:1;transform:none}
+/* «Впечатления рядом»: зум при наведении */
+.sg .ph{z-index:0;transition:transform .6s cubic-bezier(.2,.8,.2,1)}.sg:before{z-index:1}.sg span{z-index:2}
+.sg:hover .ph{transform:scale(1.06)}
+/* карточки каталога появляются каскадом */
+.car .hotel{animation:ccin .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 70ms)}
+@keyframes ccin{from{opacity:0;transform:translateY(16px)}}
+/* «Тот же ноябрь»: медленный наезд камеры, как на первом экране v7 */
+.vs-c{background-image:none!important}
+.vs-c .ph{z-index:-2;animation:drift 24s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.08)}}
+.way{transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .15s}.way:hover{transform:translateY(-4px)}
+/* v8.3: триггеры */
+.hotel.hit.top .himg{box-shadow:0 0 0 3px var(--yel)}.hotel.hit.top .b1{background:var(--yel);color:var(--text)}
+
+.trow a{color:var(--blue);border-bottom:1px dashed var(--lb)}
+.trow .tfly{display:inline-flex;align-items:center;gap:8px}.trow .tplane{width:22px;height:22px;fill:var(--blue);flex:none}
+.xchips{margin-top:-6px}.xchips button{display:inline-flex;align-items:center;gap:6px}.xchips button small{color:var(--muted);font-weight:600}.xchips button.on small{color:#D9EAFF}
+.xchips .fi,.hotel .pl .fi{width:16px;height:16px}.hotel .pl span{display:inline-flex;align-items:center;gap:4px}
+#maxHit{scroll-margin-top:100px}
+@media(prefers-reduced-motion:reduce){
+ .tcar,.car .hotel,.vs-c .ph{animation:none}
+ .hotel.hit,.hotel.hit .perks span{opacity:1;transform:none;transition:none}
+ .hotel.hit .himg .ph{transform:none;transition:none}
+ .tile:hover .photo,.tile:hover .slide,.way:hover{transform:none}
+}
+/* v8.4: без серых надписей: служебные удалены, нужные подписи тёмные */
+:root{--muted:#313140}
+/* v10: корпоративные цвета эталона (тёмная палитра v9 убрана) */
+/* v11: таймер снова на первом экране, фото в финале – как в эталоне */
+.fin-ph>img{object-position:50% 50%}
+/* ===== v12: тёмная тема из v9 по переключателю ===== */
+html[data-theme=dark]{--bg:#070B16;--bg2:#0B1226;--card:#111A2E;--card2:#17223A;--text:#F5F7FB;--muted:#F5F7FB;--sky:#17223A;--lb:#2A3A5C;--line:#22304D;--ink-d:#0B1226}
+html[data-theme=dark] body{background:var(--bg);color:var(--text)}
+html[data-theme=dark] header{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+html[data-theme=dark] .hero-box,html[data-theme=dark] .fin-sec{background:var(--bg2)}
+html[data-theme=dark] .btn-w{background:var(--bg2)}
+html[data-theme=dark] .btn-w:hover{background:var(--card2)}
+html[data-theme=dark] .card,html[data-theme=dark] .pay-c{background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+html[data-theme=dark] .tcard{background:var(--card);color:var(--text);box-shadow:inset 0 0 0 1px var(--line),0 24px 60px rgba(0,0,0,.6)}
+html[data-theme=dark] footer{background:var(--bg);box-shadow:0 -1px 0 var(--line)}
+html[data-theme=dark] .mbar{background:var(--bg);box-shadow:0 -1px 0 var(--line)}
+html[data-theme=dark] .list{background:var(--card2)}
+html[data-theme=dark] .btn-y,html[data-theme=dark] .promo,html[data-theme=dark] .promo b,html[data-theme=dark] .stats,html[data-theme=dark] .stats b,html[data-theme=dark] .stats span,html[data-theme=dark] .hero .lead b,html[data-theme=dark] .fin .btn,html[data-theme=dark] .hotel.hit.top .b1,html[data-theme=dark] .tmp,html[data-theme=dark] .tmp i{color:var(--ink-d)}
+html[data-theme=dark] .hdr-time b,html[data-theme=dark] .tcard .lbl,html[data-theme=dark] .cd b,html[data-theme=dark] .trow b,html[data-theme=dark] .trow a,html[data-theme=dark] .hotel .pr b,html[data-theme=dark] .pay-big,html[data-theme=dark] .pay-h em,html[data-theme=dark] .pill,html[data-theme=dark] .hint,html[data-theme=dark] .car .lnk,html[data-theme=dark] .tg{color:var(--yel)}
+html[data-theme=dark] .trow a{border-bottom-color:#FFCA0066}
+html[data-theme=dark] .trow .tplane{fill:var(--yel)}
+html[data-theme=dark] .pill{box-shadow:inset 0 0 0 2px var(--lb)}
+html[data-theme=dark] .pill:hover{background:var(--card2)}
+html[data-theme=dark] .btn-b{box-shadow:inset 0 0 0 1.5px var(--lb);color:var(--text)}
+html[data-theme=dark] .btn-b:hover{background:var(--card2)}
+html[data-theme=dark] .fchips button{box-shadow:inset 0 0 0 1px var(--lb)}
+html[data-theme=dark] .fchips button.on{background:var(--yel);color:var(--ink-d)}
+html[data-theme=dark] .promo i{color:var(--ink-d)}
+html[data-theme=dark] .hotel .pr s{color:#C5CEE0}
+html[data-theme=dark] .tile.sel .photo{box-shadow:0 0 0 3px var(--yel)}
+html[data-theme=dark] .fin-ph>img{object-position:70% 30%}
+
+html[data-theme=dark] .fin-ph>img{object-position:50% 50%}
+/* переключатель темы: солнце – светлая (корпоративная), луна – тёмная (из v7) */
+.thm{position:relative;display:flex;align-items:center;gap:0;width:76px;height:38px;flex:none;padding:3px;border-radius:100px;background:var(--sky);box-shadow:inset 0 0 0 1px var(--lb);cursor:pointer}
+.thm span{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:35px;height:32px}
+.thm .fi{width:20px;height:20px}
+.thm svg{width:18px;height:18px;fill:var(--blue)}
+.thm:before{content:"";position:absolute;left:3px;top:3px;width:35px;height:32px;border-radius:100px;background:#fff;box-shadow:0 1px 4px rgba(20,40,90,.18);transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+html[data-theme=dark] .thm:before{transform:translateX(35px);background:#2A3A5C}
+html[data-theme=dark] .thm svg{fill:var(--yel)}
+body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:background-color .3s,color .3s}
+@media(prefers-reduced-motion:reduce){.thm:before,body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:none}}
+</style>
+</head>
+<body>
+
+
+<div class="promo"><div id="tick"></div></div>
+
+<header><div class="wrap">
+ <a class="logo" href="https://sletat.ru/?utm_source=landing&amp;utm_medium=bf2026&amp;utm_campaign=zima&amp;utm_content=logo" target="_blank" rel="noopener"><img src="assets/logo-color.svg" alt="Слетать.ру" width="133" height="35"></a>
+ <div class="grow"></div>
+ <div class="hphones">
+  <span class="hdr-time">до конца акции <b id="hTime"></b></span>
+  <a class="hphone" href="tel:+78003339963">8 (800) 333-99-63</a>
+  <a class="hphone tel2" href="tel:+79120988029">+7 (912) 098-80-29</a>
+  <a class="tg" href="https://t.me/kuda_sletatru" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram" data-tg></a>
+  <button class="thm" id="thm" type="button" aria-label="Переключить тему: светлая или тёмная" title="Светлая / тёмная тема"><span><img class="fi" src="assets/icons/summer/sun.svg" alt=""></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 14.6A8.5 8.5 0 0 1 9.4 3.6a8.5 8.5 0 1 0 11 11z"/></svg></span></button>
+ </div>
+</div>
+</header>
+
+<div class="hero"><div class="wrap"><div class="hero-box">
+ <svg class="trails" viewBox="0 0 1280 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <path d="M400 500C455 400 510 345 585 318C690 280 700 170 625 168C552 166 560 268 645 252C712 239 735 150 752 -20"/>
+  <path d="M455 -20C495 40 560 62 625 48C665 39 690 22 715 -20"/>
+  <path d="M1300 430C1240 395 1205 330 1225 260C1245 190 1290 150 1300 120"/>
+ </svg>
+  <div class="hero-in">
+  <div>
+   <div class="kicker"><i></i>Чёрная пятница: 500+ туроператоров снизили цены</div>
+   <div class="mega">Сбежать<span>от зимы</span></div>
+   <p class="lead" id="heroLead"></p>
+   <div class="hero-cta"><a class="btn btn-y" href="#hits">Хочу к морю</a><a class="btn btn-w" data-site="/hot-tour/" data-u="hero">Все туры со скидками</a></div>
+  </div>
+  <div class="tcard">
+   <a class="t-rib" href="#maxHit" title="Смотреть этот тур">Выгода до&nbsp;<b id="stickSave">–</b></a>
+   <div class="lbl">До конца акции</div>
+   <div class="cdn"><div class="cd"><b id="d">0</b><small>дней</small></div><div class="cd"><b id="h">00</b><small>часов</small></div><div class="cd"><b id="m">00</b><small>минут</small></div><div class="cd"><b id="s">00</b><small>секунд</small></div></div>
+   <div class="trow"><span>Самая большая выгода</span><b><a href="#maxHit" id="rowSave">–</a></b></div>
+   <div class="trow"><span>До тёплого моря</span><b class="tfly">4,5 часа<svg class="tplane" viewBox="0 0 24 24" aria-hidden="true"><path transform="rotate(45 12 12)" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></b></div>
+   <a class="btn btn-y" href="#hits">Выбрать тур</a>
+  </div>
+ </div>
+</div></div></div>
+
+<section class="blk" id="hits"><div class="wrap"><div class="card">
+ <div class="bh"><div class="ico"><img class="fi" src="assets/icons/summer/flame.svg" alt=""></div><div><div class="ttl"><h2>Пакуйте купальник: хиты Чёрной пятницы</h2><a class="pill" data-site="/hot-tour/" data-u="hits-all">Смотреть все</a></div></div></div>
+ <div class="row3" id="hitsGrid"></div>
+</div></div></section>
+
+<section class="blk" id="dirs"><div class="wrap"><div class="card">
+ <div class="bh"><div><div class="ttl"><h2>Куда сбежать от зимы?</h2></div></div></div>
+ <div class="row4" id="tiles"></div>
+ <div class="tcar" id="tcar" hidden>
+  <div class="tcar-h"><b id="carT">Туры со скидкой</b><a class="pill" id="carLink" target="_blank" rel="noopener">Смотреть все</a></div>
+  <div class="fchips" id="carG"></div>
+  <div class="car" id="car"></div>
+ </div>
+</div></div></section>
+
+<!-- Цифры – блок из посадки Натальи (ЧП-корпоративный) -->
+<div class="stats">
+ <div class="wrap">
+  <div><b>3 млн+</b><span>туристов доверили нам отдых</span></div>
+  <div><b>24/7</b><span>поддержка до, во время и после поездки</span></div>
+  <div><b>0 ₽</b><span>переплаты</span></div>
+ </div>
+</div>
+
+<!-- Рассрочка: условия с sletat.ru/faq, раздел «Рассрочка и кредит» (проверено 10.11.2026) -->
+<!-- Рассрочка: оформление как в посадке Натальи (ЧП-корпоративный), тексты Эделины -->
+<section class="blk pay-sec" id="more"><div class="wrap">
+ <h2 class="pay-h">Улетайте сейчас – <em>платите потом!</em></h2>
+ <div class="pay">
+  <div class="pay-c"><div class="pay-p">Т-Банк</div><div class="pay-big">45 дней<small>без процентов</small></div><ul class="pay-l"><li>Без первоначального взноса</li><li>Рассрочка до 10 месяцев</li><li>Нужен только паспорт</li></ul></div>
+  <div class="pay-c"><div class="pay-p">Халва, Совкомбанк</div><div class="pay-big">3 месяца<small>при оплате картой «Халва»</small></div><ul class="pay-l"><li>До 10 месяцев с подпиской «Халва.Десятка»</li><li>Оплата картой на сайте</li></ul></div>
+  <div class="pay-c"><div class="pay-p">PayLate</div><div class="pay-big">120 дней<small>льготный период</small></div><ul class="pay-l"><li>Без первоначального взноса</li><li>Сумма до 500 000 ₽</li></ul></div>
+  <div class="pay-c"><div class="pay-p">Оплата частями</div><div class="pay-big">10/90<small>или 50/50</small></div><ul class="pay-l"><li>10% сразу, 90% – в течение 48 часов после подтверждения</li><li>50% сразу, 50% – за 3 недели до вылета</li></ul></div>
+ </div>
+</div></section>
+
+<!-- v8: финальная большая кнопка, как у Натальи -->
+<section class="fin-sec"><svg class="trails" viewBox="0 0 1280 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <path d="M-20 360C150 425 330 405 470 335C560 290 600 205 640 128C662 86 684 36 708 -20"/>
+  <path d="M210 -20C270 52 410 80 545 44C600 30 640 8 670 -20"/>
+ </svg>
+<div class="wrap"><div class="fin">
+ <div class="fin-t">
+  <h2>Зима подождёт!</h2>
+  <a class="btn" data-site="/hot-tour/" data-u="final">Сбежать от зимы</a>
+ </div>
+ <div class="fin-ph"><img src="assets/sights/thai-kata.jpg" alt="Пляж Ката, Пхукет" loading="lazy"><span class="tmp"><img class="fi" src="assets/icons/summer/sun.svg" alt="">+31° <i>море +29°</i></span></div>
+</div></div></section>
+
+<footer id="contacts"><div class="wrap">
+ <div class="fgrid">
+  <a class="logo" data-site="/" data-u="footer"><img src="assets/logo-color.svg" alt="Слетать.ру" width="114" height="30"></a>
+  <div class="fcont"><a class="tel" href="tel:+78003339963">8 (800) 333-99-63</a><a class="tel" href="tel:+79120988029">+7 (912) 098-80-29</a><a class="tg" href="https://t.me/kuda_sletatru" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram" data-tg></a></div>
+ </div>
+</div></footer>
+
+<div class="mbar"><div class="t" id="mbarT">…</div><div class="r"><a class="btn btn-b" href="tel:+78003339963">Позвонить</a><a class="btn btn-y" data-site="/hot-tour/" data-u="mbar">К турам</a></div></div>
+
+<script>
+// Фото направлений условные (Unsplash). Если картинка не загрузилась, остаётся градиент.
+const U=id=>`https://images.unsplash.com/photo-${id}?w=800&q=70&auto=format&fit=crop`;
+const G={g1:'linear-gradient(135deg,#236DFA,#7FB2FF)',g2:'linear-gradient(135deg,#FF9207,#FFCA00)',g3:'linear-gradient(135deg,#00C74D,#7FD8A0)',g4:'linear-gradient(135deg,#094695,#236DFA)',g5:'linear-gradient(135deg,#094695,#7FB2FF)'};
+const bg=(id,g)=>`background-image:url(${/[\/.]/.test(id)?id:U(id)}),${G[g]}`;
+
+// Туры – горящие туры sletat.ru на 09.11.2026 ~16:40 (таблица: 05_Новая посадка/Отели с sletat.ru/). o и p – цена тура на двоих (до скидки и сейчас).
+// На странице всё показываем за 1 человека: делим на 2.
+const TOURS=[
+ {g:'Азия',c:'Вьетнам',res:'Камрань',st:5,n:'Selectum Noa Resort',r:'9.1',d:'20 нояб – 26 нояб',ni:'6 ночей',m:'всё включено',o:290058,p:221290,ai:1,fam:1,url:'https://sletat.ru/vietnam/cam_ranh/selectum_noa_resort/',img:'https://hotels.sletat.ru/i/im/122018_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Камрань',st:5,n:'Swandor Hotels & Resorts Cam Ranh',r:'8.6',d:'20 нояб – 28 нояб',ni:'8 ночей',m:'всё включено',o:316629,p:269546,ai:1,fam:1,url:'https://sletat.ru/vietnam/cam_ranh/swandor_hotels_and_resorts_cam_ranh/',img:'https://hotels.sletat.ru/i/im/104244_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Муйне',st:4,n:'Asteria Mui Ne Resort',r:'9.5',d:'18 нояб – 26 нояб',ni:'8 ночей',m:'всё включено',o:246178,p:203201,ai:1,fam:0,url:'https://sletat.ru/vietnam/mui_ne/asteria_mui_ne_resort/',img:'https://hotels.sletat.ru/i/im/137345_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:4,n:'SeaSing Boutique Hotel',r:'9.1',d:'23 нояб – 1 дек',ni:'8 ночей',m:'завтраки',o:194266,p:154141,ai:0,fam:1,url:'https://sletat.ru/vietnam/nha_trang/seasing_boutique_hotel/',img:'https://hotels.sletat.ru/i/im/94186_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:5,n:'Virgo Hotel',r:'8.5',d:'23 нояб – 1 дек',ni:'8 ночей',m:'завтраки',o:199209,p:159084,ai:0,fam:0,url:'https://sletat.ru/vietnam/nha_trang/virgo_hotel/',img:'https://hotels.sletat.ru/i/im/122308_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Камрань',st:5,n:'Cam Ranh Riviera Beach Resort & Spa',r:'9.2',d:'22 нояб – 28 нояб',ni:'6 ночей',m:'всё включено',o:265251,p:228176,ai:1,fam:1,url:'https://sletat.ru/vietnam/cam_ranh/cam_ranh_riviera_beach_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/92691_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:4,n:'Libra Hotel',r:'8.7',d:'23 нояб – 1 дек',ni:'8 ночей',m:'завтраки',o:187430,p:150971,ai:0,fam:1,url:'https://sletat.ru/vietnam/nha_trang/libra_hotel/',img:'https://hotels.sletat.ru/i/im/113527_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:5,n:'Quinter Central Nha Trang',r:'8.6',d:'17 нояб – 25 нояб',ni:'8 ночей',m:'завтраки',o:187452,p:152372,ai:0,fam:0,url:'https://sletat.ru/vietnam/nha_trang/quinter_central_nha_trang/',img:'https://hotels.sletat.ru/i/im/114382_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:5,n:'Florida Hotel Nha Trang',r:'8.7',d:'12 нояб – 15 нояб',ni:'3 ночи',m:'завтраки',o:182550,p:151608,ai:0,fam:0,url:'https://sletat.ru/vietnam/nha_trang/florida_hotel_nha_trang/',img:'https://hotels.sletat.ru/i/im/121709_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Фантхиет',st:4,n:'Aroma Beach Resort & Spa',r:'9.5',d:'22 нояб – 29 нояб',ni:'7 ночей',m:'всё включено',o:286009,p:256711,ai:1,fam:1,url:'',img:''},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:5,n:'Vesna Hotel',r:'9.3',d:'23 нояб – 1 дек',ni:'8 ночей',m:'завтраки',o:183258,p:154155,ai:0,fam:1,url:'https://sletat.ru/vietnam/nha_trang/vesna_hotel/',img:'https://hotels.sletat.ru/i/im/116391_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:5,n:'Annova Hotel Nha Trang',r:'9.3',d:'17 нояб – 25 нояб',ni:'8 ночей',m:'завтраки',o:188964,p:160162,ai:0,fam:0,url:'https://sletat.ru/vietnam/nha_trang/annova_hotel_nha_trang/',img:'https://hotels.sletat.ru/i/im/135656_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Фантхиет',st:4,n:'Radisson Resort Mui Ne',r:'9.2',d:'18 нояб – 25 нояб',ni:'7 ночей',m:'всё включено',o:279092,p:250955,ai:1,fam:1,url:'https://sletat.ru/vietnam/phan_thiet/radisson_resort_mui_ne/',img:'https://hotels.sletat.ru/i/im/143521_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:4,n:'Orbit Resort & Spa',r:'8.7',d:'17 нояб – 23 нояб',ni:'6 ночей',m:'завтраки',o:177053,p:149922,ai:0,fam:1,url:'https://sletat.ru/vietnam/nha_trang/orbit_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/115955_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:5,n:'Queen Ann Hotel',r:'9.1',d:'17 нояб – 23 нояб',ni:'6 ночей',m:'завтраки',o:183956,p:157186,ai:0,fam:0,url:'https://sletat.ru/vietnam/nha_trang/queen_ann_hotel/',img:'https://hotels.sletat.ru/i/im/105876_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Камрань',st:5,n:'Duyen Ha Resort Cam Ranh',r:'8.9',d:'18 нояб – 24 нояб',ni:'6 ночей',m:'всё включено',o:248682,p:222479,ai:1,fam:1,url:'https://sletat.ru/vietnam/cam_ranh/duyen_ha_resort_cam_ranh/',img:'https://hotels.sletat.ru/i/im/103957_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Камрань',st:5,n:'Wyndham Garden Cam Ranh Resort',r:'10',d:'18 нояб – 24 нояб',ni:'6 ночей',m:'всё включено',o:261023,p:234891,ai:1,fam:1,url:'https://sletat.ru/vietnam/cam_ranh/wyndham_garden_cam_ranh_resort/',img:'https://hotels.sletat.ru/i/im/135571_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Хой Ан',st:5,n:'Bellerive Hoi An Resort and Spa',r:'9.4',d:'19 нояб – 26 нояб',ni:'7 ночей',m:'всё включено',o:234995,p:208888,ai:1,fam:0,url:'https://sletat.ru/vietnam/hoi_an/bellerive_hoi_an_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/146930_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Муйне',st:4,n:'Le Aqua Resort & Spa Phan Thiet',r:'8.6',d:'20 нояб – 29 нояб',ni:'9 ночей',m:'всё включено',o:232018,p:206277,ai:1,fam:0,url:'https://sletat.ru/vietnam/mui_ne/le_aqua_resort_and_spa_phan_thiet/',img:'https://hotels.sletat.ru/i/im/40801_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Фантхиет',st:4,n:'Amigo Sol Phan Thiet',r:'10',d:'20 нояб – 29 нояб',ni:'9 ночей',m:'всё включено',o:241763,p:216079,ai:1,fam:0,url:'https://sletat.ru/vietnam/phan_thiet/amigo_sol_phan_thiet/',img:'https://hotels.sletat.ru/i/im/166205_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:5,n:'Gonsala Nha Trang',r:'9.7',d:'17 нояб – 25 нояб',ni:'8 ночей',m:'завтраки',o:181692,p:156269,ai:0,fam:0,url:'https://sletat.ru/vietnam/nha_trang/gonsala_nha_trang/',img:'https://hotels.sletat.ru/i/im/139276_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Муйне',st:5,n:'Centara Mirage Resort Mui Ne',r:'8.8',d:'20 нояб – 29 нояб',ni:'9 ночей',m:'всё включено',o:223812,p:198702,ai:1,fam:1,url:'https://sletat.ru/vietnam/mui_ne/centara_mirage_resort_mui_ne/',img:'https://hotels.sletat.ru/i/im/129665_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Фантхиет',st:5,n:'Grace Boutique Resort',r:'10',d:'20 нояб – 30 нояб',ni:'10 ночей',m:'завтраки',o:180380,p:155847,ai:0,fam:0,url:'https://sletat.ru/vietnam/phan_thiet/grace_boutique_resort/',img:'https://hotels.sletat.ru/i/im/59760_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:5,n:'Regalia Gold Hotel',r:'9',d:'17 нояб – 25 нояб',ni:'8 ночей',m:'завтраки',o:173886,p:153456,ai:0,fam:0,url:'https://sletat.ru/vietnam/nha_trang/regalia_gold_hotel/',img:'https://hotels.sletat.ru/i/im/122589_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:4,n:'Navy Nha Trang',r:'8.7',d:'17 нояб – 25 нояб',ni:'8 ночей',m:'завтраки',o:158118,p:140382,ai:0,fam:0,url:'https://sletat.ru/vietnam/nha_trang/navy_nha_trang/',img:'https://hotels.sletat.ru/i/im/137772_0_750_500_1.jpg'},
+ {g:'Азия',c:'Вьетнам',res:'Нячанг',st:4,n:'Emerald Bay Hotel & Spa',r:'8.9',d:'20 нояб – 1 дек',ni:'11 ночей',m:'завтраки',o:168858,p:151648,ai:0,fam:1,url:'https://sletat.ru/vietnam/nha_trang/emerald_bay_hotel_and_spa/',img:'https://hotels.sletat.ru/i/im/113921_0_750_500_1.jpg'},
+ {g:'Египет',c:'Другие курорты',res:'Таба',st:5,n:'Tolip Resort & Spa',r:'8.8',d:'12 нояб – 17 нояб',ni:'5 ночей',m:'завтраки',o:171435,p:113815,ai:0,fam:0,url:'https://sletat.ru/egypt/taba/tolip_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/88574_0_750_500_1.jpg'},
+ {g:'Египет',c:'Другие курорты',res:'Марса Алам, Эль Кусейр',st:5,n:'Concorde Moreen Beach Resort & Spa Marsa Alam',r:'9.1',d:'15 нояб – 19 нояб',ni:'4 ночи',m:'всё включено',o:142045,p:120870,ai:1,fam:0,url:'https://sletat.ru/egypt/marsa_alam/concorde_moreen_beach_resort_and_spa_marsa_alam/',img:'https://hotels.sletat.ru/i/im/75390_0_750_500_1.jpg'},
+ {g:'Египет',c:'Шарм-эль-Шейх',res:'Хадаба',st:5,n:'The Grand Hotel Sharm el Sheikh',r:'8.5',d:'16 нояб – 19 нояб',ni:'3 ночи',m:'всё включено',o:142975,p:122263,ai:1,fam:0,url:'https://sletat.ru/egypt/hadaba/the_grand_hotel_sharm_el_sheikh/',img:'https://hotels.sletat.ru/i/im/16538_0_750_500_1.jpg'},
+ {g:'Египет',c:'Шарм-эль-Шейх',res:'Шарм-Эль-Шейх',st:4,n:'Ivy Cyrene Island Resort',r:'8.6',d:'16 нояб – 19 нояб',ni:'3 ночи',m:'всё включено',o:136944,p:117227,ai:1,fam:0,url:'https://sletat.ru/egypt/sharm_el-sheikh/ivy_cyrene_island_resort/',img:'https://hotels.sletat.ru/i/im/39241_0_750_500_1.jpg'},
+ {g:'Египет',c:'Шарм-эль-Шейх',res:'Наама Бей',st:5,n:'Xperience Kiroseiz Premier',r:'8.8',d:'16 нояб – 19 нояб',ni:'3 ночи',m:'всё включено',o:141208,p:121552,ai:1,fam:0,url:'https://sletat.ru/egypt/naama_bay/xperience_kiroseiz_premier/',img:'https://hotels.sletat.ru/i/im/102612_0_750_500_1.jpg'},
+ {g:'Египет',c:'Шарм-эль-Шейх',res:'Набк Бей',st:5,n:'Jaz Mirabel Park',r:'9',d:'16 нояб – 19 нояб',ni:'3 ночи',m:'всё включено',o:140473,p:122082,ai:1,fam:0,url:'https://sletat.ru/egypt/nabq_bay/jaz_mirabel_park/',img:'https://hotels.sletat.ru/i/im/20868_0_750_500_1.jpg'},
+ {g:'Египет',c:'Шарм-эль-Шейх',res:'Шарм-Эль-Шейх',st:5,n:'Sheraton Sharm (Main Building)',r:'8.9',d:'16 нояб – 19 нояб',ni:'3 ночи',m:'всё включено',o:155142,p:138735,ai:1,fam:0,url:'https://sletat.ru/egypt/sharm_el-sheikh/sheraton_sharm_main_building/',img:'https://hotels.sletat.ru/i/im/123025_0_750_500_1.jpg'},
+ {g:'Египет',c:'Хургада',res:'Сома Бей',st:5,n:'Sentido Caribbean World Soma Bay',r:'8.7',d:'23 нояб – 27 нояб',ni:'4 ночи',m:'всё включено',o:132745,p:116872,ai:1,fam:0,url:'https://sletat.ru/egypt/soma_bay/sentido_caribbean_world_soma_bay/',img:'https://hotels.sletat.ru/i/im/7368_0_750_500_1.jpg'},
+ {g:'Египет',c:'Шарм-эль-Шейх',res:'Набк Бей',st:5,n:'Parrotel Beach Resort',r:'8.5',d:'23 нояб – 27 нояб',ni:'4 ночи',m:'всё включено',o:131861,p:117573,ai:1,fam:0,url:'https://sletat.ru/egypt/nabq_bay/parrotel_beach_resort/',img:'https://hotels.sletat.ru/i/im/33718_0_750_500_1.jpg'},
+ {g:'Азия',c:'Китай',res:'Пекин',st:5,n:'Beijing Pudi Hotel',r:'9.6',d:'16 нояб – 20 нояб',ni:'4 ночи',m:'без питания',o:153574,p:123416,ai:0,fam:0,url:'https://sletat.ru/china/beijing/beijing_pudi_hotel/',img:'https://hotels.sletat.ru/i/im/26121_0_750_500_1.jpg'},
+ {g:'Азия',c:'Китай',res:'Пекин',st:5,n:'Wyndham Beijing North',r:'9',d:'16 нояб – 20 нояб',ni:'4 ночи',m:'без питания',o:145989,p:118517,ai:0,fam:0,url:'https://sletat.ru/china/beijing/wyndham_beijing_north/',img:'https://hotels.sletat.ru/i/im/41780_0_750_500_1.jpg'},
+ {g:'Азия',c:'Китай',res:'Пекин',st:5,n:'Wanda Realm Beijing',r:'8.6',d:'16 нояб – 20 нояб',ni:'4 ночи',m:'без питания',o:145575,p:118137,ai:0,fam:0,url:'https://sletat.ru/china/beijing/wanda_realm_beijing/',img:'https://hotels.sletat.ru/i/im/156464_0_750_500_1.jpg'},
+ {g:'Азия',c:'Хайнань',res:'о. Хайнань',st:5,n:'Holiday Inn Hainan Xiangshui Bay',r:'9.8',d:'22 нояб – 30 нояб',ni:'8 ночей',m:'завтраки',o:230763,p:164094,ai:0,fam:0,url:'https://sletat.ru/china/hainan/holiday_inn_hainan_xiangshui_bay/',img:'https://hotels.sletat.ru/i/im/147221_0_750_500_1.jpg'},
+ {g:'Азия',c:'Хайнань',res:'Дадунхай',st:5,n:'Harman Resort',r:'8.9',d:'23 нояб – 7 дек',ni:'14 ночей',m:'всё включено',o:428958,p:374888,ai:1,fam:0,url:'https://sletat.ru/china/dadonghai/harman_resort/',img:'https://hotels.sletat.ru/i/im/99330_0_750_500_1.jpg'},
+ {g:'Азия',c:'Хайнань',res:'Бухта Санья',st:5,n:'Crowne Plaza Resort Sanya Bay',r:'9.6',d:'18 нояб – 23 нояб',ni:'5 ночей',m:'завтраки',o:178757,p:132654,ai:0,fam:1,url:'https://sletat.ru/china/sanya_bay/crowne_plaza_resort_sanya_bay/',img:'https://hotels.sletat.ru/i/im/67853_0_750_500_1.jpg'},
+ {g:'Азия',c:'Хайнань',res:'о. Хайнань',st:5,n:'DoubleTree by Hilton Lingshui Hot Spring Hotel',r:'10',d:'23 нояб – 30 нояб',ni:'7 ночей',m:'без питания',o:189872,p:149952,ai:0,fam:0,url:'https://sletat.ru/china/hainan/doubletree_by_hilton_lingshui_hot_spring_hotel/',img:'https://hotels.sletat.ru/i/im/147219_0_750_500_1.jpg'},
+ {g:'Азия',c:'Хайнань',res:'Бухта Санья',st:5,n:'Sanya Xizang Hotel',r:'8.6',d:'23 нояб – 30 нояб',ni:'7 ночей',m:'завтраки',o:149612,p:127105,ai:0,fam:1,url:'https://sletat.ru/china/sanya_bay/sanya_xizang_hotel_5_1/',img:'https://hotels.sletat.ru/i/im/135552_0_750_500_1.jpg'},
+ {g:'Азия',c:'Хайнань',res:'Бухта Санья',st:5,n:'Oakwood Apartments',r:'9.1',d:'18 нояб – 23 нояб',ni:'5 ночей',m:'завтраки',o:143492,p:127056,ai:0,fam:1,url:'https://sletat.ru/china/sanya_bay/oakwood_apartments/',img:'https://hotels.sletat.ru/i/im/135485_0_750_500_1.jpg'},
+ {g:'Азия',c:'Хайнань',res:'Санья',st:4,n:'Paxton Vacances Hotels & Resorts Sanya',r:'10',d:'23 нояб – 2 дек',ni:'9 ночей',m:'завтраки',o:147338,p:132367,ai:0,fam:0,url:'https://sletat.ru/china/sanya/paxton_vacances_hotels_and_resorts_sanya/',img:'https://hotels.sletat.ru/i/im/144372_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Даунтаун Дубай',st:5,n:'Sofitel Dubai Downtown',r:'9.4',d:'11 нояб – 17 нояб',ni:'6 ночей',m:'без питания',o:157448,p:69502,ai:0,fam:1,url:'https://sletat.ru/uae/downtown_dubai/sofitel_dubai_downtown/',img:'https://hotels.sletat.ru/i/im/87349_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дубай Марина',st:5,n:'Movenpick Hotel Jumeirah Beach',r:'9.2',d:'12 нояб – 16 нояб',ni:'4 ночи',m:'всё включено',o:189877,p:126730,ai:1,fam:1,url:'https://sletat.ru/uae/dubai_marina/movenpick_hotel_jumeirah_beach/',img:'https://hotels.sletat.ru/i/im/28058_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Хор-Факкан',st:4,n:'Oceanic Khorfakkan Resort & Spa',r:'8.6',d:'21 нояб – 26 нояб',ni:'5 ночей',m:'всё включено',o:190667,p:129188,ai:1,fam:1,url:'https://sletat.ru/uae/khor_fakkan/oceanic_khorfakkan_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/29612_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Шарджа',st:5,n:'The Chedi Al Bait',r:'9.6',d:'11 нояб – 17 нояб',ni:'6 ночей',m:'завтраки',o:125027,p:72561,ai:0,fam:0,url:'https://sletat.ru/uae/sharjah/the_chedi_al_bait/',img:'https://hotels.sletat.ru/i/im/113484_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Рас-эль-Хайма',st:5,n:'DoubleTree by Hilton Resort & Spa Marjan Island',r:'8.6',d:'17 нояб – 20 нояб',ni:'3 ночи',m:'всё включено',o:185354,p:133232,ai:1,fam:0,url:'https://sletat.ru/uae/ras_al-khaimah/doubletree_by_hilton_resort_and_spa_marjan_island/',img:'https://hotels.sletat.ru/i/im/82939_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Рас-эль-Хайма',st:5,n:'Sofitel Ras Al Khaimah Al Hamra Beach Resort',r:'10',d:'18 нояб – 22 нояб',ni:'4 ночи',m:'всё включено',o:194500,p:144997,ai:1,fam:0,url:'https://sletat.ru/uae/ras_al-khaimah/sofitel_ras_al_khaimah_al_hamra_beach_resort/',img:'https://hotels.sletat.ru/i/im/137586_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Аджман',st:5,n:'Bahi Ajman Palace',r:'9',d:'18 нояб – 22 нояб',ni:'4 ночи',m:'всё включено',o:160318,p:114669,ai:1,fam:0,url:'https://sletat.ru/uae/ajman/bahi_ajman_palace/',img:'https://hotels.sletat.ru/i/im/74552_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Шарджа',st:4,n:'Coral Beach Resort Sharjah',r:'9',d:'18 нояб – 22 нояб',ni:'4 ночи',m:'всё включено',o:161179,p:116417,ai:1,fam:1,url:'https://sletat.ru/uae/sharjah/coral_beach_resort_sharjah/',img:'https://hotels.sletat.ru/i/im/9918_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Рас-эль-Хайма',st:5,n:'Rixos Bab Al Bahr',r:'8.7',d:'18 нояб – 22 нояб',ni:'4 ночи',m:'всё включено',o:180035,p:135557,ai:1,fam:0,url:'https://sletat.ru/uae/ras_al-khaimah/rixos_bab_al_bahr/',img:'https://hotels.sletat.ru/i/im/80571_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Аджман',st:4,n:'Ramada Hotel & Suites Ajman',r:'9.1',d:'17 нояб – 22 нояб',ni:'5 ночей',m:'всё включено',o:155411,p:114057,ai:1,fam:0,url:'https://sletat.ru/uae/ajman/ramada_hotel_and_suites_ajman/',img:'https://hotels.sletat.ru/i/im/33977_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Шарджа',st:5,n:'Sheraton Sharjah Beach Resort & Spa',r:'8.7',d:'17 нояб – 22 нояб',ni:'5 ночей',m:'всё включено',o:180896,p:139927,ai:1,fam:0,url:'https://sletat.ru/uae/sharjah/sheraton_sharjah_beach_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/94702_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Палм Джумейра',st:5,n:'The Retreat Palm Dubai MGallery by Sofitel',r:'9',d:'18 нояб – 22 нояб',ni:'4 ночи',m:'всё включено',o:174094,p:136562,ai:1,fam:0,url:'https://sletat.ru/uae/palm_jumeirah/the_retreat_palm_dubai_mgallery_by_sofitel/',img:'https://hotels.sletat.ru/i/im/104702_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Палм Джумейра',st:5,n:'Andaz Dubai The Palm',r:'8.9',d:'11 нояб – 17 нояб',ni:'6 ночей',m:'без питания',o:111553,p:74570,ai:0,fam:0,url:'https://sletat.ru/uae/palm_jumeirah/andaz_dubai_the_palm/',img:'https://hotels.sletat.ru/i/im/119221_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дубай',st:4,n:'Vida Creek Harbour',r:'9.4',d:'16 нояб – 24 нояб',ni:'8 ночей',m:'без питания',o:102852,p:70813,ai:0,fam:0,url:'https://sletat.ru/uae/dubai/vida_creek_harbour/',img:'https://hotels.sletat.ru/i/im/117765_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Рас-эль-Хайма',st:5,n:'The Cove Rotana Resort',r:'9',d:'22 нояб – 26 нояб',ni:'4 ночи',m:'всё включено',o:158702,p:132706,ai:1,fam:0,url:'https://sletat.ru/uae/ras_al-khaimah/the_cove_rotana_resort/',img:'https://hotels.sletat.ru/i/im/41538_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дубай',st:4,n:'Seven Seas Hotel Dubai',r:'9.2',d:'11 нояб – 16 нояб',ni:'5 ночей',m:'без питания',o:87980,p:66075,ai:0,fam:0,url:'',img:''},
+ {g:'Другое',c:'ОАЭ',res:'Абу Даби / Аль Айн',st:5,n:'Fairmont Bab Al Bahr',r:'9.4',d:'11 нояб – 17 нояб',ni:'6 ночей',m:'без питания',o:94773,p:73996,ai:0,fam:0,url:'https://sletat.ru/uae/abu_dhabi-al_ain/fairmont_bab_al_bahr/',img:'https://hotels.sletat.ru/i/im/13816_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Шарджа',st:4,n:'Occidental Sharjah Grand',r:'8.9',d:'11 нояб – 14 нояб',ni:'3 ночи',m:'всё включено',o:138945,p:119717,ai:1,fam:1,url:'https://sletat.ru/uae/sharjah/occidental_sharjah_grand/',img:'https://hotels.sletat.ru/i/im/16537_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Рас-эль-Хайма',st:5,n:'Movenpick Resort Al Marjan Island',r:'8.8',d:'11 нояб – 14 нояб',ni:'3 ночи',m:'всё включено',o:134155,p:115102,ai:1,fam:1,url:'https://sletat.ru/uae/ras_al-khaimah/movenpick_resort_al_marjan_island/',img:'https://hotels.sletat.ru/i/im/128809_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Бур Дубай',st:4,n:'Arabian Courtyard Hotel & Spa',r:'8.5',d:'11 нояб – 16 нояб',ni:'5 ночей',m:'без питания',o:92699,p:73688,ai:0,fam:1,url:'https://sletat.ru/uae/bur_dubai/arabian_courtyard_hotel_and_spa/',img:'https://hotels.sletat.ru/i/im/2988_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Рас-эль-Хайма',st:4,n:'Hampton by Hilton Marjan Island',r:'8.5',d:'11 нояб – 14 нояб',ni:'3 ночи',m:'всё включено',o:112354,p:93858,ai:1,fam:1,url:'https://sletat.ru/uae/ras_al-khaimah/hampton_by_hilton_marjan_island/',img:'https://hotels.sletat.ru/i/im/121739_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Аджман',st:4,n:'Ramada by Wyndham Beach Hotel Ajman',r:'8.9',d:'11 нояб – 14 нояб',ni:'3 ночи',m:'всё включено',o:128662,p:111794,ai:1,fam:1,url:'https://sletat.ru/uae/ajman/ramada_by_wyndham_beach_hotel_ajman/',img:'https://hotels.sletat.ru/i/im/23125_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Аль Барша',st:5,n:'Radisson Blu Hotel Barsha Heights',r:'8.8',d:'11 нояб – 14 нояб',ni:'3 ночи',m:'всё включено',o:140458,p:124070,ai:1,fam:1,url:'https://sletat.ru/uae/al_barsha/radisson_blu_hotel_barsha_heights/',img:'https://hotels.sletat.ru/i/im/26446_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Бур Дубай',st:5,n:'Park Regis Kris Kin Hotel',r:'8.9',d:'21 нояб – 24 нояб',ni:'3 ночи',m:'без питания',o:91668,p:76950,ai:0,fam:0,url:'https://sletat.ru/uae/bur_dubai/park_regis_kris_kin_hotel/',img:'https://hotels.sletat.ru/i/im/54325_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Фуджейра',st:5,n:'Royal M Hotel & Resort Al Aqah Beach by Gewan',r:'9.1',d:'11 нояб – 14 нояб',ni:'3 ночи',m:'всё включено',o:121977,p:107440,ai:1,fam:1,url:'https://sletat.ru/uae/fujairah/royal_m_hotel_and_resort_al_aqah_beach_by_gewan/',img:'https://hotels.sletat.ru/i/im/132041_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дейра',st:5,n:'Avani Deira Dubai',r:'8.8',d:'11 нояб – 15 нояб',ni:'4 ночи',m:'без питания',o:87521,p:73651,ai:0,fam:0,url:'https://sletat.ru/uae/deira/avani_deira_dubai/',img:'https://hotels.sletat.ru/i/im/57743_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дейра',st:5,n:'Swissotel Al Ghurair',r:'8.9',d:'21 нояб – 24 нояб',ni:'3 ночи',m:'без питания',o:90313,p:76950,ai:0,fam:0,url:'https://sletat.ru/uae/deira/swissotel_al_ghurair/',img:'https://hotels.sletat.ru/i/im/75627_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дубай',st:4,n:'Staybridge Suites Dubai Al-Maktoum Airport',r:'9.2',d:'21 нояб – 24 нояб',ni:'3 ночи',m:'завтраки',o:84899,p:72824,ai:0,fam:0,url:'https://sletat.ru/uae/dubai/staybridge_suites_dubai_al-maktoum_airport/',img:'https://hotels.sletat.ru/i/im/124595_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Шарджа',st:4,n:'Four Points by Sheraton Sharjah',r:'8.7',d:'11 нояб – 15 нояб',ni:'4 ночи',m:'завтраки',o:85188,p:73826,ai:0,fam:1,url:'https://sletat.ru/uae/sharjah/four_points_by_sheraton_sharjah/',img:'https://hotels.sletat.ru/i/im/114806_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дейра',st:5,n:'Movenpick Grand Al Bustan',r:'9.2',d:'21 нояб – 24 нояб',ni:'3 ночи',m:'без питания',o:85407,p:74108,ai:0,fam:0,url:'https://sletat.ru/uae/deira/movenpick_grand_al_bustan/',img:'https://hotels.sletat.ru/i/im/838_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дейра',st:5,n:'Grand Mercure Dubai City',r:'8.8',d:'21 нояб – 24 нояб',ni:'3 ночи',m:'без питания',o:86892,p:77330,ai:0,fam:0,url:'https://sletat.ru/uae/deira/grand_mercure_dubai_city/',img:'https://hotels.sletat.ru/i/im/123043_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Бур Дубай',st:4,n:'Ascot Hotel',r:'8.7',d:'21 нояб – 24 нояб',ni:'3 ночи',m:'без питания',o:81235,p:72497,ai:0,fam:1,url:'https://sletat.ru/uae/bur_dubai/ascot_hotel/',img:'https://hotels.sletat.ru/i/im/3420_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дейра',st:5,n:'Crowne Plaza Dubai Deira',r:'8.6',d:'16 нояб – 19 нояб',ni:'3 ночи',m:'без питания',o:80330,p:71749,ai:0,fam:0,url:'https://sletat.ru/uae/deira/crowne_plaza_dubai_deira/',img:'https://hotels.sletat.ru/i/im/67652_0_750_500_1.jpg'},
+ {g:'Другое',c:'ОАЭ',res:'Дубай',st:4,n:'Holiday Inn Dubai al Maktoum Airport',r:'8.9',d:'11 нояб – 14 нояб',ni:'3 ночи',m:'без питания',o:77261,p:69284,ai:0,fam:0,url:'https://sletat.ru/uae/dubai/holiday_inn_dubai_al_maktoum_airport/',img:'https://hotels.sletat.ru/i/im/124592_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'Као Лак',st:5,n:'Graceland Khaolak Beach Resort',r:'9.1',d:'17 нояб – 25 нояб',ni:'8 ночей',m:'всё включено',o:553858,p:407152,ai:1,fam:0,url:'https://sletat.ru/thailand/khao_lak/graceland_khaolak_beach_resort/',img:'https://hotels.sletat.ru/i/im/79802_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'пляж Патонг',st:5,n:'Avista Hideaway Phuket Patong - Mgallery',r:'9',d:'17 нояб – 24 нояб',ni:'7 ночей',m:'всё включено',o:418448,p:311386,ai:1,fam:0,url:'https://sletat.ru/thailand/patong_beach/avista_hideaway_phuket_patong-mgallery/',img:'https://hotels.sletat.ru/i/im/80500_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'о. Коконат',st:5,n:'Island Escape by Burasari',r:'8.8',d:'23 нояб – 1 дек',ni:'8 ночей',m:'всё включено',o:373051,p:283943,ai:1,fam:0,url:'https://sletat.ru/thailand/coconut_islan/island_escape_by_burasari/',img:'https://hotels.sletat.ru/i/im/122421_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'Као Лак',st:5,n:'Outrigger Khao Lak Beach Resort',r:'9.3',d:'17 нояб – 23 нояб',ni:'6 ночей',m:'всё включено',o:416998,p:349380,ai:1,fam:0,url:'https://sletat.ru/thailand/khao_lak/outrigger_khao_lak_beach_resort/',img:'https://hotels.sletat.ru/i/im/56208_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'пляж Патонг',st:4,n:'Amari Phuket',r:'9.1',d:'12 нояб – 17 нояб',ni:'5 ночей',m:'всё включено',o:340755,p:279617,ai:1,fam:1,url:'https://sletat.ru/thailand/patong_beach/amari_phuket/',img:'https://hotels.sletat.ru/i/im/1868_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'Паттайя Центр',st:4,n:'LK Royal Suite',r:'8.6',d:'22 нояб – 25 нояб',ni:'3 ночи',m:'без питания',o:186334,p:125815,ai:0,fam:1,url:'https://sletat.ru/thailand/central_pattaya/lk_royal_suite/',img:'https://hotels.sletat.ru/i/im/24612_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'Раваи',st:5,n:'Wyndham La Vita Phuket',r:'8.9',d:'12 нояб – 17 нояб',ni:'5 ночей',m:'всё включено',o:250911,p:206694,ai:1,fam:1,url:'https://sletat.ru/thailand/rawai/wyndham_la_vita_phuket/',img:'https://hotels.sletat.ru/i/im/132750_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'пляж Панва',st:5,n:'Pullman Phuket Panwa Beach Resort',r:'9',d:'17 нояб – 25 нояб',ni:'8 ночей',m:'всё включено',o:421742,p:377581,ai:1,fam:0,url:'https://sletat.ru/thailand/panwa_beach/pullman_phuket_panwa_beach_resort/',img:'https://hotels.sletat.ru/i/im/33767_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'о. Пхукет',st:4,n:'Laya Resort Phuket Island',r:'9',d:'17 нояб – 23 нояб',ni:'6 ночей',m:'всё включено',o:316264,p:272800,ai:1,fam:1,url:'https://sletat.ru/thailand/phuket/laya_resort_phuket_island/',img:'https://hotels.sletat.ru/i/im/138475_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'Као Лак',st:5,n:'Le Meridien Khao Lak Resort & Spa',r:'9.4',d:'12 нояб – 17 нояб',ni:'5 ночей',m:'всё включено',o:251476,p:209667,ai:1,fam:1,url:'https://sletat.ru/thailand/khao_lak/le_meridien_khao_lak_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/107193_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'пляж Патонг',st:5,n:'Phuket Graceland Resort & Spa',r:'8.6',d:'19 нояб – 25 нояб',ni:'6 ночей',m:'всё включено',o:369948,p:328903,ai:1,fam:0,url:'https://sletat.ru/thailand/patong_beach/phuket_graceland_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/32181_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'пляж Патонг',st:4,n:'Zenseana Resort & Spa',r:'8.5',d:'11 нояб – 18 нояб',ni:'7 ночей',m:'всё включено',o:303491,p:263291,ai:1,fam:1,url:'https://sletat.ru/thailand/patong_beach/zenseana_resort_and_spa/',img:'https://hotels.sletat.ru/i/im/119242_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'Паттайя Центр',st:4,n:'Sunbeam Hotel Pattaya',r:'8.6',d:'11 нояб – 23 нояб',ni:'12 ночей',m:'завтраки',o:160223,p:120529,ai:0,fam:1,url:'https://sletat.ru/thailand/central_pattaya/sunbeam_hotel_pattaya/',img:'https://hotels.sletat.ru/i/im/40491_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'пляж Май Кхао',st:4,n:'Le Meridien Phuket Mai Khao Beach Resort',r:'9.2',d:'19 нояб – 25 нояб',ni:'6 ночей',m:'всё включено',o:323699,p:287471,ai:1,fam:1,url:'https://sletat.ru/thailand/mai_khao_beach/le_meridien_phuket_mai_khao_beach_resort/',img:'https://hotels.sletat.ru/i/im/66859_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'пляж Сурин',st:4,n:'Holiday Inn Resort Phuket Surin Beach, an IHG Hotel',r:'8.8',d:'23 нояб – 29 нояб',ni:'6 ночей',m:'всё включено',o:321309,p:287613,ai:1,fam:1,url:'https://sletat.ru/thailand/surin_beach/holiday_inn_resort_phuket_surin_beach_an_ihg_hotel/',img:'https://hotels.sletat.ru/i/im/10282_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'о. Коконат',st:5,n:'Barcelo Coconut Island',r:'8.7',d:'16 нояб – 22 нояб',ni:'6 ночей',m:'всё включено',o:295860,p:262337,ai:1,fam:1,url:'',img:''},
+ {g:'Азия',c:'Таиланд',res:'пляж Ката',st:4,n:'The Yama Hotel Phuket',r:'8.8',d:'16 нояб – 22 нояб',ni:'6 ночей',m:'всё включено',o:298461,p:264988,ai:1,fam:1,url:'https://sletat.ru/thailand/kata_beach/the_yama_hotel_phuket/',img:'https://hotels.sletat.ru/i/im/88782_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'пляж Панва',st:4,n:'Bandara Phuket Beach Resort',r:'8.6',d:'17 нояб – 23 нояб',ni:'6 ночей',m:'всё включено',o:292063,p:261860,ai:1,fam:0,url:'https://sletat.ru/thailand/panwa_beach/bandara_phuket_beach_resort/',img:'https://hotels.sletat.ru/i/im/98583_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'о. Пхукет',st:5,n:'Marina Gallery Resort Kacha Kalim Bay',r:'8.9',d:'12 нояб – 16 нояб',ni:'4 ночи',m:'завтраки',o:148609,p:127167,ai:0,fam:0,url:'https://sletat.ru/thailand/phuket/marina_gallery_resort_kacha_kalim_bay/',img:'https://hotels.sletat.ru/i/im/122412_0_750_500_1.jpg'},
+ {g:'Азия',c:'Таиланд',res:'о. Пхукет',st:4,n:'Marina House MUAYTHAI Ta-iad Phuket',r:'8.9',d:'11 нояб – 17 нояб',ni:'6 ночей',m:'без питания',o:157130,p:136737,ai:0,fam:0,url:'',img:''},
+ {g:'Азия',c:'Таиланд',res:'Хуа Хин',st:4,n:'Amari Hua Hin',r:'9.2',d:'11 нояб – 16 нояб',ni:'5 ночей',m:'без питания',o:142111,p:126845,ai:0,fam:1,url:'https://sletat.ru/thailand/hua_hin/amari_hua_hin/',img:'https://hotels.sletat.ru/i/im/76794_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Белек',st:5,n:'Rixos Park Belek The Land of Legends free access',r:'8.9',d:'20 нояб – 23 нояб',ni:'3 ночи',m:'завтраки',o:152873,p:130466,ai:0,fam:0,url:'https://sletat.ru/turkey/belek/rixos_park_belek_the_land_of_legends_free_access/',img:'https://hotels.sletat.ru/i/im/133873_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Белек',st:5,n:'TUI Magic Life Masmavi',r:'9',d:'20 нояб – 24 нояб',ni:'4 ночи',m:'всё включено',o:142738,p:121920,ai:1,fam:0,url:'https://sletat.ru/turkey/belek/tui_magic_life_masmavi/',img:'https://hotels.sletat.ru/i/im/60045_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Белек',st:5,n:'Calista Luxury Resort',r:'9.2',d:'22 нояб – 26 нояб',ni:'4 ночи',m:'всё включено',o:152676,p:133448,ai:1,fam:0,url:'https://sletat.ru/turkey/belek/calista_luxury_resort/',img:'https://hotels.sletat.ru/i/im/7037_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Белек',st:5,n:'Sherwood Dreams Resort',r:'8.7',d:'19 нояб – 25 нояб',ni:'6 ночей',m:'всё включено',o:144581,p:126278,ai:1,fam:0,url:'https://sletat.ru/turkey/belek/sherwood_dreams_resort/',img:'https://hotels.sletat.ru/i/im/58179_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Стамбул',st:5,n:'Hidden Hills Hotel Istanbul Airport',r:'8.5',d:'23 нояб – 26 нояб',ni:'3 ночи',m:'без питания',o:64829,p:49069,ai:0,fam:0,url:'https://sletat.ru/turkey/istanbul/hidden_hills_hotel_istanbul_airport/',img:'https://hotels.sletat.ru/i/im/128092_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Белек',st:4,n:'Mercure Antalya Belek',r:'9',d:'19 нояб – 25 нояб',ni:'6 ночей',m:'без питания',o:112426,p:99560,ai:0,fam:0,url:'https://sletat.ru/turkey/belek/mercure_antalya_belek/',img:'https://hotels.sletat.ru/i/im/166274_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Богазкент',st:5,n:'Orange County Resort Hotel Belek',r:'8.8',d:'23 нояб – 26 нояб',ni:'3 ночи',m:'всё включено',o:78553,p:70246,ai:1,fam:0,url:'https://sletat.ru/turkey/bogazkent/orange_county_resort_hotel_belek/',img:'https://hotels.sletat.ru/i/im/43705_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Стамбул',st:5,n:'Wanda Vista Istanbul',r:'8.8',d:'23 нояб – 26 нояб',ni:'3 ночи',m:'без питания',o:57149,p:48909,ai:0,fam:0,url:'https://sletat.ru/turkey/istanbul/wanda_vista_istanbul/',img:'https://hotels.sletat.ru/i/im/128658_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Анталья',st:4,n:'Aspen Hotel',r:'8.5',d:'23 нояб – 26 нояб',ni:'3 ночи',m:'завтраки',o:70222,p:62846,ai:0,fam:0,url:'https://sletat.ru/turkey/antalya/aspen_hotel/',img:'https://hotels.sletat.ru/i/im/88160_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Авсаллар',st:5,n:'Aska Just in Beach',r:'8.5',d:'23 нояб – 26 нояб',ni:'3 ночи',m:'всё включено',o:70816,p:63441,ai:1,fam:1,url:'https://sletat.ru/turkey/avsallar/aska_just_in_beach/',img:'https://hotels.sletat.ru/i/im/3469_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Сиде',st:4,n:'Side Amour Hotel',r:'9.3',d:'23 нояб – 26 нояб',ni:'3 ночи',m:'всё включено',o:71740,p:64366,ai:1,fam:1,url:'https://sletat.ru/turkey/side/side_amour_hotel/',img:'https://hotels.sletat.ru/i/im/126869_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Зейтинбурну',st:5,n:'Grand Makel Hotel Topkapi',r:'8.8',d:'23 нояб – 26 нояб',ni:'3 ночи',m:'без питания',o:54867,p:48010,ai:0,fam:0,url:'https://sletat.ru/turkey/zeytinburnu/grand_makel_hotel_topkapi/',img:'https://hotels.sletat.ru/i/im/115658_0_750_500_1.jpg'},
+ {g:'Турция',c:'Турция',res:'Бейоглу (Пера)',st:4,n:'Misafir Suites 8 Istanbul',r:'8.9',d:'23 нояб – 26 нояб',ni:'3 ночи',m:'завтраки',o:52320,p:47028,ai:0,fam:1,url:'https://sletat.ru/turkey/beyoglu_pera/misafir_suites_8_istanbul/',img:'https://hotels.sletat.ru/i/im/91082_0_750_500_1.jpg'},
+];
+
+const $=id=>document.getElementById(id);
+const NB='\u00A0';
+const rub=n=>Math.round(n).toLocaleString('ru-RU').replace(/\s/g,NB)+NB+'₽';
+const pp=n=>Math.round(n/2); // цена за 1 человека при поездке вдвоём
+const plural=(n,a,b,c)=>{const m=n%10,h=n%100;return m===1&&h!==11?a:(m>=2&&m<=4&&(h<12||h>14)?b:c)};
+const fi=(n,alt='')=>`<img class="fi" src="assets/icons/summer/${n}.svg" alt="${alt}" loading="lazy">`;
+document.querySelectorAll('[data-fi]').forEach(e=>e.insertAdjacentHTML('afterbegin',fi(e.dataset.fi)));
+document.querySelectorAll('[data-tg]').forEach(e=>e.innerHTML='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 4.2 2.9 11.3c-1 .4-1 1.6.1 1.9l4.6 1.4 1.8 5.5c.3.8 1.3 1 1.9.4l2.6-2.5 4.8 3.5c.7.5 1.7.1 1.9-.7l3.1-14.6c.2-1-.8-1.9-1.8-1.5ZM9.6 14.2l8.2-7.3-6.8 8.6-.3 3.3-1.1-4.6Z"/></svg>');
+// погода в конце ноября – декабре и прямой рейс из Москвы (из v7, климатические нормы – допущение, сверить)
+const WX={'Таиланд':[31,29,'9'],'Вьетнам':[30,27,'9'],'Хайнань':[27,26,'8,5'],'ОАЭ':[29,26,'5,5'],'Египет':[26,25,'4,5']};
+const wxOf=t=>WX[t.g==='Азия'||t.g==='Другое'?t.c:t.g];
+const tmp=w=>w?`<span class="tmp">${fi('sun')}+${w[0]}°<i>море +${w[1]}°</i></span>`:'';
+// «Впечатления рядом» – места и фото из посадки Натальи (v6)
+const SIGHTS={kotapu:['Залив Пханг Нга','thai-ko-tapu'],phiphi:['Острова Пхи-Пхи','thai-phiphi'],elephant:['Заповедник слонов','thai-elephant'],
+ guanyin:['Статуя Гуаньинь','hainan-guanyin'],monkey:['Остров обезьян','hainan-monkey'],yanoda:['Лес Янода','hainan-yanoda'],
+ ras:['Рас-Мохаммед','egypt-ras-mohammed'],naama:['Наама-Бэй','egypt-naama-bay'],sinai:['Гора Моисея','egypt-sinai'],
+ desert:["Сафари в пустыне","uae-desert"],palm:["Пальма Джумейра · ≈1 ч","uae-palm"],burj:["Бурдж-Халифа · ≈1 ч","uae-burj"]};
+const seeHTML=ids=>`<div class="see-h">Впечатления рядом</div><div class="see">${ids.map(k=>`<div class="sg"><i class="ph" style="background-image:url(assets/sights/${SIGHTS[k][1]}.jpg)"></i><span>${SIGHTS[k][0]}</span></div>`).join('')}</div>`;
+
+// ссылки: всё ведёт на sletat.ru, utm как у посадки Натальи (utm_campaign – вариант посадки)
+const S='https://sletat.ru';
+const UTM=id=>`utm_source=landing&utm_medium=bf2026&utm_campaign=zima&utm_content=${id}`;
+const site=(path,id)=>`${S}${path}${path.includes('?')?'&':'?'}${UTM(id)}`;
+document.querySelectorAll('[data-site]').forEach(a=>{a.href=site(a.dataset.site,a.dataset.u);a.target='_blank';a.rel='noopener'});
+const SLUG={'Таиланд':'thailand','Вьетнам':'vietnam','Хайнань':'china','Китай':'china','Япония':'japan','Египет':'egypt','Турция':'turkey','ОАЭ':'uae'};
+const slugOf=t=>SLUG[t.g==='Азия'?t.c:t.g];
+const countryUrl=(name,id)=>site(SLUG[name]?`/tours/${SLUG[name]}/`:'/hot-tour/',id);
+const MON={'нояб':11,'дек':12};
+// «Смотреть тур» – страница отеля с поиском на те же даты и ночи, 2 взрослых, вылет из Москвы (departCity=832, как у Натальи)
+function tourUrl(t,id){
+ if(!t.url)return countryUrl(t.g==='Азия'?t.c:t.g,id);
+ const [dd,mm]=t.d.split('–')[0].trim().split(' '),from=`${String(dd).padStart(2,'0')}.${MON[mm]}.2026`,n=parseInt(t.ni);
+ return `${t.url}?search&departCity=832&adults=2&nightsFrom=${n}&nightsTo=${n}&dateFrom=${from}&dateTo=${from}&${UTM(id)}`}
+
+const MAXSAVE=50000; // туры с экономией больше 50 000 ₽ на двоих не показываем (подозрительно большие скидки, сверить)
+// v8.3: Китай (Пекин) и Япония убраны – в декабре там холодно, а страница про тёплое море. 10.11.2026: Турция тоже (в конце ноября не пляжный сезон)
+const LIVE=TOURS.filter(t=>t.o-t.p<=MAXSAVE&&!['Китай','Япония','Турция'].includes(t.c));
+const maxT=LIVE.reduce((a,t)=>t.o-t.p>a.o-a.p?t:a),placeOf=t=>t.g==="Азия"||t.g==="Другое"?t.c:t.g;
+const maxSave=pp(Math.max(...LIVE.map(t=>t.o-t.p))),minPrice=pp(Math.min(...LIVE.map(t=>t.p)));
+$('stickSave').textContent=rub(maxSave);$("rowSave").textContent=rub(maxSave)+" · "+placeOf(maxT); // подпись из данных тура, а не хардкод
+const minWarm=pp(Math.min(...LIVE.filter(wxOf).map(t=>t.p))); // только тёплые страны
+$("heroLead").innerHTML=`<strong>В Москве 0°, на Пхукете +31°.</strong> <br>Меняйте пуховик на купальник – <br>туры от <b>${rub(minWarm)}</b> за 1 человека`;
+
+
+// хиты: «крючок» про отдых + 3 удобства с иконками; данные – из TOURS
+// v8.3: первым – тур, который даёт «выгоду до …» на первом экране (иначе обещание не подтверждается). Jaz Mirabel убран: выгода 9 196 ₽ – втрое меньше обещанной
+const HITS=[
+ {n:'Sofitel Ras Al Khaimah Al Hamra Beach Resort',max:1,hook:'Всё включено у моря, и гости ставят 10 из 10',perks:[['bbq','Всё включено'],['umbrella','Пляжный курорт Аль-Хамра'],['airplane','5,5 часа полёта']],see:['desert','palm','burj']},
+ {n:'Le Meridien Khao Lak Resort & Spa',hook:'Вместо слякоти – всё включено в Као Лаке',perks:[['bbq','Всё включено'],['kids','Можно с детьми'],['hotel','Гости ставят 9,4 из 10']],see:['kotapu','phiphi','elephant']},
+ {n:'Crowne Plaza Resort Sanya Bay',hook:'Встречайте декабрь в тропиках у бухты Санья',perks:[['umbrella','Своя бухта Санья'],['kids','Можно с детьми'],['hotel','Гости ставят 9,6 из 10']],see:['guanyin','monkey','yanoda']}];
+const byName=n=>TOURS.find(t=>t.n===n);
+const where=t=>`${t.g==='Азия'||t.g==='Другое'?t.c:t.g} · ${t.res}`;
+const terms=t=>`<div class="terms"><b>${t.ni}</b> · из Москвы · цена за 1 человека при поездке вдвоём</div>`;
+const price=t=>`<div class="pr"><b><small>от </small>${rub(pp(t.p))}</b><s>${rub(pp(t.o))}</s></div>`;
+const btns=(t,id)=>`<div class="cta2"><a class="btn btn-y" href="${tourUrl(t,id)}" target="_blank" rel="noopener">Хочу сюда</a><a class="btn btn-b" href="${countryUrl(t.g==='Азия'?t.c:t.g,'similar-'+id)}" target="_blank" rel="noopener">Похожие туры</a></div>`;
+$('hitsGrid').innerHTML=HITS.map((h,i)=>{const t=byName(h.n);return `<article class="hotel hit${h.max?' top':''}" style="--i:${i}"${h.max?' id="maxHit"':''}>
+ <div class="himg"><i class="ph" style="background-image:url(${t.img}),${G.g1}"></i><span class="b1">${h.max?'Самая большая выгода · ':'Выгода '}${rub(pp(t.o-t.p))}</span><span class="rt">${t.r.replace('.',',')}</span><span class="cn">${where(t)}</span>${tmp(wxOf(t))}</div>
+ <h3 class="hook">${h.hook}</h3>
+ <div class="hn"><b>${t.st}★</b>${t.n}</div>
+ <div class="perks">${h.perks.map((p,j)=>`<span style="--j:${j}">${fi(p[0])}${p[1]}</span>`).join('')}</div>
+ ${seeHTML(h.see)}
+ ${terms(t)}${price(t)}${btns(t,'hit-'+(i+1))}</article>`}).join('');
+// хиты проявляются, когда доскроллили до них (как карточки отелей в v7)
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);e.target.classList.add('vis')}}),{threshold:.12});
+ document.querySelectorAll('.hotel.hit').forEach(c=>io.observe(c))}else document.querySelectorAll('.hotel.hit').forEach(c=>c.classList.add('vis'));
+
+// направления: клик по плитке открывает под плитками каталог «Туры со скидкой» этого направления (как в v7)
+const minOf=f=>{const l=LIVE.filter(f);return l.length?'от '+rub(pp(Math.min(...l.map(t=>t.p)))):'смотреть туры'};
+// v8.3: фото – свои (assets/sights с посадки Натальи и фото отелей из выгрузки), а не условные с Unsplash
+const SA=n=>`assets/sights/${n}.jpg`,HI=n=>(byName(n)||{}).img;
+const DIRS=[
+ {t:'Азия',slides:[['g1',SA('thai-phiphi'),'Острова Пхи-Пхи, Таиланд'],['g1',SA('thai-ko-tapu'),'Залив Пханг Нга, Таиланд'],['g3',SA('viet-nhatrang-islands'),'Острова Нячанга, Вьетнам'],['g5',SA('hainan-yanoda'),'Лес Янода, Хайнань']],
+  list:['Таиланд','Вьетнам','Хайнань']},
+ {t:'Египет',slides:[['g2',SA('egypt-reef-shallow'),'Рифы Красного моря'],['g1',SA('egypt-naama-bay'),'Наама-Бэй, Шарм'],['g2',SA('egypt-giza-sphinx'),'Пирамиды Гизы']],hint:'Хургада, Шарм-эль-Шейх'},
+ {t:'Другое',wx:'до +31°',slides:[['g4',SA('maldives-atoll'),'Атоллы, Мальдивы'],['g4',SA('uae-palm'),'Пальма Джумейра, Дубай'],['g4',SA('maldives-island'),'Остров-отель, Мальдивы'],['g5',SA('uae-burj'),'Бурдж-Халифа, Дубай'],['g4',SA('uae-desert'),'Сафари в пустыне, ОАЭ']],hint:'Дубай, Мальдивы и не только'}];
+$('tiles').innerHTML=DIRS.map((t,i)=>{const from=minOf(x=>x.g===t.t);
+ return `<div class="tile" data-i="${i}">
+ <div class="photo" role="button" tabindex="0" aria-label="Туры со скидкой: ${t.t}">${t.slides.map((s,j)=>`<div class="slide ${j?'':'on'}" style="${bg(s[1],s[0])}"></div>`).join('')}
+  <div class="ov"><div class="t1">${t.t==="Азия"||t.wx?`<span class="tmp">${fi("sun")}${t.wx||'до +31°'}</span>`:(tmp(WX[t.t])||(t.tag?`<span class="tmp">${fi("airplane")}${t.tag}</span>`:"<span></span>"))}<span class="arr"><button data-step="-1" aria-label="Назад">‹</button><button data-step="1" aria-label="Вперёд">›</button></span></div>
+  <div><div class="cap">${t.slides[0][2]}</div><b>${t.t}</b><div class="from">${from} за 1 человека</div><div class="dots">${t.slides.map((s,j)=>`<i class="${j?'':'on'}"></i>`).join('')}</div></div></div></div>
+ <button class="hint">${t.list?t.list.join(', '):t.hint}</button>
+</div>`}).join('');
+const pos=DIRS.map(()=>0);
+function show(i,k){const tile=document.querySelector(`.tile[data-i="${i}"]`);const n=DIRS[i].slides.length;pos[i]=(k+n)%n;
+ tile.querySelectorAll('.slide').forEach((s,j)=>s.classList.toggle('on',j===pos[i]));tile.querySelectorAll('.dots i').forEach((s,j)=>s.classList.toggle('on',j===pos[i]));
+ tile.querySelector('.cap').textContent=DIRS[i].slides[pos[i]][2]}
+const AUTO=4000,timers=[];
+function auto(i){clearInterval(timers[i]);const t=document.querySelector(`.tile[data-i="${i}"]`);t.classList.remove('run');void t.offsetWidth;t.classList.add('run');
+ timers[i]=setInterval(()=>{show(i,pos[i]+1);t.classList.remove('run');void t.offsetWidth;t.classList.add('run')},AUTO)}
+DIRS.forEach((_,i)=>{setTimeout(()=>auto(i),i*900);const t=document.querySelector(`.tile[data-i="${i}"]`);
+ t.addEventListener('mouseenter',()=>{clearInterval(timers[i]);t.classList.remove('run')});t.addEventListener('mouseleave',()=>auto(i))});
+$('tiles').addEventListener('click',e=>{const tile=e.target.closest('.tile');if(!tile)return;const i=+tile.dataset.i;
+ const st=e.target.closest('[data-step]');if(st){e.preventDefault();show(i,pos[i]+ +st.dataset.step);return}
+ if(e.target.closest('.photo,.hint'))openCat(DIRS[i].t)});
+$('tiles').addEventListener('keydown',e=>{const p=e.target.closest('.photo');if(p&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openCat(DIRS[+p.closest('.tile').dataset.i].t)}});
+// открыть каталог: показать блок, переключить на направление, подсветить плитку и доскроллить
+function openCat(g){const tc=$('tcar');if(tc.hidden){tc.hidden=false}else{tc.style.animation='none';void tc.offsetWidth;tc.style.animation=''}
+ setCar(g,null);document.querySelectorAll('.tile').forEach(t=>t.classList.toggle('sel',DIRS[+t.dataset.i].t===g));
+ tc.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
+
+// карусель: все туры направления, переключается чипами, листается стрелками, свайпом и сама
+const GC={'Азия':'g1','Египет':'g2','Другое':'g4'};
+let car={g:'Азия',c:null},carTimer;
+// v8.3: фильтры для семей (ядро аудитории, ~40%) и любителей «всё включено» – флаги fam и ai из выгрузки
+const X={fam:false,ai:false};
+const tags=t=>(t.fam||t.ai)?`<div class="pl">${t.ai?`<span>${fi('bbq')}Всё включено</span>`:''}${t.fam?`<span>${fi('kids')}Можно с детьми</span>`:''}</div>`:'';
+function tourCard(t,k){const id=`car-${slugOf(t)}-${k}`;return `<article class="hotel" style="--i:${Math.min(k,6)}"><div class="himg"><i class="ph" style="background-image:url(${t.img}),${G[GC[t.g]]}"></i><span class="b1">Выгода ${rub(pp(t.o-t.p))}</span><span class="rt">${t.r.replace('.',',')}</span><span class="cn">${where(t)}</span>${tmp(wxOf(t))}</div>
+ <h3>${t.st}★ ${t.n}</h3>${tags(t)}
+ <div class="terms"><b>${t.ni}</b> · ${t.m} · из Москвы<br>цена за 1 человека при поездке вдвоём</div>
+ ${price(t)}${btns(t,id)}</article>`}
+$('carG').innerHTML=Object.keys(GC).map(g=>`<button data-g="${g}">${g}</button>`).join('');
+function setCar(g,c){car={g,c};const all=LIVE.filter(t=>t.g===g);
+ const base=all.filter(t=>!c||t.c===c),list=base.filter(t=>(!X.fam||t.fam)&&(!X.ai||t.ai)).sort((a,b)=>(b.o-b.p)-(a.o-a.p));
+ $('carG').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.g===g));
+ $('carT').textContent='Туры со скидкой: '+(c||g);
+ const ln=c||g;$('carLink').href=countryUrl(ln,'car-all-'+(SLUG[ln]||'asia'));
+ $('car').innerHTML=list.map(tourCard).join('');$('car').scrollLeft=0;carAuto();
+ document.querySelectorAll('.tile').forEach(t=>t.classList.toggle('sel',DIRS[+t.dataset.i].t===g))}
+function carStep(d){const el=$('car'),w=el.firstElementChild?el.firstElementChild.offsetWidth+20:300;
+ if(d>0&&el.scrollLeft+el.clientWidth>=el.scrollWidth-5)el.scrollLeft=0;else if(d<0&&el.scrollLeft<=0)el.scrollLeft=el.scrollWidth;else el.scrollBy({left:d*w})}
+function carAuto(){clearInterval(carTimer);carTimer=setInterval(()=>carStep(1),3500)}
+$('carG').addEventListener('click',e=>{const b=e.target.closest('[data-g]');if(b)setCar(b.dataset.g,null)});
+$('tcar').addEventListener('mouseenter',()=>clearInterval(carTimer));$('tcar').addEventListener('mouseleave',carAuto);
+$('car').addEventListener('touchstart',()=>clearInterval(carTimer),{passive:true});
+// каталог скрыт, пока не нажали на плитку или вкладку направления
+
+// верхний баннер
+const TK=["<b>ЧЁРНАЯ ПЯТНИЦА</b>","<b>СБЕЖАТЬ ОТ ЗИМЫ</b>","отпуск дешевле до "+rub(maxSave)+" за 1 человека","в Москве 0°, на Пхукете +31°","рассрочка до 120 дней","500+ туроператоров в одном поиске"];
+$('tick').innerHTML=Array(4).fill(TK.map(x=>`<span>${x}</span><i>●</i>`).join('')).join('');
+
+// таймер – единый для всех посадок ЧП (логика посадки Натальи): у каждого посетителя 3 дня – до конца 3-го дня
+// от первого визита (дата хранится в браузере), но не позже конца акции 30.11.2026 23:59:59 МСК
+const PROMO_END=new Date('2026-11-30T23:59:59+03:00').getTime();
+const DEADLINE=(()=>{let first=Date.now();
+ try{const v=+localStorage.getItem('sl_bf26_first');if(v>0&&v<=first)first=v;else localStorage.setItem('sl_bf26_first',String(first))}catch(e){}
+ const d=new Date(first);d.setHours(23,59,59,0);d.setDate(d.getDate()+3);return Math.min(d.getTime(),PROMO_END)})();
+const pad=n=>String(n).padStart(2,'0');
+function tick(){let ms=Math.max(0,DEADLINE-Date.now());const D=Math.floor(ms/864e5);ms-=D*864e5;const H=Math.floor(ms/36e5);ms-=H*36e5;const M=Math.floor(ms/6e4);ms-=M*6e4;const Sx=Math.floor(ms/1e3);
+ $('d').textContent=Math.min(D,99);$('h').textContent=pad(H);$('m').textContent=pad(M);$('s').textContent=pad(Sx);
+ $('hTime').textContent=`${D}${NB}дн ${pad(H)}:${pad(M)}:${pad(Sx)}`;
+ $("mbarT").textContent=`До конца акции: ${D} дн ${pad(H)}:${pad(M)}:${pad(Sx)}`}
+tick();setInterval(tick,1000);
+
+// вкладки: подсветка активной, вкладка направления переключает карусель
+
+// неразрывные пробелы (правило uForce): короткие слова и предлоги не отрываются от следующего слова, разряды чисел и «₽» не рвутся, тире не уходит в начало строки
+const ty=v=>v.replace(/(?<=^|[\s(«])([а-яёА-ЯЁ]{1,2}|\d+|для|без|под|при|про|над|Для|Без|При) (?=\S)/g,'$1\u00A0').replace(/ – /g,'\u00A0– ').replace(/ ₽/g,'\u00A0₽');
+const tyNodes=root=>{const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while((n=w.nextNode())){const p=n.parentElement;if(!p||p.closest('script,style'))continue;const v=ty(n.nodeValue);if(v!==n.nodeValue)n.nodeValue=v}};
+tyNodes(document.body);
+new MutationObserver(ms=>ms.forEach(m=>{if(m.type==='characterData'){const n=m.target,v=ty(n.nodeValue);if(v!==n.nodeValue)n.nodeValue=v}else m.addedNodes.forEach(n=>n.nodeType===1?tyNodes(n):n.nodeType===3&&(n.nodeValue=ty(n.nodeValue)))})).observe(document.body,{childList:true,subtree:true,characterData:true});
+
+// 11. Цели Метрики – оба счётчика промо-страниц Слетать и dataLayer, как на ЧП-витрине (имена целей bf_*)
+const YM_IDS=[9072040,53866042],VARIANT='zima';
+function track(goal,params){const p=Object.assign({variant:VARIANT},params||{});
+  try{if(typeof window.ym==='function')YM_IDS.forEach(id=>window.ym(id,'reachGoal',goal,p))}catch(e){}
+  try{(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:goal},p))}catch(e){}}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const h=a.getAttribute('href')||'';let g=a.dataset.goal;
+  if(!g){if(h.startsWith('tel:'))g='bf_phone_click';else if(h.includes('t.me/'))g='bf_tg_click';else if(/utm_content=(logo|footer)\b/.test(h))g='bf_logo_click';
+    else if(/utm_content=similar-/.test(h))g='bf_similar_click';else if(/[?&]search\b/.test(h))g='bf_tour_click';else if(h.includes('sletat.ru'))g='bf_all_click'}
+  if(g){const m=h.match(/utm_content=([^&]+)/);track(g,{block:m?m[1]:(a.closest('[id]')||{}).id||'',href:h.split('?')[0]})}},true);
+document.querySelectorAll('#carG').forEach(el=>el.addEventListener('click',e=>{const b=e.target.closest('[data-tab],[data-g],[data-f],[data-x]');if(b)track('bf_filter',{value:b.dataset.tab||b.dataset.g||b.dataset.f||b.dataset.x})}));
+// v12: переключатель темы. Выбор помним в браузере (sl_theme), по умолчанию – светлая корпоративная
+(()=>{const D=document.documentElement,b=$('thm'),logos=document.querySelectorAll('.logo img');
+ const apply=t=>{D.dataset.theme=t;b.setAttribute('aria-pressed',t==='dark');logos.forEach(i=>i.src='assets/logo-'+(t==='dark'?'white':'color')+'.svg')};
+ apply(D.dataset.theme==='dark'?'dark':'light');
+ b.addEventListener('click',()=>{const t=D.dataset.theme==='dark'?'light':'dark';apply(t);try{localStorage.setItem('sl_theme',t)}catch(e){}})})();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- время в пути: секундомер (отмерено 7 минут) в манере и цветах набора Summer (Printerinks), вариант для Слетать.ру 10.11.2026 -->
+<rect x="27.5" y="4.5" width="9" height="4.6" rx="2" fill="#535962"/>
+<rect x="30.4" y="8" width="3.2" height="6" fill="#535962"/>
+<rect x="45" y="10.6" width="6.4" height="4.4" rx="1.8" transform="rotate(45 48.2 12.8)" fill="#535962"/>
+<circle cx="32" cy="36" r="21" fill="#ff5a5a"/>
+<circle cx="32" cy="36" r="16" fill="#fff7e7"/>
+<path d="M32 36V22a14 14 0 0 1 9.37 3.6z" fill="#ffce52"/>
+<g stroke="#535962" stroke-width="2" stroke-linecap="round"><path d="M32 22.6v2.6M32 46.8v2.6M18.6 36h2.6M42.8 36h2.6"/></g>
+<path d="M32 36l7.9-8.8" stroke="#535962" stroke-width="2.6" stroke-linecap="round"/>
+<circle cx="32" cy="36" r="2.4" fill="#535962"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="64" height="64" viewBox="3.00 3.00 58.00 58.00">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,0,64)" d="M0 64H64V0H0Z"/>
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(1,0,0,-1,0,64)" d="M4 10H60V54H4Z"/>
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(1,0,0,-1,0,64)" d="M56 48C52 48 49 54 45 54H41 37C33 54 30 48 26 48H18.6L18.322 49.392C18.135 50.327 17.314 51 16.36 51H11.64C10.686 51 9.865 50.327 9.678 49.392L9.4 48H8C5.8 48 4 46.2 4 44V14C4 11.8 5.8 10 8 10H56C58.2 10 60 11.8 60 14V44C60 46.2 58.2 48 56 48"/>
+</clipPath>
+</defs>
+<g>
+<g inkscape:groupmode="layer" inkscape:label="Icons">
+<g clip-path="url(#clip_1)">
+<path transform="matrix(1,0,0,-1,60,20)" d="M0 0V-30C0-32.2-1.8-34-4-34H-52C-54.2-34-56-32.2-56-30V0C-56 2.2-54.2 4-52 4H-4C-1.8 4 0 2.2 0 0" fill="#535962"/>
+<path transform="matrix(1,0,0,-1,9,18)" d="M0 0 .678 3.392C.865 4.327 1.686 5 2.64 5H7.36C8.314 5 9.135 4.327 9.322 3.392L10 0Z" fill="#535962"/>
+<path transform="matrix(1,0,0,-1,26,16)" d="M0 0C4 0 7 6 11 6H15V0Z" fill="#535962"/>
+<path transform="matrix(1,0,0,-1,56,16)" d="M0 0C-4 0-7 6-11 6H-15V0Z" fill="#535962"/>
+<path transform="matrix(1,0,0,-1,4,43)" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ffce52" d="M0 0H56"/>
+<path transform="matrix(1,0,0,-1,41,21)" d="M0 0C-7.732 0-14-6.268-14-14-14-21.732-7.732-28 0-28 7.732-28 14-21.732 14-14 14-6.268 7.732 0 0 0" fill="#6384ad"/>
+<path transform="matrix(1,0,0,-1,51,35)" d="M0 0C0-5.523-4.477-10-10-10-15.523-10-20-5.523-20 0-20 5.523-15.523 10-10 10-4.477 10 0 5.523 0 0" fill="#73bccd"/>
+<path transform="matrix(1,0,0,-1,39,31)" d="M0 0C0-1.105-.895-2-2-2-3.105-2-4-1.105-4 0-4 1.105-3.105 2-2 2-.895 2 0 1.105 0 0" fill="#cef7ef"/>
+<g opacity=".350006" style="mix-blend-mode:overlay">
+<g clip-path="url(#clip_2)">
+<g clip-path="url(#clip_3)">
+<image x="4" y="10" width="56" height="44" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAADgAAAAsCAYAAAAwwXuTAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAABFElEQVR4nN3DQSsDAACG4fef7IBCobRCobQSiVBaiURqiUQitRQi
+tdRSKNRSKBzmMIXDHOYwBzvMYQ522WWHueyyyy6f//E99dAQCMg5zY1Nck5bS6uc
+09neIed0BYNyTm93j5wz0Ncv5wyGQnLOyNCwnDM+OibnTE1MyjnT4bCcMzczK+cs
+zi/IOUuRiJyzurwi52ysrcs525tbcs5ONCrn7O/uyTlHB4dyznEsJuecxONyzvnp
+mZxzdXEp51wnEnLO3c2tnPN4/yDnPCWTcs5zKiXnvL28yjnv6bSc85HJyDmf2ayc
+k/vKyTnf+byc81MoyDnF36KcUyqV5JxyuSzn/FUqck61WpVzarWanFOv1+X8H32b
+hqjRypf6AAAAAElFTkSuQmCC"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

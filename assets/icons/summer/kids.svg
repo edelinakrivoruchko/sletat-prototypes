@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="7 7 50 50">
+<!-- дети: в наборе Summer (Printerinks) такой иконки нет, нарисовано в его манере и цветах для посадок Слетать.ру 09.11.2026 -->
+<path d="M11 55.5H53" stroke="#845549" stroke-width="2" stroke-linecap="round" opacity=".15"/>
+<g fill="#73bccd">
+<circle cx="21" cy="16.5" r="5.5"/>
+<path d="M15.5 28.5a4 4 0 0 1 4-4h3a4 4 0 0 1 4 4V40h-11z"/>
+<rect x="16" y="38" width="4.4" height="16" rx="2.2"/>
+<rect x="21.6" y="38" width="4.4" height="16" rx="2.2"/>
+</g>
+<g fill="none" stroke="#73bccd" stroke-width="3.8" stroke-linecap="round"><path d="M16.5 27.5 12.5 37"/><path d="M25.5 27.5 31.5 34"/></g>
+<g fill="#ff5a5a">
+<circle cx="43" cy="18" r="5.5"/>
+<circle cx="36.6" cy="15.6" r="2.4"/>
+<circle cx="49.4" cy="15.6" r="2.4"/>
+<path d="M40.2 25.5h5.6a2.2 2.2 0 0 1 2.1 1.7l3.9 16.3H34.2l3.9-16.3a2.2 2.2 0 0 1 2.1-1.7z"/>
+<rect x="38.4" y="41" width="4.2" height="13" rx="2.1"/>
+<rect x="43.4" y="41" width="4.2" height="13" rx="2.1"/>
+</g>
+<g fill="none" stroke="#ff5a5a" stroke-width="3.8" stroke-linecap="round"><path d="M39.5 28.5 32.5 34"/><path d="M46.5 28.5 51.5 37"/></g>
+</svg>

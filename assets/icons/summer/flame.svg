@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="64" height="64" viewBox="6.00 3.00 52.00 52.00">
+<defs>
+<clipPath id="clip_1">
+<path transform="matrix(1,0,0,-1,0,64)" d="M0 64H64V0H0Z"/>
+</clipPath>
+<clipPath id="clip_2">
+<path transform="matrix(1,0,0,-1,0,64)" d="M10 4H18.0652V12.2146H10Z"/>
+</clipPath>
+<clipPath id="clip_3">
+<path transform="matrix(1,0,0,-1,0,64)" d="M45.9348 4H54V12.2146H45.9348Z"/>
+</clipPath>
+<clipPath id="clip_4">
+<path transform="matrix(1,0,0,-1,0,64)" d="M10 4.00002H54V60H10Z"/>
+</clipPath>
+<clipPath id="clip_5">
+<path transform="matrix(1,0,0,-1,50,31.083302)" d="M0 0C0-6.104-.88-18.417-11.88-22.01-12.26-22.125-12.65-22.24-13.05-22.344-13.06-22.344-13.06-22.365-13.06-22.365-14.46-22.719-16.03-22.917-17.77-22.917-19.13-22.917-20.43-22.812-21.63-22.615-21.99-22.552-22.35-22.49-22.7-22.406-35.23-19.708-38.49-6.417-34 6.25-34 6.25-33 1.042-29 1.042-29 1.042-21.88 9.698-23 27.083-13.56 17.115-11.17 11.01-16 1.042-16 1.042-10.36 .75-8 8.333-8 8.333-3.18 3.25-5.92-4.167-5.78-4.167-2.22-4.125 0 0"/>
+</clipPath>
+</defs>
+<g>
+<g inkscape:groupmode="layer" inkscape:label="Icons">
+<g clip-path="url(#clip_1)">
+<path transform="matrix(1,0,0,-1,50,31.083302)" d="M0 0C0-6.104-.88-18.417-11.88-22.01-12.26-22.125-12.65-22.24-13.05-22.344-13.06-22.344-13.06-22.365-13.06-22.365-14.46-22.719-16.03-22.917-17.77-22.917-19.13-22.917-20.43-22.812-21.63-22.615-21.99-22.552-22.35-22.49-22.7-22.406-35.23-19.708-38.49-6.417-34 6.25-34 6.25-33 1.042-29 1.042-29 1.042-21.88 9.698-23 27.083-13.56 17.115-11.17 11.01-16 1.042-16 1.042-10.36 .75-8 8.333-8 8.333-3.18 3.25-5.92-4.167-5.78-4.167-2.22-4.125 0 0" fill="#ff5a5a"/>
+<path transform="matrix(1,0,0,-1,38.0049,53.13)" d="M0 0C-.38-.11-.77-.22-1.17-.32-1.18-.32-1.18-.34-1.18-.34-2.58-.68-4.15-.87-5.89-.87-7.25-.87-8.55-.77-9.75-.58-10.11-.52-10.47-.46-10.82-.38-14.75 4.92-13.89 16.88-9.09 22.04-9.09 22.04-9.44 11.89-6.12 11.13-2.68 10.35-.18 12.39 .88 15.87 .88 15.87 3.9 5.48 0 0" fill="#ffce52"/>
+<g opacity=".350006" style="mix-blend-mode:overlay">
+<g clip-path="url(#clip_4)">
+<g clip-path="url(#clip_5)">
+<image x="10" y="4" width="44" height="56" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAACwAAAA4CAYAAACGwxqMAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAABUklEQVR4nNXDQUcDAAAF4PdPdigWi8VSMSqNSsVSaVSalCal0qQ0
+qUwqk0llUllUFpPForJoLBaLxQ6Lxg6LHRY77LDDDq/f8T4+1BkMVApjXT2VwmRs
+oFKYTY1UCou5iUrRYmmmUlhb26gU7VYrlaKro5NK0W2zUSn6enqpFPb+ASrFkH2Q
+SjE6PEKlGHM4qBST4xNUiimnk0oxOz1DpZhzuagUi/MLVIqVpWUqxarbTaXYWFun
+Umx6PFSKna1tKsWu10ulONjbp1Ic+nxUiiO/n0pxenxCpTgLBKgUl+cXVIqrYJBK
+cXt9Q6W4C4WoFPfhMJXiIRKhUjxGo1SKl6dnKsVrLEaliL/FqRTviQSV4iOZpFJ8
+plJUiq90mkqRyWSoFN/ZLJUi95OjUuTzeSrFb6FApSgWi1SKv1KJSlEul6kUlUqF
+SlGtVqkUtVqNSv8BgCuWbHDeoeUAAAAASUVORK5CYII="/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
