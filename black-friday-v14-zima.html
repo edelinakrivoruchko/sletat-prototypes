@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="only light"><!-- v14: тёмная тема телефона не перекрашивает посадку, как у Натальи -->
 <title>Сбежать от зимы – Чёрная пятница в Слетать.ру</title>
 <!-- шрифты бренда локально (00_Бренд/fonts): Onest – заголовки, Open Sans – текст; фирменный шрифт Яндекса с yandex-серверов убран -->
 <link rel="stylesheet" href="assets/fonts/fonts.css">
@@ -11,8 +10,6 @@
 <script>try{if(localStorage.getItem("sl_theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
 <script>(() => { const D = document.documentElement, f = () => { const w = D.clientWidth || innerWidth; D.style.setProperty('--z', w > 1080 ? Math.max(.8, Math.min(w / 1280, innerHeight / 560)).toFixed(4) : '1'); }; f(); addEventListener('resize', f); document.addEventListener('DOMContentLoaded', f); })();</script>
 <style>
-:root{color-scheme:only light}
-@media (prefers-color-scheme:dark){:root{color-scheme:only light}}
 /* цвета только из основной темы sletat.ru (base.html) */
 /* цвета бренда (00_Бренд/BRANDBOOK.md): синий #236DFA, жёлтый #FFCA00, оранжевый плашек #FF9207, рейтинг #00C74D, подписи #6C6C76 */
 :root{--blue:#236DFA;--bd:#094695;--text:#313140;--muted:#6C6C76;--sky:#F4F8FD;--lb:#D9EAFF;--line:#E1E6EE;--yel:#FFCA00;--org:#FF9207;--grn:#00C74D;--gbg:#E3F7E8}
@@ -180,8 +177,6 @@ header .wrap{display:flex;align-items:center;gap:22px;height:64px}
 .stats .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;text-align:center}
 .stats b{display:block;font:900 64px/1.05 'Onest','Open Sans',Arial,sans-serif;color:var(--text);letter-spacing:-.02em}
 .stats span{display:block;margin-top:10px;font-size:18px;font-weight:600;line-height:1.35;color:var(--text)}
-.t-d,.t-m{font-style:normal}.t-m{display:none}
-@media (max-width:760px){.t-d{display:none}.t-m{display:inline}}
 @media(max-width:980px){.stats{padding:32px 0}.stats .wrap{gap:8px}.stats b{font-size:28px;white-space:nowrap}.stats span{font-size:13px}}
 
 /* форма – как «Подберём под ваш бюджет» */
@@ -256,16 +251,7 @@ footer .tel{color:var(--text);font-size:16px;font-weight:800}
 /* шапка: два телефона и Telegram */
 .hphones{display:flex;gap:18px;align-items:center}
 .tg{width:38px;height:38px;flex:none;border-radius:50%;background:var(--sky);color:var(--blue);display:flex;align-items:center;justify-content:center}
-.tg svg{width:20px;height:20px}.tg:hover{background:var(--lb)}.tg.mx svg{width:22px;height:22px}
-/* трубка (Наталья, 10.11.2026): где номера в шапке скрыты – значок перед Telegram и Макс, по нажатию выпадают оба номера */
-.hdr-cw{position:relative;display:none}
-.hdr-call{padding:0;border:0;font:inherit;cursor:pointer}
-.call-pop{position:absolute;right:0;top:calc(100% + 10px);z-index:60;display:none;flex-direction:column;gap:2px;padding:8px;border-radius:16px;background:#fff;box-shadow:0 0 0 1px var(--line),0 18px 40px -12px rgba(18,62,140,.4)}
-.hdr-cw.open .call-pop{display:flex}
-.call-pop a{display:block;padding:12px 14px;border-radius:10px;font:700 16px/1.2 'Onest','Open Sans',Arial,sans-serif;color:var(--text);text-decoration:none;white-space:nowrap}
-.call-pop a:hover,.call-pop a:focus-visible{background:var(--sky);color:var(--blue)}
-/* подвал на мобиле: Telegram над Максом – Макс на месте справа от второго номера, Telegram строкой выше (Наталья, 10.11.2026) */
-@media(max-width:760px){.fcont{display:grid;grid-template-columns:max-content 38px 38px;column-gap:18px;row-gap:10px}.fcont [href^="tel:+7800"]{grid-area:1/1}.fcont [href^="tel:+7912"]{grid-area:2/1}.fcont .tg:not(.mx){grid-area:1/3}.fcont .tg.mx{grid-area:2/3}}
+.tg svg{width:20px;height:20px}.tg:hover{background:var(--lb)}
 /* карточка тура: крючок, удобства, условия и две кнопки, как у Натальи */
 .hotel .hook{font-size:18px;font-weight:800;line-height:1.25}
 .hotel .hn{font-size:13px;color:var(--muted)}.hotel .hn b{color:var(--org);font-weight:700;margin-right:4px}
@@ -311,7 +297,6 @@ footer .tel{color:var(--text);font-size:16px;font-weight:800}
  header .wrap{gap:10px}.logo img{height:28px}.hphones{gap:10px}
  .kicker{font-size:12px;letter-spacing:.4px;padding:7px 12px}.hero .lead br{display:none}
  .hphone{display:none}
- .hdr-cw{display:block}
  .payg{grid-template-columns:1fr 1fr}.payc .big{font-size:24px}
  .tcar-h{flex-wrap:wrap}
 }
@@ -460,6 +445,25 @@ html[data-theme=dark] .thm:before{transform:translateX(35px);background:#2A3A5C}
 html[data-theme=dark] .thm svg{fill:var(--yel)}
 body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:background-color .3s,color .3s}
 @media(prefers-reduced-motion:reduce){.thm:before,body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:none}}
+/* ===== v14: доработка мобильной версии (проверено на 390 px) ===== */
+@media(max-width:980px){
+ /* первый экран: подпись над заголовком в одну строку, плашка «Выгода» не закрывает «До конца акции» */
+ .kicker .k-long{display:none}
+ .tcard{padding-top:46px}
+ /* хиты: «Смотреть все» компактнее, плашка погоды не наезжает на «страна · курорт» */
+ .bh .ttl .pill,.tcar-h .pill{font-size:16px;padding:7px 18px;margin-top:4px}
+ .himg .tmp{top:44px;right:10px;bottom:auto}
+ .himg .b1{font-size:10px}
+ /* «Впечатления рядом»: подписи помещаются */
+ .sg{font-size:10.5px;padding:5px 6px}
+ /* подвал: телефоны и Telegram в одну строку */
+ .fcont{gap:12px}.fcont .tel{font-size:16px}
+}
+@media(max-width:420px){
+ .mega{font-size:48px}
+ .cd b{font-size:34px}.cdn{gap:8px}
+ .trow{font-size:14px}
+}
 </style>
 </head>
 <body>
@@ -472,9 +476,9 @@ body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:backg
  <div class="grow"></div>
  <div class="hphones">
   <span class="hdr-time">до конца акции <b id="hTime"></b></span>
-  <a class="hphone" href="tel:+78003339963">+7 (800) 333-99-63</a>
+  <a class="hphone" href="tel:+78003339963">8 (800) 333-99-63</a>
   <a class="hphone tel2" href="tel:+79120988029">+7 (912) 098-80-29</a>
-  <span class="hdr-cw"><button class="tg hdr-call" type="button" aria-label="Позвонить" title="Позвонить" aria-expanded="false" aria-haspopup="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg></button><span class="call-pop"><a href="tel:+78003339963" data-goal="bf_phone_click" data-block="header-call">+7 (800) 333-99-63</a><a href="tel:+79120988029" data-goal="bf_phone_click" data-block="header-call">+7 (912) 098-80-29</a></span></span><a class="tg" href="https://t.me/ruSletat_bot" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram" data-tg></a><a class="tg mx" href="https://max.ru/id4703163292_1_bot" target="_blank" rel="noopener" aria-label="Написать в Макс" title="Макс" data-max></a>
+  <a class="tg" href="https://t.me/kuda_sletatru" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram" data-tg></a>
   <button class="thm" id="thm" type="button" aria-label="Переключить тему: светлая или тёмная" title="Светлая / тёмная тема"><span><img class="fi" src="assets/icons/summer/sun.svg" alt=""></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 14.6A8.5 8.5 0 0 1 9.4 3.6a8.5 8.5 0 1 0 11 11z"/></svg></span></button>
  </div>
 </div>
@@ -488,7 +492,7 @@ body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:backg
  </svg>
   <div class="hero-in">
   <div>
-   <div class="kicker"><i></i>Чёрная пятница: 500+ туроператоров снизили цены</div>
+   <div class="kicker"><i></i><span class="k-long">Чёрная пятница:&nbsp;</span>500+ туроператоров снизили цены</div>
    <div class="mega">Сбежать<span>от зимы</span></div>
    <p class="lead" id="heroLead"></p>
    <div class="hero-cta"><a class="btn btn-y" href="#hits">Хочу к морю</a><a class="btn btn-w" data-site="/hot-tour/" data-u="hero">Все туры со скидками</a></div>
@@ -496,7 +500,7 @@ body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:backg
   <div class="tcard">
    <a class="t-rib" href="#maxHit" title="Смотреть этот тур">Выгода до&nbsp;<b id="stickSave">–</b></a>
    <div class="lbl">До конца акции</div>
-   <div class="cdn"><div class="cd"><b id="d">0</b><small data-unit="d">дней</small></div><div class="cd"><b id="h">00</b><small data-unit="h">часов</small></div><div class="cd"><b id="m">00</b><small data-unit="m">минут</small></div><div class="cd"><b id="s">00</b><small data-unit="s">секунд</small></div></div>
+   <div class="cdn"><div class="cd"><b id="d">0</b><small>дней</small></div><div class="cd"><b id="h">00</b><small>часов</small></div><div class="cd"><b id="m">00</b><small>минут</small></div><div class="cd"><b id="s">00</b><small>секунд</small></div></div>
    <div class="trow"><span>Самая большая выгода</span><b><a href="#maxHit" id="rowSave">–</a></b></div>
    <div class="trow"><span>До тёплого моря</span><b class="tfly">4,5 часа<svg class="tplane" viewBox="0 0 24 24" aria-hidden="true"><path transform="rotate(45 12 12)" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></b></div>
    <a class="btn btn-y" href="#hits">Выбрать тур</a>
@@ -522,8 +526,8 @@ body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:backg
 <!-- Цифры – блок из посадки Натальи (ЧП-корпоративный) -->
 <div class="stats">
  <div class="wrap">
-  <div><b><i class="t-d">3 млн+</i><i class="t-m">3 млн</i></b><span><i class="t-d">туристов доверили нам отдых</i><i class="t-m">туристов доверяют нам</i></span></div>
-  <div><b>24/7</b><span><i class="t-d">поддержка до, во время и после поездки</i><i class="t-m">поддержим вас в путешествии</i></span></div>
+  <div><b>3 млн+</b><span>туристов доверили нам отдых</span></div>
+  <div><b>24/7</b><span>поддержка до, во время и после поездки</span></div>
   <div><b>0 ₽</b><span>переплаты</span></div>
  </div>
 </div>
@@ -556,7 +560,7 @@ body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:backg
 <footer id="contacts"><div class="wrap">
  <div class="fgrid">
   <a class="logo" data-site="/" data-u="footer"><img src="assets/logo-color.svg" alt="Слетать.ру" width="114" height="30"></a>
-  <div class="fcont"><a class="tel" href="tel:+78003339963">+7 (800) 333-99-63</a><a class="tel" href="tel:+79120988029">+7 (912) 098-80-29</a><a class="tg" href="https://t.me/ruSletat_bot" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram" data-tg></a><a class="tg mx" href="https://max.ru/id4703163292_1_bot" target="_blank" rel="noopener" aria-label="Написать в Макс" title="Макс" data-max></a></div>
+  <div class="fcont"><a class="tel" href="tel:+78003339963">8 (800) 333-99-63</a><a class="tel" href="tel:+79120988029">+7 (912) 098-80-29</a><a class="tg" href="https://t.me/kuda_sletatru" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram" data-tg></a></div>
  </div>
 </div></footer>
 
@@ -693,7 +697,6 @@ const pp=n=>Math.round(n/2); // цена за 1 человека при поез
 const plural=(n,a,b,c)=>{const m=n%10,h=n%100;return m===1&&h!==11?a:(m>=2&&m<=4&&(h<12||h>14)?b:c)};
 const fi=(n,alt='')=>`<img class="fi" src="assets/icons/summer/${n}.svg" alt="${alt}" loading="lazy">`;
 document.querySelectorAll('[data-fi]').forEach(e=>e.insertAdjacentHTML('afterbegin',fi(e.dataset.fi)));
-document.querySelectorAll('[data-max]').forEach(e=>e.innerHTML='<svg aria-hidden="true" viewBox="4 4 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.1035 5.6543C15.6187 5.65433 18.373 8.50641 18.373 12.0186C18.3848 15.4763 15.5945 18.2911 12.1367 18.3096C10.886 18.3095 10.3043 18.1269 9.29395 17.3965C8.65455 18.218 6.63155 18.8599 6.54297 17.7617C6.54297 16.937 6.36028 16.2394 6.15332 15.4785C5.90685 14.5413 5.627 13.4975 5.62695 11.9854C5.62695 8.37275 8.59136 5.6543 12.1035 5.6543ZM12.1885 8.77734C10.4781 8.68919 9.14481 9.87304 8.84961 11.7295C8.60622 13.2664 9.03899 15.138 9.40723 15.2354C9.58393 15.2775 10.0279 14.9184 10.3047 14.6416C10.7626 14.9579 11.2959 15.1479 11.8506 15.1924C13.6229 15.2776 15.1378 13.9285 15.2568 12.1582C15.326 10.3842 13.9609 8.8818 12.1885 8.78027V8.77734Z" fill="currentColor"/></svg>');
 document.querySelectorAll('[data-tg]').forEach(e=>e.innerHTML='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 4.2 2.9 11.3c-1 .4-1 1.6.1 1.9l4.6 1.4 1.8 5.5c.3.8 1.3 1 1.9.4l2.6-2.5 4.8 3.5c.7.5 1.7.1 1.9-.7l3.1-14.6c.2-1-.8-1.9-1.8-1.5ZM9.6 14.2l8.2-7.3-6.8 8.6-.3 3.3-1.1-4.6Z"/></svg>');
 // погода в конце ноября – декабре и прямой рейс из Москвы (из v7, климатические нормы – допущение, сверить)
 const WX={'Таиланд':[31,29,'9'],'Вьетнам':[30,27,'9'],'Хайнань':[27,26,'8,5'],'ОАЭ':[29,26,'5,5'],'Египет':[26,25,'4,5']};
@@ -711,13 +714,13 @@ const S='https://sletat.ru';
 const UTM=id=>`utm_source=landing&utm_medium=bf2026&utm_campaign=zima&utm_content=${id}`;
 const site=(path,id)=>`${S}${path}${path.includes('?')?'&':'?'}${UTM(id)}`;
 document.querySelectorAll('[data-site]').forEach(a=>{a.href=site(a.dataset.site,a.dataset.u);a.target='_blank';a.rel='noopener'});
-const SLUG={'Азия':'thailand','Другое':'uae','Таиланд':'thailand','Вьетнам':'vietnam','Хайнань':'china','Китай':'china','Япония':'japan','Египет':'egypt','Турция':'turkey','ОАЭ':'uae'};
+const SLUG={'Таиланд':'thailand','Вьетнам':'vietnam','Хайнань':'china','Китай':'china','Япония':'japan','Египет':'egypt','Турция':'turkey','ОАЭ':'uae'};
 const slugOf=t=>SLUG[t.g==='Азия'?t.c:t.g];
-const countryUrl=(name,id)=>site(SLUG[name]?`/hot-tour/moscow/${SLUG[name]}/`:'/hot-tour/',id); // v14: горящие туры из Москвы, как у Натальи
+const countryUrl=(name,id)=>site(SLUG[name]?`/tours/${SLUG[name]}/`:'/hot-tour/',id);
 const MON={'нояб':11,'дек':12};
 // «Смотреть тур» – страница отеля с поиском на те же даты и ночи, 2 взрослых, вылет из Москвы (departCity=832, как у Натальи)
 function tourUrl(t,id){
- if(!t.url)return countryUrl(t.g==='Азия'||t.g==='Другое'?t.c:t.g,id);
+ if(!t.url)return countryUrl(t.g==='Азия'?t.c:t.g,id);
  const [dd,mm]=t.d.split('–')[0].trim().split(' '),from=`${String(dd).padStart(2,'0')}.${MON[mm]}.2026`,n=parseInt(t.ni);
  return `${t.url}?search&departCity=832&adults=2&nightsFrom=${n}&nightsTo=${n}&dateFrom=${from}&dateTo=${from}&${UTM(id)}`}
 
@@ -734,14 +737,14 @@ $("heroLead").innerHTML=`<strong>В Москве 0°, на Пхукете +31°.
 // хиты: «крючок» про отдых + 3 удобства с иконками; данные – из TOURS
 // v8.3: первым – тур, который даёт «выгоду до …» на первом экране (иначе обещание не подтверждается). Jaz Mirabel убран: выгода 9 196 ₽ – втрое меньше обещанной
 const HITS=[
- {n:'Sofitel Ras Al Khaimah Al Hamra Beach Resort',max:1,hook:'Всё включено у моря, и гости ставят 10 из 10',perks:[['cloche','Всё включено'],['umbrella','Пляжный курорт Аль-Хамра'],['airplane','5,5 часа полёта']],see:['desert','palm','burj']},
- {n:'Le Meridien Khao Lak Resort & Spa',hook:'Вместо слякоти – всё включено в Као Лаке',perks:[['cloche','Всё включено'],['kids','Можно с детьми'],['hotel','Гости ставят 9,4 из 10']],see:['kotapu','phiphi','elephant']},
+ {n:'Sofitel Ras Al Khaimah Al Hamra Beach Resort',max:1,hook:'Всё включено у моря, и гости ставят 10 из 10',perks:[['bbq','Всё включено'],['umbrella','Пляжный курорт Аль-Хамра'],['airplane','5,5 часа полёта']],see:['desert','palm','burj']},
+ {n:'Le Meridien Khao Lak Resort & Spa',hook:'Вместо слякоти – всё включено в Као Лаке',perks:[['bbq','Всё включено'],['kids','Можно с детьми'],['hotel','Гости ставят 9,4 из 10']],see:['kotapu','phiphi','elephant']},
  {n:'Crowne Plaza Resort Sanya Bay',hook:'Встречайте декабрь в тропиках у бухты Санья',perks:[['umbrella','Своя бухта Санья'],['kids','Можно с детьми'],['hotel','Гости ставят 9,6 из 10']],see:['guanyin','monkey','yanoda']}];
 const byName=n=>TOURS.find(t=>t.n===n);
 const where=t=>`${t.g==='Азия'||t.g==='Другое'?t.c:t.g} · ${t.res}`;
 const terms=t=>`<div class="terms"><b>${t.ni}</b> · из Москвы · цена за 1 человека при поездке вдвоём</div>`;
 const price=t=>`<div class="pr"><b><small>от </small>${rub(pp(t.p))}</b><s>${rub(pp(t.o))}</s></div>`;
-const btns=(t,id)=>`<div class="cta2"><a class="btn btn-y" href="${tourUrl(t,id)}" target="_blank" rel="noopener">Хочу сюда</a><a class="btn btn-b" href="${countryUrl(t.g==='Азия'||t.g==='Другое'?t.c:t.g,'similar-'+id)}" target="_blank" rel="noopener">Похожие туры</a></div>`;
+const btns=(t,id)=>`<div class="cta2"><a class="btn btn-y" href="${tourUrl(t,id)}" target="_blank" rel="noopener">Хочу сюда</a><a class="btn btn-b" href="${countryUrl(t.g==='Азия'?t.c:t.g,'similar-'+id)}" target="_blank" rel="noopener">Похожие туры</a></div>`;
 $('hitsGrid').innerHTML=HITS.map((h,i)=>{const t=byName(h.n);return `<article class="hotel hit${h.max?' top':''}" style="--i:${i}"${h.max?' id="maxHit"':''}>
  <div class="himg"><i class="ph" style="background-image:url(${t.img}),${G.g1}"></i><span class="b1">${h.max?'Самая большая выгода · ':'Выгода '}${rub(pp(t.o-t.p))}</span><span class="rt">${t.r.replace('.',',')}</span><span class="cn">${where(t)}</span>${tmp(wxOf(t))}</div>
  <h3 class="hook">${h.hook}</h3>
@@ -792,7 +795,7 @@ const GC={'Азия':'g1','Египет':'g2','Другое':'g4'};
 let car={g:'Азия',c:null},carTimer;
 // v8.3: фильтры для семей (ядро аудитории, ~40%) и любителей «всё включено» – флаги fam и ai из выгрузки
 const X={fam:false,ai:false};
-const tags=t=>(t.fam||t.ai)?`<div class="pl">${t.ai?`<span>${fi('cloche')}Всё включено</span>`:''}${t.fam?`<span>${fi('kids')}Можно с детьми</span>`:''}</div>`:'';
+const tags=t=>(t.fam||t.ai)?`<div class="pl">${t.ai?`<span>${fi('bbq')}Всё включено</span>`:''}${t.fam?`<span>${fi('kids')}Можно с детьми</span>`:''}</div>`:'';
 function tourCard(t,k){const id=`car-${slugOf(t)}-${k}`;return `<article class="hotel" style="--i:${Math.min(k,6)}"><div class="himg"><i class="ph" style="background-image:url(${t.img}),${G[GC[t.g]]}"></i><span class="b1">Выгода ${rub(pp(t.o-t.p))}</span><span class="rt">${t.r.replace('.',',')}</span><span class="cn">${where(t)}</span>${tmp(wxOf(t))}</div>
  <h3>${t.st}★ ${t.n}</h3>${tags(t)}
  <div class="terms"><b>${t.ni}</b> · ${t.m} · из Москвы<br>цена за 1 человека при поездке вдвоём</div>
@@ -824,15 +827,10 @@ const DEADLINE=(()=>{let first=Date.now();
  try{const v=+localStorage.getItem('sl_bf26_first');if(v>0&&v<=first)first=v;else localStorage.setItem('sl_bf26_first',String(first))}catch(e){}
  const d=new Date(first);d.setHours(23,59,59,0);d.setDate(d.getDate()+3);return Math.min(d.getTime(),PROMO_END)})();
 const pad=n=>String(n).padStart(2,'0');
-const dnTxt = n => n % 10 === 1 && n % 100 !== 11 ? 'день' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'дня' : 'дней';
-/* подписи под цифрами таймера склоняются по числу: 3 дня, 2 часа, 1 минута (Наталья, 10.11.2026) */
-const UNITS = {d: ['день', 'дня', 'дней'], h: ['час', 'часа', 'часов'], m: ['минута', 'минуты', 'минут'], s: ['секунда', 'секунды', 'секунд']};
-const pl3 = (n, f) => { const a = Math.abs(n) % 100, b = a % 10; return a > 10 && a < 20 ? f[2] : b > 1 && b < 5 ? f[1] : b === 1 ? f[0] : f[2]; };
-const unitLabels = v => document.querySelectorAll('[data-unit]').forEach(e => { const t = pl3(v[e.dataset.unit], UNITS[e.dataset.unit]); if (e.textContent !== t) e.textContent = t; });
 function tick(){let ms=Math.max(0,DEADLINE-Date.now());const D=Math.floor(ms/864e5);ms-=D*864e5;const H=Math.floor(ms/36e5);ms-=H*36e5;const M=Math.floor(ms/6e4);ms-=M*6e4;const Sx=Math.floor(ms/1e3);
  $('d').textContent=Math.min(D,99);$('h').textContent=pad(H);$('m').textContent=pad(M);$('s').textContent=pad(Sx);
- $('hTime').textContent=`${D}${NB}${dnTxt(D)} ${pad(H)}:${pad(M)}:${pad(Sx)}`;unitLabels({d: D, h: H, m: M, s: Sx});
- $("mbarT").textContent=`До конца акции: ${D}${NB}${dnTxt(D)} ${pad(H)}:${pad(M)}:${pad(Sx)}`}
+ $('hTime').textContent=`${D}${NB}дн ${pad(H)}:${pad(M)}:${pad(Sx)}`;
+ $("mbarT").textContent=`До конца акции: ${D} дн ${pad(H)}:${pad(M)}:${pad(Sx)}`}
 tick();setInterval(tick,1000);
 
 // вкладки: подсветка активной, вкладка направления переключает карусель
@@ -843,19 +841,13 @@ const tyNodes=root=>{const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT
 tyNodes(document.body);
 new MutationObserver(ms=>ms.forEach(m=>{if(m.type==='characterData'){const n=m.target,v=ty(n.nodeValue);if(v!==n.nodeValue)n.nodeValue=v}else m.addedNodes.forEach(n=>n.nodeType===1?tyNodes(n):n.nodeType===3&&(n.nodeValue=ty(n.nodeValue)))})).observe(document.body,{childList:true,subtree:true,characterData:true});
 
-// трубка в шапке: открыть и закрыть список номеров; закрывается по клику вне, по Esc и после выбора номера
-function closeCall(){document.querySelectorAll('.hdr-cw.open').forEach(w=>{w.classList.remove('open');w.querySelector('.hdr-call').setAttribute('aria-expanded','false')})}
-document.querySelectorAll('.hdr-call').forEach(b=>b.addEventListener('click',()=>{const w=b.closest('.hdr-cw'),open=!w.classList.contains('open');closeCall();if(open){w.classList.add('open');b.setAttribute('aria-expanded','true')}}));
-document.addEventListener('click',e=>{const w=e.target.closest('.hdr-cw');if(!w||e.target.closest('.call-pop a'))closeCall()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCall()});
-
 // 11. Цели Метрики – оба счётчика промо-страниц Слетать и dataLayer, как на ЧП-витрине (имена целей bf_*)
 const YM_IDS=[9072040,53866042],VARIANT='zima';
 function track(goal,params){const p=Object.assign({variant:VARIANT},params||{});
   try{if(typeof window.ym==='function')YM_IDS.forEach(id=>window.ym(id,'reachGoal',goal,p))}catch(e){}
   try{(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:goal},p))}catch(e){}}
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const h=a.getAttribute('href')||'';let g=a.dataset.goal;
-  if(!g){if(h.startsWith('tel:'))g='bf_phone_click';else if(h.includes('t.me/'))g='bf_tg_click';else if(h.includes('max.ru/'))g='bf_max_click';else if(/utm_content=(logo|footer)\b/.test(h))g='bf_logo_click';
+  if(!g){if(h.startsWith('tel:'))g='bf_phone_click';else if(h.includes('t.me/'))g='bf_tg_click';else if(/utm_content=(logo|footer)\b/.test(h))g='bf_logo_click';
     else if(/utm_content=similar-/.test(h))g='bf_similar_click';else if(/[?&]search\b/.test(h))g='bf_tour_click';else if(h.includes('sletat.ru'))g='bf_all_click'}
   if(g){const m=h.match(/utm_content=([^&]+)/);track(g,{block:m?m[1]:(a.closest('[id]')||{}).id||'',href:h.split('?')[0]})}},true);
 document.querySelectorAll('#carG').forEach(el=>el.addEventListener('click',e=>{const b=e.target.closest('[data-tab],[data-g],[data-f],[data-x]');if(b)track('bf_filter',{value:b.dataset.tab||b.dataset.g||b.dataset.f||b.dataset.x})}));
