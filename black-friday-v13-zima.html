@@ -475,6 +475,14 @@ body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:backg
  .cd b{font-size:40px}.cdn{gap:8px}
  .trow{font-size:15px}
 }
+/* v16: подвал выровнен – кружок Telegram виден (раньше сливался с фоном), на планшете и телефоне всё по центру с равными отступами */
+footer .tg{background:#fff}
+html[data-theme=dark] footer .tg{background:var(--card2)}
+.fcont{gap:16px}
+@media(max-width:980px){
+ .fgrid{flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}
+ .fcont{justify-content:center;gap:16px}
+}
 </style>
 </head>
 <body>
