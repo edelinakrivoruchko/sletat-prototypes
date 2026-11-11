@@ -464,6 +464,17 @@ body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:backg
  .cd b{font-size:34px}.cdn{gap:8px}
  .trow{font-size:14px}
 }
+/* v15: окно 981–1080 px (масштаб ещё не включается) – колонка заголовка узкая, таймер наезжал на «СБЕЖАТЬ» */
+@media(min-width:981px) and (max-width:1080px){
+ .hero-box{padding-left:40px;padding-right:40px}
+ .hero-in{grid-template-columns:minmax(0,1fr) 400px;gap:32px}
+ .kicker{font-size:12px;letter-spacing:.4px;padding:7px 14px}
+ .mega{font-size:68px;letter-spacing:-1px}
+ .hero .lead{font-size:19px}
+ .tcard{padding-left:26px;padding-right:26px}
+ .cd b{font-size:40px}.cdn{gap:8px}
+ .trow{font-size:15px}
+}
 </style>
 </head>
 <body>
@@ -492,7 +503,7 @@ body,header,.card,.tcard,.pay-c,footer,.mbar,.hero-box,.fin-sec{transition:backg
  </svg>
   <div class="hero-in">
   <div>
-   <div class="kicker"><i></i><span class="k-long">Чёрная пятница:&nbsp;</span>500+ туроператоров снизили цены</div>
+   <div class="kicker"><i></i><span><span class="k-long">Чёрная пятница:&nbsp;</span>500+ туроператоров снизили цены</span></div>
    <div class="mega">Сбежать<span>от зимы</span></div>
    <p class="lead" id="heroLead"></p>
    <div class="hero-cta"><a class="btn btn-y" href="#hits">Хочу к морю</a><a class="btn btn-w" data-site="/hot-tour/" data-u="hero">Все туры со скидками</a></div>
